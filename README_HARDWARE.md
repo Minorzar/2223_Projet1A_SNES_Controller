@@ -28,5 +28,6 @@ We don't now if we have a led with 4 feet (and with multiple color) or just 2 le
 
 We should, set up some register to fuse all bouton imput into an unique bus of 13 bites
 
+We have make the choice to pique a battery to 4.3V Li ion, because the most part of the PCB will have some composent
 
 ///// PLUG PART /////
