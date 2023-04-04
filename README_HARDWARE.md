@@ -6,6 +6,8 @@ After an long discussion, we have accept to pic a snes controller because if we 
 
 To make this controller wireless we need use something to plug to the real console to exchange some information between the controller and the console. The technology NRF 24 is on the table because it's more simple than Bluetooth technology
 
+/////CONTROLLER PART/////
+
 We have counted 13 bouton:
 4 for the cross
 A bouton
@@ -25,3 +27,6 @@ We have some led
 We don't now if we have a led with 4 feet (and with multiple color) or just 2 led
 
 We should, set up some register to fuse all bouton imput into an unique bus of 13 bites
+
+
+///// PLUG PART /////
