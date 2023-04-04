@@ -6,3 +6,5 @@ Our project will first focus on the controller (next year it will be on the cons
 Currently, we are working on looking how the controller works and so get the first ideas of what we are going to do.
 Next, we will do the Gantt diagram for both the hardware and software.
 All the datasheet will also be found in the main branch.
+
+The program folder will contain the code (written in C) that will run on the microprocessor of the controller. A readme explaining the function and why they are needed can be found inside the same folder.
