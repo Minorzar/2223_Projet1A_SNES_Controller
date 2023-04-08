@@ -1,10 +1,6 @@
 # snes_project_ensea2025
-This is the repository of the snes project made in the ENSEA by the 2025 promotion.
+This is the repository of the SNES project carried out at ENSEA by the promotion of 2025.
 
-
-Our project will first focus on the controller (next year it will be on the console itself). This repository will most likely only contains the files for the controller.
-Currently, we are working on looking how the controller works and so get the first ideas of what we are going to do.
-Next, we will do the Gantt diagram for both the hardware and software.
-All the datasheet will also be found in the main branch.
-
-The program folder will contain the code (written in C) that will run on the microprocessor of the controller. A readme explaining the function and why they are needed can be found inside the same folder.
+During the first year, our project will focus only on the controller aspect of the SNES before moving on to the console itself the following year. This repository will most likely only contain files relevant to the controller.
+Our repository will be divided into different sections such as "References", "Data sheets", "Hardware" and "Software".
+For more details on each section, a readme can be found inside the folders.
