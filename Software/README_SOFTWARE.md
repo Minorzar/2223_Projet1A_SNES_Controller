@@ -16,11 +16,11 @@ Pin 6: N/A
 Pin 7: Ground
 
 ----- Cycle -----
-Clock    SNES    NES
-1    B    A
-2    Y    B
-3    Select    Select
-4    Start    Start
+Clock   SNES    NES
+1       B    A
+2       Y    B
+3       Select    Select
+4       Start    Start
 5    Up    Up
 6    Down    Down
 7    Left    Left
@@ -48,3 +48,6 @@ Else if the data bits from 13 to 16 are low
     NES Controller
 Else
     N/A
+
+Send data to NRF24 pipeline
+Transmit data
