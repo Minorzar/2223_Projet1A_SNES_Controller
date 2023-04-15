@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\auria\OneDrive\Documents\Projet_manette\Projet_manette_proto\Projet_manette_proto.kicad_sch</source>
+    <date>11/04/2023 11:44:00</date>
+    <tool>Eeschema (7.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>SNES_1</title>
+        <company>ENSEA</company>
+        <rev/>
+        <date>06/04/2023</date>
+        <source>Projet_manette_proto.kicad_sch</source>
+        <comment number="1" value="Auriac Robin"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value="Ce n'est pas fini, c'est une bêta"/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="Antenna_nRF1">
+      <value>~</value>
+      <footprint>RF_Antenna:Texas_SWRA117D_2.4GHz_Right</footprint>
+      <datasheet>https://www.ti.com/lit/an/swra117d/swra117d.pdf</datasheet>
+      <libsource lib="Antenna_nRF24_2_4GHz" part="Antenna_nRF_2_4GHz" description="Antenna for nRF24 working on 2.4GHz, use for communication"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Antenna for nRF24 working on 2.4GHz, use for communication"/>
+      <property name="ki_keywords" value="nRF24"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fab00638-815d-4ee1-817c-2d1657e0f6f1</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>C_Small</value>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2942a385-d87e-453c-a40c-025487879a68</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>C_Small</value>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4bee564b-733e-401d-9dad-5b6eed7237d3</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>C_Small</value>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3de8115d-376f-40a2-9f69-16d2c6de703c</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>C_Small</value>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd9f1b25-b276-4fda-8a5f-ec2185faefbb</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>C_Small</value>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>db3bf4f0-27bb-415d-9c13-86f0c3879cf9</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>C_Small</value>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c02d8052-9873-4e83-a496-d28926421ab4</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>C_Small</value>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9272504c-972a-4bb9-8e58-3a5b2496a425</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED_Small</value>
+      <libsource lib="Device" part="LED_Small" description="Light emitting diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode, small symbol"/>
+      <property name="ki_keywords" value="LED diode light-emitting-diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>017e2250-bb31-46ed-9546-b6fcf43529bc</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x02</value>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6086c96e-4dfc-442b-a764-5fd5cb327614</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>L_Small</value>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Inductor, small symbol"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b31a1d3-9c28-45ce-9b39-3c729179d1d5</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>L_Small</value>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Inductor, small symbol"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a6faca1c-339d-415f-8ba6-79050f367c59</tstamps>
+    </comp>
+    <comp ref="L3">
+      <value>L_Small</value>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Inductor, small symbol"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2fbf6af9-60fd-4fea-9b36-8edfa5247618</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3652655e-b3fe-4211-afcf-37b9d1418b43</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>88211407-fcb9-42c4-a644-4fe97571f7e5</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bd87df4f-09e4-43d6-87bd-77adbaee0485</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>24d1b31a-3aea-4f06-8711-cd32342b42c5</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>036d0291-a1f5-4dcb-8985-95a6575d2071</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7243f38c-d8dd-4a7a-92ae-c374cd1fb0eb</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eaf854e5-75e0-42c6-8f15-8e10820804ed</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c11c975d-30ce-48a2-996d-d5b3a5dcf454</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cf0c8581-dc20-4c2f-86ad-d80edbea3bb6</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0167eeb-ecc9-4125-9025-33b0400cd688</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>R_Small</value>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small symbol"/>
+      <property name="ki_keywords" value="R resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>995eca00-64d5-4ee3-baa7-498fd08f3580</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5fc3746a-c26c-402d-b554-ba4d620bb648</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e29e56d5-5bd1-4c46-9cb4-8c545ca24393</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>135cec3f-1d51-4920-9ef9-5b386e08ba2d</tstamps>
+    </comp>
+    <comp ref="SW4">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a781c7b1-10d7-47d8-9cd0-0ebe1bbd440c</tstamps>
+    </comp>
+    <comp ref="SW5">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3ff390b7-1b44-4df0-8e42-1bc477a773d5</tstamps>
+    </comp>
+    <comp ref="SW6">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b13822ac-f3bf-47d1-8adf-0c97f15113d5</tstamps>
+    </comp>
+    <comp ref="SW7">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d60d416d-b0ae-48fa-ab9f-27e276bda95d</tstamps>
+    </comp>
+    <comp ref="SW8">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>306ba1db-ebba-488f-8ffe-2ab0b35cd472</tstamps>
+    </comp>
+    <comp ref="SW9">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>69586644-b10c-41b8-bb43-569d567e2b6c</tstamps>
+    </comp>
+    <comp ref="SW10">
+      <value>SW_Push</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1b114e06-b378-4191-9216-36409522a0af</tstamps>
+    </comp>
+    <comp ref="SW11">
+      <value>SW_DIP_x01</value>
+      <libsource lib="Switch" part="SW_DIP_x01" description="1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"/>
+      <property name="ki_keywords" value="dip switch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1840e9b0-f8a7-41d1-96e3-63cc6dd6e623</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>STM32L412KBTx</value>
+      <footprint>Package_QFP:LQFP-32_7x7mm_P0.8mm</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/stm32l412kb.pdf</datasheet>
+      <libsource lib="MCU_ST_STM32L4" part="STM32L412KBTx" description="STMicroelectronics Arm Cortex-M4 MCU, 128KB flash, 40KB RAM, 80 MHz, 1.71-3.6V, 26 GPIO, LQFP32"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="STMicroelectronics Arm Cortex-M4 MCU, 128KB flash, 40KB RAM, 80 MHz, 1.71-3.6V, 26 GPIO, LQFP32"/>
+      <property name="ki_keywords" value="Arm Cortex-M4 STM32L4 STM32L4x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d94478e5-3538-4d1e-828a-cb772f080006</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>AMS1117-3.3</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>http://www.advanced-monolithic.com/pdf/ds1117.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="AMS1117-3.3" description="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
+      <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1c724367-2793-42b7-a120-8af3f9e60072</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>NRF24L01</value>
+      <footprint>Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.5x2.5mm</footprint>
+      <datasheet>http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf</datasheet>
+      <libsource lib="RF" part="NRF24L01" description="Ultra low power 2.4GHz RF Transceiver, QFN-20"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Ultra low power 2.4GHz RF Transceiver, QFN-20"/>
+      <property name="ki_keywords" value="Low Power RF Transceiver"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9daee66-43d2-4be2-b492-1af50207c4f3</tstamps>
+    </comp>
+    <comp ref="Y1">
+      <value>Crystal_Small</value>
+      <libsource lib="Device" part="Crystal_Small" description="Two pin crystal, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Projet_manette_proto.kicad_sch"/>
+      <property name="ki_description" value="Two pin crystal, small symbol"/>
+      <property name="ki_keywords" value="quartz ceramic resonator oscillator"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e55a764a-5c1d-4328-9260-0ba3652979e0</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Antenna_nRF24_2_4GHz" part="Antenna_nRF_2_4GHz">
+      <description>Antenna for nRF24 working on 2.4GHz, use for communication</description>
+      <docs>https://www.ti.com/lit/an/swra117d/swra117d.pdf</docs>
+      <fields>
+        <field name="Reference">Antenna_nRF</field>
+        <field name="Footprint">RF_Antenna:Texas_SWRA117D_2.4GHz_Right</field>
+        <field name="Datasheet">https://www.ti.com/lit/an/swra117d/swra117d.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Feed_point" type="bidirectional"/>
+        <pin num="2" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Crystal_Small">
+      <description>Two pin crystal, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED_Small">
+      <description>Light emitting diode, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L_Small">
+      <description>Inductor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small">
+      <description>Resistor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_ST_STM32L4" part="STM32L412KBTx">
+      <description>STMicroelectronics Arm Cortex-M4 MCU, 128KB flash, 40KB RAM, 80 MHz, 1.71-3.6V, 26 GPIO, LQFP32</description>
+      <docs>https://www.st.com/resource/en/datasheet/stm32l412kb.pdf</docs>
+      <footprints>
+        <fp>LQFP*7x7mm*P0.8mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">STM32L412KBTx</field>
+        <field name="Footprint">Package_QFP:LQFP-32_7x7mm_P0.8mm</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/stm32l412kb.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="PC14" type="bidirectional"/>
+        <pin num="3" name="PC15" type="bidirectional"/>
+        <pin num="4" name="NRST" type="input"/>
+        <pin num="5" name="VDDA" type="power_in"/>
+        <pin num="6" name="PA0" type="bidirectional"/>
+        <pin num="7" name="PA1" type="bidirectional"/>
+        <pin num="8" name="PA2" type="bidirectional"/>
+        <pin num="9" name="PA3" type="bidirectional"/>
+        <pin num="10" name="PA4" type="bidirectional"/>
+        <pin num="11" name="PA5" type="bidirectional"/>
+        <pin num="12" name="PA6" type="bidirectional"/>
+        <pin num="13" name="PA7" type="bidirectional"/>
+        <pin num="14" name="PB0" type="bidirectional"/>
+        <pin num="15" name="PB1" type="bidirectional"/>
+        <pin num="16" name="VSS" type="power_in"/>
+        <pin num="17" name="VDD" type="power_in"/>
+        <pin num="18" name="PA8" type="bidirectional"/>
+        <pin num="19" name="PA9" type="bidirectional"/>
+        <pin num="20" name="PA10" type="bidirectional"/>
+        <pin num="21" name="PA11" type="bidirectional"/>
+        <pin num="22" name="PA12" type="bidirectional"/>
+        <pin num="23" name="PA13" type="bidirectional"/>
+        <pin num="24" name="PA14" type="bidirectional"/>
+        <pin num="25" name="PA15" type="bidirectional"/>
+        <pin num="26" name="PB3" type="bidirectional"/>
+        <pin num="27" name="PB4" type="bidirectional"/>
+        <pin num="28" name="PB5" type="bidirectional"/>
+        <pin num="29" name="PB6" type="bidirectional"/>
+        <pin num="30" name="PB7" type="bidirectional"/>
+        <pin num="31" name="PH3" type="bidirectional"/>
+        <pin num="32" name="VSS" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RF" part="NRF24L01">
+      <description>Ultra low power 2.4GHz RF Transceiver, QFN-20</description>
+      <docs>http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf</docs>
+      <footprints>
+        <fp>QFN*4x4*0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NRF24L01</field>
+        <field name="Footprint">Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.5x2.5mm</field>
+        <field name="Datasheet">http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CE" type="input"/>
+        <pin num="2" name="CSN" type="input"/>
+        <pin num="3" name="SCK" type="input"/>
+        <pin num="4" name="MOSI" type="input"/>
+        <pin num="5" name="MISO" type="output"/>
+        <pin num="6" name="IRQ" type="output"/>
+        <pin num="7" name="VDD" type="power_in"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="XC2" type="passive"/>
+        <pin num="10" name="XC1" type="passive"/>
+        <pin num="11" name="VDD_PA" type="power_out"/>
+        <pin num="12" name="ANT1" type="passive"/>
+        <pin num="13" name="ANT2" type="passive"/>
+        <pin num="14" name="VSS" type="power_in"/>
+        <pin num="15" name="VDD" type="power_in"/>
+        <pin num="16" name="IREF" type="passive"/>
+        <pin num="17" name="VSS" type="power_in"/>
+        <pin num="18" name="VDD" type="power_in"/>
+        <pin num="19" name="DVDD" type="power_out"/>
+        <pin num="20" name="VSS" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="AMS1117-3.3">
+      <description>1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223</description>
+      <docs>http://www.advanced-monolithic.com/pdf/ds1117.pdf</docs>
+      <footprints>
+        <fp>SOT?223*TabPin2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AMS1117-3.3</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Datasheet">http://www.advanced-monolithic.com/pdf/ds1117.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_DIP_x01">
+      <description>1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SW?DIP?x1*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_DIP_x01</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Antenna_nRF24_2_4GHz">
+      <uri>C:\Users\auria\OneDrive\Documents\KiCad\7.0\symbols\Antenna_nRF24_2_4GHz.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>D:\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>D:\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="MCU_ST_STM32L4">
+      <uri>D:\7.0\share\kicad\symbols\/MCU_ST_STM32L4.kicad_sym</uri>
+    </library>
+    <library logical="RF">
+      <uri>D:\7.0\share\kicad\symbols\/RF.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>D:\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>D:\7.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V8">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="SW11" pin="1" pintype="passive"/>
+    </net>
+    <net code="2" name="A_Button">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="PA0" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="B_Button">
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="PA1" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="DC_Button">
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="SW8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="PA5" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="Digital_Out_Put">
+      <node ref="U1" pin="27" pinfunction="PB4" pintype="bidirectional"/>
+      <node ref="U3" pin="5" pinfunction="MISO" pintype="output"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="Antenna_nRF1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U1" pin="32" pinfunction="VSS" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="14" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U3" pin="17" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U3" pin="20" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="VSS" pintype="power_in"/>
+    </net>
+    <net code="7" name="Glob_Alim">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW8" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="VO" pintype="power_out"/>
+      <node ref="U3" pin="15" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U3" pin="18" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U3" pin="7" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="8" name="LC_Button">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="SW6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="PA6" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="Net-(Antenna_nRF1-Feed_point)">
+      <node ref="Antenna_nRF1" pin="1" pinfunction="Feed_point" pintype="bidirectional"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(C4-Pad2)">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="L2" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(D1-A)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="SW11" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(D1-K)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="13" name="Net-(U3-ANT1)">
+      <node ref="L1" pin="1" pintype="passive"/>
+      <node ref="L3" pin="2" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="ANT1" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(U3-ANT2)">
+      <node ref="L2" pin="1" pintype="passive"/>
+      <node ref="L3" pin="1" pintype="passive"/>
+      <node ref="U3" pin="13" pinfunction="ANT2" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(U3-VDD_PA)">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="L1" pin="2" pintype="passive"/>
+      <node ref="U3" pin="11" pinfunction="VDD_PA" pintype="power_out"/>
+    </net>
+    <net code="16" name="Net-(U3-XC1)">
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U3" pin="10" pinfunction="XC1" pintype="passive"/>
+      <node ref="Y1" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(U3-XC2)">
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="U3" pin="9" pinfunction="XC2" pintype="passive"/>
+      <node ref="Y1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="18" name="Pin_Clock">
+      <node ref="U1" pin="26" pinfunction="PB3" pintype="bidirectional"/>
+      <node ref="U3" pin="3" pinfunction="SCK" pintype="input"/>
+    </net>
+    <net code="19" name="RC_Button">
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="SW7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="PA7" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="SE_Button">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="SW10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="PA9" pintype="bidirectional"/>
+    </net>
+    <net code="21" name="ST_Button">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="SW9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="PA8" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="UC_Button">
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="SW5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="PA4" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="X_Button">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="SW3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="PA2" pintype="bidirectional"/>
+    </net>
+    <net code="24" name="Y_Button">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="SW4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="PA3" pintype="bidirectional"/>
+    </net>
+    <net code="25" name="unconnected-(U1-NRST-Pad4)">
+      <node ref="U1" pin="4" pinfunction="NRST" pintype="input"/>
+    </net>
+    <net code="26" name="unconnected-(U1-PA10-Pad20)">
+      <node ref="U1" pin="20" pinfunction="PA10" pintype="bidirectional"/>
+    </net>
+    <net code="27" name="unconnected-(U1-PA11-Pad21)">
+      <node ref="U1" pin="21" pinfunction="PA11" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="unconnected-(U1-PA12-Pad22)">
+      <node ref="U1" pin="22" pinfunction="PA12" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="unconnected-(U1-PA13-Pad23)">
+      <node ref="U1" pin="23" pinfunction="PA13" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="unconnected-(U1-PA14-Pad24)">
+      <node ref="U1" pin="24" pinfunction="PA14" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="unconnected-(U1-PA15-Pad25)">
+      <node ref="U1" pin="25" pinfunction="PA15" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="unconnected-(U1-PB0-Pad14)">
+      <node ref="U1" pin="14" pinfunction="PB0" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="unconnected-(U1-PB1-Pad15)">
+      <node ref="U1" pin="15" pinfunction="PB1" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="unconnected-(U1-PB5-Pad28)">
+      <node ref="U1" pin="28" pinfunction="PB5" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="unconnected-(U1-PB6-Pad29)">
+      <node ref="U1" pin="29" pinfunction="PB6" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="unconnected-(U1-PB7-Pad30)">
+      <node ref="U1" pin="30" pinfunction="PB7" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="unconnected-(U1-PC14-Pad2)">
+      <node ref="U1" pin="2" pinfunction="PC14" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="unconnected-(U1-PC15-Pad3)">
+      <node ref="U1" pin="3" pinfunction="PC15" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="unconnected-(U1-PH3-Pad31)">
+      <node ref="U1" pin="31" pinfunction="PH3" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="unconnected-(U1-VDD-Pad1)">
+      <node ref="U1" pin="1" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="41" name="unconnected-(U1-VDD-Pad17)">
+      <node ref="U1" pin="17" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="42" name="unconnected-(U1-VDDA-Pad5)">
+      <node ref="U1" pin="5" pinfunction="VDDA" pintype="power_in"/>
+    </net>
+    <net code="43" name="unconnected-(U3-CE-Pad1)">
+      <node ref="U3" pin="1" pinfunction="CE" pintype="input"/>
+    </net>
+    <net code="44" name="unconnected-(U3-CSN-Pad2)">
+      <node ref="U3" pin="2" pinfunction="CSN" pintype="input"/>
+    </net>
+    <net code="45" name="unconnected-(U3-DVDD-Pad19)">
+      <node ref="U3" pin="19" pinfunction="DVDD" pintype="power_out"/>
+    </net>
+    <net code="46" name="unconnected-(U3-IREF-Pad16)">
+      <node ref="U3" pin="16" pinfunction="IREF" pintype="passive"/>
+    </net>
+    <net code="47" name="unconnected-(U3-IRQ-Pad6)">
+      <node ref="U3" pin="6" pinfunction="IRQ" pintype="output"/>
+    </net>
+    <net code="48" name="unconnected-(U3-MOSI-Pad4)">
+      <node ref="U3" pin="4" pinfunction="MOSI" pintype="input"/>
+    </net>
+  </nets>
+</export>
