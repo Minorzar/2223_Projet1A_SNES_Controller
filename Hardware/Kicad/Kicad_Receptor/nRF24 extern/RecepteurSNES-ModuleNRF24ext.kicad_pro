@@ -392,7 +392,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Test.kicad_pro",
+    "filename": "RecepteurSNES-ModuleNRF24ext.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -426,7 +426,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
+      "netlist": "./",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""

@@ -64,11 +64,11 @@
       39,
       40
     ],
-    "visible_layers": "ffffffe_ffffffff",
+    "visible_layers": "ffffffe_7fffffff",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "Test.kicad_prl",
+    "filename": "RecepteurSNES-ModuleNRF24ext.kicad_prl",
     "version": 3
   },
   "project": {
