@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 31,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_netclasses": [],
@@ -67,7 +67,7 @@
     "zone_display_mode": 1
   },
   "meta": {
-    "filename": "ProjetSNES2023ENSEA.kicad_prl",
+    "filename": "SNES_Controller_NRF24L01_Include.kicad_prl",
     "version": 3
   },
   "project": {
