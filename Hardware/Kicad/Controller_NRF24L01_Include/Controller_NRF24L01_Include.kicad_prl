@@ -1,7 +1,7 @@
 {
   "board": {
     "active_layer": 0,
-    "active_layer_preset": "All Layers",
+    "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
     "hidden_nets": [],
@@ -42,7 +42,6 @@
       13,
       15,
       16,
-      17,
       18,
       19,
       20,
@@ -68,7 +67,7 @@
     "zone_display_mode": 1
   },
   "meta": {
-    "filename": "Controller_NRF24L01_Include.kicad_prl",
+    "filename": "Projet_manette_proto.kicad_prl",
     "version": 3
   },
   "project": {
