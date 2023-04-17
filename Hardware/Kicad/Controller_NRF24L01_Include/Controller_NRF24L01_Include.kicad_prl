@@ -64,10 +64,10 @@
       40
     ],
     "visible_layers": "fffffff_ffffffff",
-    "zone_display_mode": 1
+    "zone_display_mode": 0
   },
   "meta": {
-    "filename": "Projet_manette_proto.kicad_prl",
+    "filename": "Controller_NRF24L01_Include.kicad_prl",
     "version": 3
   },
   "project": {

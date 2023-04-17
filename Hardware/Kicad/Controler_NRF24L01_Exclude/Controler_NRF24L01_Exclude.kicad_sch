@@ -110,6 +110,206 @@
         )
       )
     )
+    (symbol "Connector_Generic:Conn_02x07_Odd_Even" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 1.27 10.16 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "Conn_02x07_Odd_Even" (at 1.27 -10.16 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "connector" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "Connector*:*_2x??_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "Conn_02x07_Odd_Even_1_1"
+        (rectangle (start -1.27 -7.493) (end 0 -7.747)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 -4.953) (end 0 -5.207)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 -2.413) (end 0 -2.667)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 2.667) (end 0 2.413)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 5.207) (end 0 4.953)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 7.747) (end 0 7.493)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start -1.27 8.89) (end 3.81 -8.89)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (rectangle (start 3.81 -7.493) (end 2.54 -7.747)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 3.81 -4.953) (end 2.54 -5.207)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 3.81 -2.413) (end 2.54 -2.667)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 3.81 0.127) (end 2.54 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 3.81 2.667) (end 2.54 2.413)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 3.81 5.207) (end 2.54 4.953)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 3.81 7.747) (end 2.54 7.493)
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (pin passive line (at -5.08 7.62 0) (length 3.81)
+          (name "Pin_1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 7.62 -2.54 180) (length 3.81)
+          (name "Pin_10" (effects (font (size 1.27 1.27))))
+          (number "10" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -5.08 0) (length 3.81)
+          (name "Pin_11" (effects (font (size 1.27 1.27))))
+          (number "11" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 7.62 -5.08 180) (length 3.81)
+          (name "Pin_12" (effects (font (size 1.27 1.27))))
+          (number "12" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -7.62 0) (length 3.81)
+          (name "Pin_13" (effects (font (size 1.27 1.27))))
+          (number "13" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 7.62 -7.62 180) (length 3.81)
+          (name "Pin_14" (effects (font (size 1.27 1.27))))
+          (number "14" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 7.62 7.62 180) (length 3.81)
+          (name "Pin_2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 5.08 0) (length 3.81)
+          (name "Pin_3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 7.62 5.08 180) (length 3.81)
+          (name "Pin_4" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 2.54 0) (length 3.81)
+          (name "Pin_5" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 7.62 2.54 180) (length 3.81)
+          (name "Pin_6" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "Pin_7" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 7.62 0 180) (length 3.81)
+          (name "Pin_8" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+          (name "Pin_9" (effects (font (size 1.27 1.27))))
+          (number "9" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Device:C_Polarized" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "C_Polarized" (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "" (at 0.9652 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "cap capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Polarized capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "CP_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "C_Polarized_0_1"
+        (rectangle (start -2.286 0.508) (end 2.286 1.016)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.778 2.286)
+            (xy -0.762 2.286)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.27 2.794)
+            (xy -1.27 1.778)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 2.286 -0.508) (end -2.286 -1.016)
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+      )
+      (symbol "C_Polarized_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Device:C_Small" (pin_numbers hide) (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
       (property "Reference" "C" (at 0.254 1.778 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -157,73 +357,6 @@
         )
         (pin passive line (at 0 -2.54 90) (length 2.032)
           (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Device:D_Small" (pin_numbers hide) (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "D" (at -1.27 2.032 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "D_Small" (at -3.81 -2.032 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "" (at 0 0 90)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 90)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Device" "D" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Pins" "1=K 2=A" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "diode" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Diode, small symbol" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "D_Small_0_1"
-        (polyline
-          (pts
-            (xy -0.762 -1.016)
-            (xy -0.762 1.016)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -0.762 0)
-            (xy 0.762 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 -1.016)
-            (xy -0.762 0)
-            (xy 0.762 1.016)
-            (xy 0.762 -1.016)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "D_Small_1_1"
-        (pin passive line (at -2.54 0 0) (length 1.778)
-          (name "K" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 0 180) (length 1.778)
-          (name "A" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
       )
@@ -955,6 +1088,58 @@
         )
       )
     )
+    (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+3.3V" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+3.3V\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+3.3V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+3.3V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+3.3V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "power:+3V8" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -1089,7 +1274,6 @@
     )
   )
 
-
   (junction (at 115.57 88.9) (diameter 0) (color 0 0 0 0)
     (uuid 016ae6a9-6cd6-4b55-adb9-936159cfc8a6)
   )
@@ -1102,8 +1286,14 @@
   (junction (at 198.12 95.25) (diameter 0) (color 0 0 0 0)
     (uuid 0a227fad-138e-4a36-8844-42b3f86f12f0)
   )
+  (junction (at 132.08 135.89) (diameter 0) (color 0 0 0 0)
+    (uuid 0c4dfe6f-d505-4cd3-88cf-38559c02597a)
+  )
   (junction (at 223.52 95.25) (diameter 0) (color 0 0 0 0)
     (uuid 1013c41b-ccd1-47ed-807f-425c3a17f1d7)
+  )
+  (junction (at 130.81 132.08) (diameter 0) (color 0 0 0 0)
+    (uuid 1279dc13-d058-4e35-93cf-007d8eee4d63)
   )
   (junction (at 241.3 20.32) (diameter 0) (color 0 0 0 0)
     (uuid 19b8c4bd-36c0-4bc6-97da-038500313933)
@@ -1116,6 +1306,9 @@
   )
   (junction (at 210.82 107.95) (diameter 0) (color 0 0 0 0)
     (uuid 24a8682c-4a7f-4450-a1e5-688e27c46e0a)
+  )
+  (junction (at 40.64 147.32) (diameter 0) (color 0 0 0 0)
+    (uuid 24f6d409-16fc-4ba5-b761-ebb7296aef59)
   )
   (junction (at 115.57 86.36) (diameter 0) (color 0 0 0 0)
     (uuid 25f6c6d0-7224-427b-a6e9-150676f7e598)
@@ -1143,6 +1336,9 @@
   )
   (junction (at 186.69 95.25) (diameter 0) (color 0 0 0 0)
     (uuid 41a3f12f-4cff-4d1f-9324-797a8a6e9bcc)
+  )
+  (junction (at 130.81 88.9) (diameter 0) (color 0 0 0 0)
+    (uuid 43d6d86a-192d-4eb2-931e-ffcd58ca9376)
   )
   (junction (at 123.19 88.9) (diameter 0) (color 0 0 0 0)
     (uuid 4dc5bee2-fd3e-4670-9a1f-9dd05499fd84)
@@ -1177,6 +1373,9 @@
   (junction (at 182.88 20.32) (diameter 0) (color 0 0 0 0)
     (uuid 8e00901a-b3c0-4035-ae8f-3cbae3590d1d)
   )
+  (junction (at 59.69 147.32) (diameter 0) (color 0 0 0 0)
+    (uuid 8eedb78f-3989-40dd-991d-38a823d0daab)
+  )
   (junction (at 124.46 48.26) (diameter 0) (color 0 0 0 0)
     (uuid 91508fa7-a2a4-4da4-9f32-fa3f21927c25)
   )
@@ -1186,8 +1385,14 @@
   (junction (at 228.6 48.26) (diameter 0) (color 0 0 0 0)
     (uuid 9ca6ec35-4a76-49fa-b4a7-d1d0fed5cafd)
   )
+  (junction (at 110.49 142.24) (diameter 0) (color 0 0 0 0)
+    (uuid 9f0628cc-148b-467b-b833-aee313bcbed1)
+  )
   (junction (at 88.9 73.66) (diameter 0) (color 0 0 0 0)
     (uuid 9f3a2dd2-98f6-42e4-80f7-c97e223a6acf)
+  )
+  (junction (at 132.08 138.43) (diameter 0) (color 0 0 0 0)
+    (uuid aaae43ec-ba6b-4311-8c4f-c3eab1498f33)
   )
   (junction (at 255.27 88.9) (diameter 0) (color 0 0 0 0)
     (uuid ab885635-7387-4046-80f1-2cdb6244f0ed)
@@ -1198,14 +1403,14 @@
   (junction (at 44.45 34.29) (diameter 0) (color 0 0 0 0)
     (uuid cd4f487f-0372-4012-a913-1c37aa01d8d1)
   )
-  (junction (at 88.9 68.58) (diameter 0) (color 0 0 0 0)
-    (uuid cd5dc878-c8ac-4046-84b1-5facea1b74f1)
-  )
   (junction (at 182.88 48.26) (diameter 0) (color 0 0 0 0)
     (uuid d28dc3bb-319c-4747-b548-59a76c64baf3)
   )
   (junction (at 91.44 73.66) (diameter 0) (color 0 0 0 0)
     (uuid d5f9ed07-cf3e-4b4d-888f-f45c5a7cbb0f)
+  )
+  (junction (at 130.81 73.66) (diameter 0) (color 0 0 0 0)
+    (uuid db330dbb-2e42-4826-98c3-ce63b3abfc6d)
   )
   (junction (at 124.46 20.32) (diameter 0) (color 0 0 0 0)
     (uuid e84608fd-67aa-47b1-bd00-a1ba8296ace4)
@@ -1221,14 +1426,14 @@
   )
 
   (no_connect (at 107.95 76.2) (uuid 111a6aa3-ae70-4e56-95e3-e14b523a5f7a))
-  (no_connect (at 34.29 57.15) (uuid 1250a4c8-c2a7-4d44-a6e6-68c96e3e80a8))
+  (no_connect (at 149.86 138.43) (uuid 1cff557b-38fc-4588-99f0-b91a86a00624))
   (no_connect (at 59.69 82.55) (uuid 25751eaf-5335-4fae-9894-c90fc55aa11d))
+  (no_connect (at 149.86 140.97) (uuid 3110dc21-a82e-46a1-bc18-1e1f5315cc4c))
   (no_connect (at 34.29 49.53) (uuid 3159c0f7-6ce4-40cd-9fa4-7d35a9f0ecde))
-  (no_connect (at 59.69 80.01) (uuid 3b23f7bb-d18d-4e6a-82e6-44ee9101d152))
-  (no_connect (at 34.29 64.77) (uuid 3b61552b-4597-4926-8b6d-6b5635ef7a47))
-  (no_connect (at 34.29 54.61) (uuid 61e58afd-55c7-48df-a186-e5396b6f7247))
-  (no_connect (at 34.29 44.45) (uuid 648152e3-0e17-4d1e-a245-30362ef324d2))
+  (no_connect (at 137.16 140.97) (uuid 37a0e7a5-1f4e-4a0a-a386-fc6c41cbda2f))
+  (no_connect (at 149.86 130.81) (uuid 55c65bcb-edfd-4ae3-aa58-7c3967972ee6))
   (no_connect (at 58.42 154.94) (uuid 8806162a-d181-4cc3-8469-e3891f8e0d4d))
+  (no_connect (at 137.16 130.81) (uuid a4b16517-1d9b-498d-b08d-02758a8777a1))
   (no_connect (at 34.29 62.23) (uuid c33f8006-32b9-48c2-aaf0-e0c745c598f3))
   (no_connect (at 34.29 77.47) (uuid c7cae063-8c54-4e62-b4dd-b70f13e9a11b))
   (no_connect (at 58.42 149.86) (uuid ef92894d-27b3-477f-858e-2c768141526e))
@@ -1252,14 +1457,28 @@
     (uuid 066ee202-3e07-435b-8c4d-df09e4a312ff)
   )
 
+  (bus (pts (xy 119.38 115.57) (xy 167.64 115.57))
+    (stroke (width 0) (type default))
+    (uuid 0850cb73-ff5c-4750-91f1-e19b22bd9477)
+  )
+
   (wire (pts (xy 241.3 45.72) (xy 241.3 48.26))
     (stroke (width 0) (type default))
     (uuid 0edfd6ae-3624-4f83-a8a8-0cf256dfaff7)
+  )
+  (wire (pts (xy 137.16 133.35) (xy 130.81 133.35))
+    (stroke (width 0) (type default))
+    (uuid 0f0c051d-f570-4adf-ba10-ea9ad2349e44)
   )
   (wire (pts (xy 228.6 45.72) (xy 228.6 48.26))
     (stroke (width 0) (type default))
     (uuid 0f1116d4-c483-491a-ac9a-a79e82d4c6e6)
   )
+  (bus (pts (xy 167.64 115.57) (xy 167.64 154.94))
+    (stroke (width 0) (type default))
+    (uuid 0f1fed2d-ea8a-4ad9-aca3-df8b02d8a733)
+  )
+
   (polyline (pts (xy 81.28 110.49) (xy 81.28 15.24))
     (stroke (width 0) (type default))
     (uuid 1137d2fb-a198-48d3-942a-6817bf49cb11)
@@ -1289,6 +1508,11 @@
     (stroke (width 0) (type default))
     (uuid 19a082cc-a802-4e4e-947c-74fb21baf29a)
   )
+
+  (wire (pts (xy 130.81 73.66) (xy 140.97 73.66))
+    (stroke (width 0) (type default))
+    (uuid 1b0c1709-660a-4dfb-bf4a-299ae23fbc20)
+  )
   (polyline (pts (xy 13.97 115.57) (xy 81.28 115.57))
     (stroke (width 0) (type default))
     (uuid 1bcadb2e-742f-4e11-9719-86f46c0538c9)
@@ -1302,10 +1526,6 @@
     (stroke (width 0) (type default))
     (uuid 1d6dd3e8-8aa8-4d8a-aed2-90fa6be84285)
   )
-  (wire (pts (xy 134.62 73.66) (xy 140.97 73.66))
-    (stroke (width 0) (type default))
-    (uuid 1d84e6bf-e38f-42c2-bb15-8f57863f81d3)
-  )
   (wire (pts (xy 241.3 20.32) (xy 241.3 24.13))
     (stroke (width 0) (type default))
     (uuid 1dbe2b8f-8f40-477f-955f-b779aa110c25)
@@ -1315,13 +1535,17 @@
     (uuid 2154d6f0-9142-4aa1-bcb8-5900007e5280)
   )
 
-  (wire (pts (xy 30.48 34.29) (xy 33.02 34.29))
-    (stroke (width 0) (type default))
-    (uuid 21ccc88d-6c9e-4cdd-ac6c-600c921f18d3)
-  )
   (wire (pts (xy 67.31 147.32) (xy 63.5 147.32))
     (stroke (width 0) (type default))
     (uuid 23c8cbb5-537a-41f6-9445-1d0772a074f9)
+  )
+  (wire (pts (xy 40.64 147.32) (xy 44.45 147.32))
+    (stroke (width 0) (type default))
+    (uuid 23da315e-a131-46ff-bce1-b130cd0baaa8)
+  )
+  (wire (pts (xy 59.69 135.89) (xy 59.69 147.32))
+    (stroke (width 0) (type default))
+    (uuid 25fce5b5-2be4-4b16-a4b7-273e8f09288d)
   )
   (wire (pts (xy 199.39 20.32) (xy 182.88 20.32))
     (stroke (width 0) (type default))
@@ -1331,9 +1555,18 @@
     (stroke (width 0) (type default))
     (uuid 28c33738-6532-4c7e-bd68-cc63a2309a3a)
   )
+  (bus (pts (xy 167.64 154.94) (xy 119.38 154.94))
+    (stroke (width 0) (type default))
+    (uuid 2998630a-cdb0-4ab7-876c-f176c6e9ae62)
+  )
+
   (wire (pts (xy 186.69 100.33) (xy 186.69 107.95))
     (stroke (width 0) (type default))
     (uuid 2e8359f8-a5bb-4c48-9052-fd2e60d0e3e3)
+  )
+  (wire (pts (xy 54.61 135.89) (xy 59.69 135.89))
+    (stroke (width 0) (type default))
+    (uuid 2f808f3d-c265-44da-bc84-0a40245c8b2a)
   )
   (wire (pts (xy 124.46 20.32) (xy 107.95 20.32))
     (stroke (width 0) (type default))
@@ -1403,11 +1636,23 @@
     (stroke (width 0) (type default))
     (uuid 4dfd3dad-e70c-43af-a11f-3f3b8e916497)
   )
+  (wire (pts (xy 130.81 81.28) (xy 130.81 82.55))
+    (stroke (width 0) (type default))
+    (uuid 4e4eee20-a7b3-451e-9707-42f496d003ae)
+  )
+  (wire (pts (xy 132.08 143.51) (xy 137.16 143.51))
+    (stroke (width 0) (type default))
+    (uuid 4fb97529-1ad4-41a2-b823-650ff7a5d553)
+  )
+  (wire (pts (xy 40.64 135.89) (xy 40.64 147.32))
+    (stroke (width 0) (type default))
+    (uuid 51013ce5-95ed-447d-99c3-6bb19f455cf4)
+  )
   (wire (pts (xy 154.94 48.26) (xy 167.64 48.26))
     (stroke (width 0) (type default))
     (uuid 51c0bfbc-14cd-49c3-95cb-c867d8dd9863)
   )
-  (wire (pts (xy 63.5 147.32) (xy 58.42 147.32))
+  (wire (pts (xy 63.5 147.32) (xy 59.69 147.32))
     (stroke (width 0) (type default))
     (uuid 52ab2380-ad00-48ab-8fca-9d8624e872e6)
   )
@@ -1437,6 +1682,10 @@
     (uuid 5fae9fbe-4fa4-4b11-863f-bf9009d4703d)
   )
 
+  (wire (pts (xy 130.81 73.66) (xy 130.81 76.2))
+    (stroke (width 0) (type default))
+    (uuid 65b14342-69dd-43ab-ba84-656c1413513c)
+  )
   (wire (pts (xy 107.95 45.72) (xy 107.95 48.26))
     (stroke (width 0) (type default))
     (uuid 65e373da-b7cf-4a70-8fee-4fc714f15d12)
@@ -1445,9 +1694,13 @@
     (stroke (width 0) (type default))
     (uuid 6814de16-7571-4b6a-b6b5-9075790d030a)
   )
-  (wire (pts (xy 24.13 147.32) (xy 44.45 147.32))
+  (wire (pts (xy 24.13 147.32) (xy 40.64 147.32))
     (stroke (width 0) (type default))
     (uuid 683c1f23-b4b4-4188-ac65-ceb1e7487c58)
+  )
+  (wire (pts (xy 132.08 135.89) (xy 132.08 138.43))
+    (stroke (width 0) (type default))
+    (uuid 68401dab-70cc-45f2-acba-4d22e3254aa1)
   )
   (wire (pts (xy 184.15 95.25) (xy 186.69 95.25))
     (stroke (width 0) (type default))
@@ -1470,7 +1723,7 @@
     (uuid 6da3a7de-45d5-4dec-a3c8-af42db5834c3)
   )
 
-  (wire (pts (xy 123.19 88.9) (xy 140.97 88.9))
+  (wire (pts (xy 123.19 88.9) (xy 130.81 88.9))
     (stroke (width 0) (type default))
     (uuid 74606f6a-976d-49d8-9b28-c7fe96dcbd5a)
   )
@@ -1479,6 +1732,18 @@
     (uuid 756ab480-24a0-4ae7-abc9-087f95e526c5)
   )
 
+  (wire (pts (xy 132.08 138.43) (xy 132.08 143.51))
+    (stroke (width 0) (type default))
+    (uuid 75df5e23-0a56-4429-ad7b-4265e3c20820)
+  )
+  (wire (pts (xy 151.13 135.89) (xy 149.86 135.89))
+    (stroke (width 0) (type default))
+    (uuid 770833b1-794c-46e4-8c51-ad7e78d6e243)
+  )
+  (wire (pts (xy 130.81 88.9) (xy 140.97 88.9))
+    (stroke (width 0) (type default))
+    (uuid 778a3ca5-a0a9-405d-94ce-87a8b9dc91f8)
+  )
   (wire (pts (xy 199.39 20.32) (xy 199.39 24.13))
     (stroke (width 0) (type default))
     (uuid 778ccc8b-474b-4f29-ae7e-4efc650c4aa3)
@@ -1513,9 +1778,13 @@
     (stroke (width 0) (type default))
     (uuid 7f6ff858-64b0-459f-bcc8-d81454e99783)
   )
-  (wire (pts (xy 123.19 73.66) (xy 129.54 73.66))
+  (wire (pts (xy 123.19 73.66) (xy 130.81 73.66))
     (stroke (width 0) (type default))
     (uuid 83943158-5716-419c-a42c-8a511cb0a9ec)
+  )
+  (wire (pts (xy 132.08 135.89) (xy 137.16 135.89))
+    (stroke (width 0) (type default))
+    (uuid 84309adb-245b-4e8f-9210-1c3d2601cda7)
   )
   (wire (pts (xy 115.57 88.9) (xy 115.57 90.17))
     (stroke (width 0) (type default))
@@ -1538,6 +1807,14 @@
     (stroke (width 0) (type default))
     (uuid 8d25e8fa-1da1-47ef-972d-220a4b4cdda6)
   )
+  (wire (pts (xy 151.13 133.35) (xy 149.86 133.35))
+    (stroke (width 0) (type default))
+    (uuid 8d61981f-0947-44df-ade6-948f2915805d)
+  )
+  (wire (pts (xy 134.62 146.05) (xy 137.16 146.05))
+    (stroke (width 0) (type default))
+    (uuid 8e123a64-87c5-458a-bd81-31b542b39976)
+  )
   (wire (pts (xy 228.6 48.26) (xy 214.63 48.26))
     (stroke (width 0) (type default))
     (uuid 8f298a0b-d048-429c-8302-c716212bf299)
@@ -1554,6 +1831,10 @@
   (wire (pts (xy 182.88 20.32) (xy 182.88 24.13))
     (stroke (width 0) (type default))
     (uuid 934125c4-b777-4791-a438-12e1e00b685a)
+  )
+  (wire (pts (xy 46.99 135.89) (xy 40.64 135.89))
+    (stroke (width 0) (type default))
+    (uuid 94788fae-e653-4751-9cde-0b84aa5ed67d)
   )
   (wire (pts (xy 46.99 34.29) (xy 49.53 34.29))
     (stroke (width 0) (type default))
@@ -1613,6 +1894,10 @@
     (stroke (width 0) (type default))
     (uuid a2558806-113d-4dea-a761-a77d7005ced5)
   )
+  (wire (pts (xy 110.49 142.24) (xy 110.49 138.43))
+    (stroke (width 0) (type default))
+    (uuid a3c280b5-71fd-445e-8dc6-87dcd3855cee)
+  )
   (polyline (pts (xy 85.09 54.61) (xy 280.67 54.61))
     (stroke (width 0) (type default))
     (uuid a4607f17-9e3c-4c0b-8027-89bc0cc2e5d7)
@@ -1630,6 +1915,10 @@
     (stroke (width 0) (type default))
     (uuid a928e7ec-0bf7-404d-947e-c08c956462a2)
   )
+  (wire (pts (xy 107.95 142.24) (xy 110.49 142.24))
+    (stroke (width 0) (type default))
+    (uuid ab9172db-a827-44d6-b025-6ada7603a92e)
+  )
   (wire (pts (xy 107.95 20.32) (xy 107.95 24.13))
     (stroke (width 0) (type default))
     (uuid abfcda3a-76a6-400a-99b2-d807abe21959)
@@ -1641,6 +1930,10 @@
   (wire (pts (xy 139.7 45.72) (xy 139.7 48.26))
     (stroke (width 0) (type default))
     (uuid aeb885c7-5f47-48d0-94c9-ac9a5fb03129)
+  )
+  (wire (pts (xy 127 135.89) (xy 132.08 135.89))
+    (stroke (width 0) (type default))
+    (uuid af0f34f1-0c5f-4a60-bb51-d5cf64ef4b68)
   )
   (wire (pts (xy 24.13 147.32) (xy 24.13 161.29))
     (stroke (width 0) (type default))
@@ -1676,6 +1969,10 @@
     (stroke (width 0) (type default))
     (uuid b9821ba3-b0c0-4b56-852f-c1608f9ec37c)
   )
+  (wire (pts (xy 130.81 87.63) (xy 130.81 88.9))
+    (stroke (width 0) (type default))
+    (uuid ba833353-277c-4d3e-91ac-8cd88f3710ca)
+  )
   (wire (pts (xy 46.99 34.29) (xy 46.99 39.37))
     (stroke (width 0) (type default))
     (uuid bb74db9a-264f-4a0d-b383-6e3654607258)
@@ -1695,6 +1992,10 @@
   (wire (pts (xy 182.88 48.26) (xy 167.64 48.26))
     (stroke (width 0) (type default))
     (uuid c5822980-7b7c-4290-a153-df0ceb5e5236)
+  )
+  (wire (pts (xy 132.08 138.43) (xy 137.16 138.43))
+    (stroke (width 0) (type default))
+    (uuid c82dbb13-7e59-4a41-8b66-03bf3c9ccd68)
   )
   (wire (pts (xy 262.89 48.26) (xy 241.3 48.26))
     (stroke (width 0) (type default))
@@ -1760,6 +2061,11 @@
     (stroke (width 0) (type default))
     (uuid e56a97cb-889d-4cd4-93dd-ca83eead9c92)
   )
+  (bus (pts (xy 119.38 115.57) (xy 119.38 154.94))
+    (stroke (width 0) (type default))
+    (uuid e5b2fd6d-4439-47c3-81c6-44bcbd9d0297)
+  )
+
   (wire (pts (xy 154.94 20.32) (xy 154.94 24.13))
     (stroke (width 0) (type default))
     (uuid e927d7a8-5ecc-40b5-b9d3-30f8dd751bf0)
@@ -1768,7 +2074,7 @@
     (stroke (width 0) (type default))
     (uuid ea5b4aad-ee1f-4b7c-b117-b759dcfce5d6)
   )
-  (wire (pts (xy 38.1 34.29) (xy 40.64 34.29))
+  (wire (pts (xy 30.48 34.29) (xy 40.64 34.29))
     (stroke (width 0) (type default))
     (uuid ec1d9a7b-9168-4773-8fff-4f89370dfcc3)
   )
@@ -1776,7 +2082,11 @@
     (stroke (width 0) (type default))
     (uuid ed22e820-959d-43eb-a975-f599d44832a2)
   )
-  (wire (pts (xy 110.49 147.32) (xy 110.49 138.43))
+  (wire (pts (xy 59.69 147.32) (xy 58.42 147.32))
+    (stroke (width 0) (type default))
+    (uuid ee6ac5a3-8c32-49f1-a187-0949ea24b709)
+  )
+  (wire (pts (xy 110.49 147.32) (xy 110.49 142.24))
     (stroke (width 0) (type default))
     (uuid ef73a585-e2c7-4cef-b9f7-549c041d2358)
   )
@@ -1792,6 +2102,10 @@
   (wire (pts (xy 198.12 107.95) (xy 210.82 107.95))
     (stroke (width 0) (type default))
     (uuid f40b7b12-be5c-4f4b-8883-fdcaf7b9af0d)
+  )
+  (wire (pts (xy 130.81 133.35) (xy 130.81 132.08))
+    (stroke (width 0) (type default))
+    (uuid f45c5923-af90-456c-bae2-79b32c2c43cd)
   )
   (wire (pts (xy 167.64 40.64) (xy 167.64 34.29))
     (stroke (width 0) (type default))
@@ -1834,9 +2148,13 @@
     (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
     (uuid 853b9c9d-b808-4ce1-a67e-fd58d3354b84)
   )
-  (text "DC/DC convertor\n" (at 90.17 62.23 0)
+  (text "DC/DC convertor\nInput : 4.2V\n\n" (at 86.36 63.5 0)
     (effects (font (size 1.27 1.27) bold) (justify left bottom))
     (uuid 96e67743-a52e-4fce-b60a-bf5ea4032317)
+  )
+  (text "SWD Connector" (at 120.65 119.38 0)
+    (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
+    (uuid ae4644ba-26f1-4bf4-9362-0fc9a8267eca)
   )
   (text "ENERGY LEVEL" (at 158.75 95.25 0)
     (effects (font (size 1.27 1.27) bold) (justify left bottom))
@@ -1855,18 +2173,18 @@
     (uuid f58c8fa1-887a-4f11-a0e2-eb2a7b5dded8)
   )
 
+  (global_label "SWDCK" (shape input) (at 59.69 80.01 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 084cbfaa-435d-45c4-bf11-7b6e21427f5d)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 69.0667 80.01 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "LC_Button" (shape input) (at 182.88 38.1 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 0a716bea-e328-46fc-b2c2-9c3142df1b91)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 170.5401 38.1 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "NES{slash}SNES_switcher" (shape input) (at 59.69 77.47 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 0eb5369e-ae04-4cdd-b7b0-024834a27dc9)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 81.2829 77.47 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
   (global_label "Order_Search" (shape input) (at 59.69 69.85 0) (fields_autoplaced)
@@ -1883,6 +2201,13 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "NRST" (shape input) (at 34.29 44.45 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 1901a97d-c705-4193-81a4-b608ea86560a)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 26.6066 44.45 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
   (global_label "ST_Button" (shape input) (at 228.6 38.1 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 1b965e91-7e6b-44a4-a368-42f4d54b48cc)
@@ -1890,10 +2215,24 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "Reset_Buton " (shape input) (at 149.86 143.51 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 1dc2bb49-3a55-4544-b6a1-42d1b63cec2a)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 165.1391 143.51 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "Glob_Alim" (shape input) (at 99.06 121.92 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27) bold) (justify right))
     (uuid 1e494ad8-ec83-45f6-9bdb-7c1b29c476ca)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 86.4731 121.92 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "Y_Button" (shape input) (at 34.29 54.61 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 26ffe9cc-23f1-44c4-86fc-cca80c571f21)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 23.1596 54.61 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1918,6 +2257,13 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "SWDCK" (shape input) (at 151.13 135.89 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 31a0d947-6cc6-44c9-ba67-bd96ebf8fae0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 160.5067 135.89 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "B_Button" (shape input) (at 124.46 38.1 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 34d07a07-ea75-4939-a26d-097b4b6e102e)
@@ -1929,6 +2275,13 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 3698c740-cefe-483a-8f5b-71ec6c2ce2ea)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 22.1919 67.31 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "X_Button" (shape input) (at 34.29 57.15 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 36c774e7-0f12-4b1f-b12f-decb51b69eb1)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 23.0387 57.15 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1946,10 +2299,24 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "USART2_RX" (shape input) (at 134.62 146.05 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 4d1698c2-6b9f-49c5-9ffb-3ee9f2a88248)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 121.1914 146.05 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
   (global_label "B_Button" (shape input) (at 59.69 46.99 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 52d14c63-677d-4af4-a072-01424743cd91)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 71.0018 46.99 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "USART2_TX" (shape input) (at 149.86 146.05 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 56c50456-ff81-4b26-912f-2b1f70fcb6ed)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 162.9862 146.05 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1960,10 +2327,31 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
+  (global_label "USART2_RX" (shape input) (at 59.69 52.07 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 59753b21-971f-4ee3-83a1-e99fc476531d)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 73.1186 52.07 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "SWDIO" (shape input) (at 59.69 77.47 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 5d722b55-073a-47e6-9d2e-76bee8861b71)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 68.462 77.47 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "Glob_Alim" (shape input) (at 67.31 147.32 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27) bold) (justify left))
     (uuid 5f65a58d-71a0-4500-bc39-5ff843692a9f)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 79.8969 147.32 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "SWDIO" (shape input) (at 151.13 133.35 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 6d1424d8-b209-4100-ba22-241ef417fbe5)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 159.902 133.35 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1981,24 +2369,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "X_Button" (shape input) (at 59.69 49.53 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 7a6f2776-e20a-46e4-90c4-09ef9656b386)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 70.9413 49.53 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
   (global_label "SE_Button" (shape input) (at 59.69 67.31 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 87901082-c3c5-4cfd-a2df-a7d44cda4952)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.0903 67.31 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "Y_Button" (shape input) (at 59.69 52.07 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 8c13fa48-dfa8-489f-846f-2c937a7cbf3b)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 70.8204 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2065,10 +2439,17 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "NES{slash}SNES_switcher" (shape input) (at 110.49 142.24 180) (fields_autoplaced)
+  (global_label "USART2_TX" (shape input) (at 59.69 49.53 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid c2758ec6-855e-414d-9950-c3cf670a62a8)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.8162 49.53 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "NES{slash}SNES_switcher" (shape input) (at 107.95 142.24 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid c5adcf9e-adfe-4534-b009-7628f5568175)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 88.8971 142.24 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 86.3571 142.24 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2098,6 +2479,13 @@
     (uuid d41d6a7a-6da1-4ff0-8d8d-270c25829180)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.2718 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "NES{slash}SNES_switcher" (shape input) (at 34.29 64.77 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid d73aba5b-0a51-453c-8b5c-62098335c584)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 12.6971 64.77 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
   (global_label "A_Button" (shape input) (at 107.95 38.1 180) (fields_autoplaced)
@@ -2150,6 +2538,32 @@
     )
   )
 
+  (symbol (lib_id "Device:R_Small") (at 130.81 85.09 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 042ae89f-9b0d-41b9-ae60-b62f7997643c)
+    (property "Reference" "R2" (at 133.35 84.455 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "R_Small" (at 133.35 86.995 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 130.81 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 130.81 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 626aeb0e-a6c1-4150-9292-a00dd2c43598))
+    (pin "2" (uuid 28a51531-6bfc-4c37-880a-8ca023d0e760))
+    (instances
+      (project "Controler_NRF24L01_Exclude"
+        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
+          (reference "R2") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R_Small") (at 196.85 80.01 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0d1bc267-2ec1-4c75-ac2f-513fa26d1718)
@@ -2173,7 +2587,7 @@
           (reference "R18") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R10") (unit 1)
         )
@@ -2204,7 +2618,7 @@
           (reference "R16") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R14") (unit 1)
         )
@@ -2229,7 +2643,7 @@
     )
     (pin "1" (uuid 41f7c2db-ba72-4c8b-9892-78efd4864c82))
     (instances
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR01") (unit 1)
         )
@@ -2260,39 +2674,9 @@
           (reference "SW4") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW5") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V8") (at 88.9 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 1a7aabdc-31c7-4df4-aab4-a208279d7e0d)
-    (property "Reference" "#PWR017" (at 88.9 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V8" (at 88.9 64.77 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 88.9 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 88.9 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 985c9659-a85e-4e78-94d8-a2bed71a9368))
-    (instances
-      (project "Projet_manette_proto"
-        (path "/700f508b-c905-4d29-9c95-836d8db731fc"
-          (reference "#PWR017") (unit 1)
-        )
-      )
-      (project "Projet_manette_modu_Exter"
-        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
-          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -2321,7 +2705,7 @@
           (reference "D3") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "D6") (unit 1)
         )
@@ -2352,7 +2736,7 @@
           (reference "R9") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R17") (unit 1)
         )
@@ -2366,7 +2750,7 @@
     (property "Reference" "C11" (at 124.46 82.55 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C_Small" (at 123.19 83.82 0)
+    (property "Value" "470p" (at 123.19 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 123.19 81.28 0)
@@ -2383,7 +2767,7 @@
           (reference "C11") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C9") (unit 1)
         )
@@ -2413,7 +2797,7 @@
           (reference "H5") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H5") (unit 1)
         )
@@ -2444,7 +2828,7 @@
           (reference "R5") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R7") (unit 1)
         )
@@ -2474,9 +2858,69 @@
           (reference "H6") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H6") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 127 135.89 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2af57fd1-9808-43d6-9c9b-81fb55d2c55d)
+    (property "Reference" "#PWR04" (at 127 142.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 127 140.97 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 127 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 127 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 710a5ab7-28f9-4e14-8416-b414b9945188))
+    (instances
+      (project "Controler_NRF24L01_Exclude"
+        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
+          (reference "#PWR04") (unit 1)
+        )
+      )
+      (project "PCBschematic"
+        (path "/cc300af8-7dc6-4303-a7a3-6c9320b23fa8"
+          (reference "#PWR019") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 130.81 132.08 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2c9853ff-151c-49e4-8e47-f7db045bfc18)
+    (property "Reference" "#PWR06" (at 130.81 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 130.81 128.27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 130.81 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 130.81 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 9afdf9b6-3e26-4f33-a0d8-5bf47f3e7033))
+    (instances
+      (project "Controler_NRF24L01_Exclude"
+        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "PCBschematic"
+        (path "/cc300af8-7dc6-4303-a7a3-6c9320b23fa8"
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -2505,40 +2949,9 @@
           (reference "D4") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "D5") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:LED_Small") (at 132.08 73.66 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 38d03182-e177-4212-b7f2-b71d699ee585)
-    (property "Reference" "D1" (at 132.0165 68.58 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "LED_Small" (at 132.0165 71.12 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 132.08 73.66 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 132.08 73.66 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 182f5f21-2365-4eaf-bbd7-191b8199b2b3))
-    (pin "2" (uuid ebca0e89-93b1-4905-965e-e128ab3694af))
-    (instances
-      (project "Projet_manette_proto"
-        (path "/700f508b-c905-4d29-9c95-836d8db731fc"
-          (reference "D1") (unit 1)
-        )
-      )
-      (project "Projet_manette_modu_Exter"
-        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
-          (reference "D2") (unit 1)
         )
       )
     )
@@ -2566,7 +2979,7 @@
           (reference "#PWR03") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR018") (unit 1)
         )
@@ -2597,7 +3010,7 @@
           (reference "SW3") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW4") (unit 1)
         )
@@ -2628,7 +3041,7 @@
           (reference "R3") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R5") (unit 1)
         )
@@ -2658,7 +3071,7 @@
           (reference "H3") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H3") (unit 1)
         )
@@ -2689,7 +3102,7 @@
           (reference "R4") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R6") (unit 1)
         )
@@ -2720,7 +3133,7 @@
           (reference "SW12") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW7") (unit 1)
         )
@@ -2751,7 +3164,7 @@
           (reference "J1") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "J1") (unit 1)
         )
@@ -2782,7 +3195,7 @@
           (reference "C13") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C4") (unit 1)
         )
@@ -2813,46 +3226,9 @@
           (reference "R8") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R15") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D_Small") (at 35.56 34.29 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 6407db41-60ff-44ce-b070-44fc1b2fbc6e)
-    (property "Reference" "D7" (at 35.56 36.83 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "D_Small" (at 35.56 39.37 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 35.56 34.29 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 35.56 34.29 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 35.56 34.29 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 35.56 34.29 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ab784961-e781-4986-b779-89806c5095e8))
-    (pin "2" (uuid a9f2ba18-ff4b-4d49-b078-fabc14607b9d))
-    (instances
-      (project "Projet_manette_proto"
-        (path "/700f508b-c905-4d29-9c95-836d8db731fc"
-          (reference "D7") (unit 1)
-        )
-      )
-      (project "Projet_manette_modu_Exter"
-        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
-          (reference "D1") (unit 1)
         )
       )
     )
@@ -2881,7 +3257,7 @@
           (reference "SW9") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW12") (unit 1)
         )
@@ -2912,7 +3288,7 @@
           (reference "SW11") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW1") (unit 1)
         )
@@ -2942,7 +3318,7 @@
           (reference "#FLG03") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG02") (unit 1)
         )
@@ -2973,7 +3349,7 @@
           (reference "D6") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "D7") (unit 1)
         )
@@ -3003,7 +3379,7 @@
           (reference "H4") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H4") (unit 1)
         )
@@ -3034,7 +3410,7 @@
           (reference "R7") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R12") (unit 1)
         )
@@ -3065,7 +3441,7 @@
           (reference "R13") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R9") (unit 1)
         )
@@ -3095,9 +3471,35 @@
           (reference "#PWR014") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR011") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C_Polarized") (at 50.8 135.89 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8966ada2-dc1f-436a-bcbf-5c84256d26b0)
+    (property "Reference" "C1" (at 51.689 129.54 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100uF" (at 51.689 132.08 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 46.99 136.8552 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 50.8 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 8a2e11fa-4426-4c5a-a07b-cf8eb53e9cae))
+    (pin "2" (uuid 127cb7dc-6640-4651-af75-be6080df5f64))
+    (instances
+      (project "Controler_NRF24L01_Exclude"
+        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -3125,7 +3527,7 @@
           (reference "#PWR015") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR013") (unit 1)
         )
@@ -3155,7 +3557,7 @@
           (reference "#PWR02") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR05") (unit 1)
         )
@@ -3186,7 +3588,7 @@
           (reference "SW1") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW2") (unit 1)
         )
@@ -3201,7 +3603,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "3.8V" (at 106.68 64.77 0)
-      (effects (font (size 1.27 1.27)))
+      (effects (font (size 1.27 1.27)) hide)
     )
     (property "Footprint" "" (at 106.68 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3216,7 +3618,7 @@
           (reference "#FLG04") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG05") (unit 1)
         )
@@ -3246,7 +3648,7 @@
           (reference "#PWR07") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR02") (unit 1)
         )
@@ -3277,7 +3679,7 @@
           (reference "D2") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "D3") (unit 1)
         )
@@ -3309,7 +3711,7 @@
     (pin "7" (uuid a749ffc9-55c6-430c-8e97-9b65e4dccf69))
     (pin "8" (uuid 7b6724a4-e8fa-440a-a20f-b30381f08b61))
     (instances
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "U2") (unit 1)
         )
@@ -3340,7 +3742,7 @@
           (reference "SW8") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW11") (unit 1)
         )
@@ -3370,7 +3772,7 @@
           (reference "#PWR016") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR03") (unit 1)
         )
@@ -3401,7 +3803,7 @@
           (reference "SW10") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW13") (unit 1)
         )
@@ -3432,7 +3834,7 @@
           (reference "R14") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R11") (unit 1)
         )
@@ -3462,9 +3864,70 @@
           (reference "#PWR05") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR015") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 130.81 132.08 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid bb6826ef-f5ee-4478-8443-5ccabaf3b151)
+    (property "Reference" "#PWR08" (at 130.81 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 130.81 128.27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 130.81 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 130.81 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 15fb50fc-57a0-437b-b44d-7c2281a91909))
+    (instances
+      (project "Controler_NRF24L01_Exclude"
+        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
+          (reference "#PWR08") (unit 1)
+        )
+      )
+      (project "PCBschematic"
+        (path "/cc300af8-7dc6-4303-a7a3-6c9320b23fa8"
+          (reference "#PWR020") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED_Small") (at 130.81 78.74 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid bc7af164-3d22-49cf-8439-b081ac0b9593)
+    (property "Reference" "D1" (at 133.35 78.0415 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "LED_Small" (at 133.35 80.5815 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 130.81 78.74 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 130.81 78.74 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid cc934a13-53bd-4d00-9e87-45f5f91c4953))
+    (pin "2" (uuid 5ad8fcbe-3b3b-4aa3-a039-540866682a51))
+    (instances
+      (project "Projet_manette_proto"
+        (path "/700f508b-c905-4d29-9c95-836d8db731fc"
+          (reference "D1") (unit 1)
+        )
+      )
+      (project "Controler_NRF24L01_Exclude"
+        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -3493,7 +3956,7 @@
           (reference "SW2") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW3") (unit 1)
         )
@@ -3523,7 +3986,7 @@
           (reference "#PWR01") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR07") (unit 1)
         )
@@ -3554,7 +4017,7 @@
           (reference "SW13") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW10") (unit 1)
         )
@@ -3585,7 +4048,7 @@
           (reference "SW5") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW6") (unit 1)
         )
@@ -3616,7 +4079,7 @@
           (reference "R2") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R4") (unit 1)
         )
@@ -3646,7 +4109,7 @@
           (reference "H2") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H2") (unit 1)
         )
@@ -3671,7 +4134,7 @@
     )
     (pin "1" (uuid 27dba71e-100a-494a-a448-970b18d4b2f5))
     (instances
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG03") (unit 1)
         )
@@ -3701,7 +4164,7 @@
           (reference "#PWR04") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR016") (unit 1)
         )
@@ -3732,7 +4195,7 @@
           (reference "R10") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R19") (unit 1)
         )
@@ -3763,7 +4226,7 @@
           (reference "R1") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R3") (unit 1)
         )
@@ -3794,9 +4257,52 @@
           (reference "C1") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C10") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector_Generic:Conn_02x07_Odd_Even") (at 142.24 138.43 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d1be133a-48d9-4380-94b8-b1559fbed134)
+    (property "Reference" "J2" (at 143.51 125.73 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "Conn_02x07_Odd_Even" (at 143.51 128.27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical_SMD" (at 142.24 138.43 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 142.24 138.43 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid da5866ea-7013-43c0-9955-6283dbb77212))
+    (pin "10" (uuid 079c283f-574f-4224-8cd7-763cd216f727))
+    (pin "11" (uuid 2c41a728-7437-4a29-bc7f-754a012dafc4))
+    (pin "12" (uuid 888db2e5-1cf9-467d-a392-914fbd161dbf))
+    (pin "13" (uuid 92d23e0b-b7ba-4ad3-b352-852ea84e2546))
+    (pin "14" (uuid 0d5f334c-e7be-464a-91af-4f0c4fba8812))
+    (pin "2" (uuid be7fd1f4-3ce9-48f2-bb93-c6858c3ed94c))
+    (pin "3" (uuid f8ec6829-ad07-4005-ba57-a016450a9ef7))
+    (pin "4" (uuid da486da5-014c-461a-8c93-8a9fb53c5b3f))
+    (pin "5" (uuid 97c4ca18-e2c4-48e0-b506-c3595763460d))
+    (pin "6" (uuid c747d66a-0c58-414c-afd1-6f4e1646348e))
+    (pin "7" (uuid af8aa9d2-cea6-4ab3-bc9c-e1e7c2f43393))
+    (pin "8" (uuid c9d2000c-c828-4c23-a889-e72025fe9847))
+    (pin "9" (uuid 86ab14f9-af19-42f9-9316-3418d7ae667b))
+    (instances
+      (project "Controler_NRF24L01_Exclude"
+        (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
+          (reference "J2") (unit 1)
+        )
+      )
+      (project "PCBschematic"
+        (path "/cc300af8-7dc6-4303-a7a3-6c9320b23fa8"
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -3824,7 +4330,7 @@
           (reference "#PWR012") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR012") (unit 1)
         )
@@ -3855,7 +4361,7 @@
           (reference "R17") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R18") (unit 1)
         )
@@ -3885,7 +4391,7 @@
           (reference "#PWR018") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR017") (unit 1)
         )
@@ -3915,7 +4421,7 @@
           (reference "#FLG01") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG04") (unit 1)
         )
@@ -3940,7 +4446,7 @@
     )
     (pin "1" (uuid 0eb498ab-c876-4821-84e5-e8129c0633f4))
     (instances
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG01") (unit 1)
         )
@@ -3971,7 +4477,7 @@
           (reference "D5") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "D4") (unit 1)
         )
@@ -4002,7 +4508,7 @@
           (reference "R15") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R16") (unit 1)
         )
@@ -4039,7 +4545,7 @@
           (reference "U2") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "U3") (unit 1)
         )
@@ -4070,7 +4576,7 @@
           (reference "SW7") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW9") (unit 1)
         )
@@ -4100,7 +4606,7 @@
           (reference "H1") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H1") (unit 1)
         )
@@ -4131,7 +4637,7 @@
           (reference "R6") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R8") (unit 1)
         )
@@ -4192,7 +4698,7 @@
           (reference "U1") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "U1") (unit 1)
         )
@@ -4223,7 +4729,7 @@
           (reference "R19") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R1") (unit 1)
         )
@@ -4254,7 +4760,7 @@
           (reference "SW6") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW8") (unit 1)
         )
@@ -4285,7 +4791,7 @@
           (reference "C12") (unit 1)
         )
       )
-      (project "Projet_manette_modu_Exter"
+      (project "Controler_NRF24L01_Exclude"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C13") (unit 1)
         )
