@@ -405,7 +405,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "SNES_Controller_NRF24L01_Exclude.kicad_pro",
+    "filename": "Plug_NRF24L01_Exclude.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -451,9 +451,7 @@
     "net_colors": null,
     "netclass_assignments": {
       "+5V": "SNES",
-      "GND": "SNES",
-      "unconnected-(J1-Pin_5-Pad5)": "SNES",
-      "unconnected-(J1-Pin_6-Pad6)": "SNES"
+      "GND": "SNES"
     },
     "netclass_patterns": [
       {
