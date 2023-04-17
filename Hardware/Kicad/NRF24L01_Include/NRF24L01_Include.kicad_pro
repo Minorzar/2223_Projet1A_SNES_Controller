@@ -417,14 +417,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Plug_NRF24L01_Include.kicad_pro",
+    "filename": "NRF24L01_Include.kicad_pro",
     "version": 1
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.3,
+        "clearance": 0.25,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -458,7 +458,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.3,
+        "clearance": 0.25,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -516,7 +516,7 @@
       "+5V": "SNES",
       "unconnected-(J1-Pin_5-Pad5)": "SNES",
       "unconnected-(J1-Pin_6-Pad6)": "SNES",
-      "unconnected-(U3-IRQ-Pad6)": "NRF24L01"
+      "unconnected-(U1-IRQ-Pad6)": "NRF24L01"
     },
     "netclass_patterns": [
       {

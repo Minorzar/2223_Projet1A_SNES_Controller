@@ -15,17 +15,17 @@
       "zones": 0.6
     },
     "selection_filter": {
-      "dimensions": true,
+      "dimensions": false,
       "footprints": true,
-      "graphics": true,
-      "keepouts": true,
+      "graphics": false,
+      "keepouts": false,
       "lockedItems": false,
       "otherItems": true,
-      "pads": true,
-      "text": true,
-      "tracks": true,
-      "vias": true,
-      "zones": true
+      "pads": false,
+      "text": false,
+      "tracks": false,
+      "vias": false,
+      "zones": false
     },
     "visible_items": [
       0,
@@ -67,7 +67,7 @@
     "zone_display_mode": 1
   },
   "meta": {
-    "filename": "SNES_Controller_NRF24L01_Include.kicad_prl",
+    "filename": "Plug_NRF24L01_Include.kicad_prl",
     "version": 3
   },
   "project": {
