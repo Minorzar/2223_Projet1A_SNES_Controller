@@ -2266,7 +2266,7 @@
           (reference "SW1") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "SW1") (unit 1)
         )
@@ -2296,7 +2296,7 @@
           (reference "H2") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "H2") (unit 1)
         )
@@ -2357,7 +2357,7 @@
           (reference "U3") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "U1") (unit 1)
         )
@@ -2387,7 +2387,7 @@
           (reference "#PWR03") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR019") (unit 1)
         )
@@ -2417,7 +2417,7 @@
           (reference "#PWR01") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR020") (unit 1)
         )
@@ -2447,7 +2447,7 @@
           (reference "#PWR018") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR013") (unit 1)
         )
@@ -2477,7 +2477,7 @@
           (reference "#PWR020") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR014") (unit 1)
         )
@@ -2507,7 +2507,7 @@
           (reference "#FLG01") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#FLG01") (unit 1)
         )
@@ -2538,7 +2538,7 @@
           (reference "R6") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R9") (unit 1)
         )
@@ -2569,7 +2569,7 @@
           (reference "R10") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R1") (unit 1)
         )
@@ -2600,7 +2600,7 @@
           (reference "R7") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R7") (unit 1)
         )
@@ -2630,7 +2630,7 @@
           (reference "#PWR025") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR01") (unit 1)
         )
@@ -2660,7 +2660,7 @@
           (reference "#PWR04") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR08") (unit 1)
         )
@@ -2690,7 +2690,7 @@
           (reference "#PWR09") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR024") (unit 1)
         )
@@ -2721,7 +2721,7 @@
           (reference "C6") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "C4") (unit 1)
         )
@@ -2751,7 +2751,7 @@
           (reference "#FLG04") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#FLG03") (unit 1)
         )
@@ -2783,7 +2783,7 @@
           (reference "Q1") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "Q1") (unit 1)
         )
@@ -2813,7 +2813,7 @@
           (reference "#PWR08") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR025") (unit 1)
         )
@@ -2843,7 +2843,7 @@
           (reference "#PWR011") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR026") (unit 1)
         )
@@ -2873,7 +2873,7 @@
           (reference "#PWR022") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR010") (unit 1)
         )
@@ -2903,7 +2903,7 @@
           (reference "#PWR027") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR04") (unit 1)
         )
@@ -2934,7 +2934,7 @@
           (reference "R12") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R4") (unit 1)
         )
@@ -2965,7 +2965,7 @@
           (reference "R5") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R6") (unit 1)
         )
@@ -2995,7 +2995,7 @@
           (reference "H1") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "H1") (unit 1)
         )
@@ -3025,7 +3025,7 @@
           (reference "#PWR016") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR012") (unit 1)
         )
@@ -3055,7 +3055,7 @@
           (reference "#PWR023") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR011") (unit 1)
         )
@@ -3086,7 +3086,7 @@
           (reference "R11") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R3") (unit 1)
         )
@@ -3117,7 +3117,7 @@
           (reference "C5") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "C3") (unit 1)
         )
@@ -3147,7 +3147,7 @@
           (reference "#PWR024") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR02") (unit 1)
         )
@@ -3177,7 +3177,7 @@
           (reference "#PWR05") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR022") (unit 1)
         )
@@ -3207,7 +3207,7 @@
           (reference "H3") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "H3") (unit 1)
         )
@@ -3238,7 +3238,7 @@
           (reference "D2") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "D1") (unit 1)
         )
@@ -3268,7 +3268,7 @@
           (reference "#PWR029") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR06") (unit 1)
         )
@@ -3299,7 +3299,7 @@
           (reference "L1") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "L1") (unit 1)
         )
@@ -3331,7 +3331,7 @@
           (reference "Q3") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "Q3") (unit 1)
         )
@@ -3361,7 +3361,7 @@
           (reference "#PWR017") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR015") (unit 1)
         )
@@ -3391,7 +3391,7 @@
           (reference "#PWR014") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR09") (unit 1)
         )
@@ -3423,7 +3423,7 @@
           (reference "U2") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "U2") (unit 1)
         )
@@ -3453,7 +3453,7 @@
           (reference "#FLG02") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#FLG02") (unit 1)
         )
@@ -3485,7 +3485,7 @@
           (reference "Q2") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "Q2") (unit 1)
         )
@@ -3515,7 +3515,7 @@
           (reference "H4") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "H4") (unit 1)
         )
@@ -3546,7 +3546,7 @@
           (reference "R3") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R8") (unit 1)
         )
@@ -3576,7 +3576,7 @@
           (reference "#PWR019") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR016") (unit 1)
         )
@@ -3606,7 +3606,7 @@
           (reference "#PWR013") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR05") (unit 1)
         )
@@ -3637,7 +3637,7 @@
           (reference "D3") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "D3") (unit 1)
         )
@@ -3667,7 +3667,7 @@
           (reference "#PWR06") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR021") (unit 1)
         )
@@ -3698,7 +3698,7 @@
           (reference "C2") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "C2") (unit 1)
         )
@@ -3728,7 +3728,7 @@
           (reference "#PWR02") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR018") (unit 1)
         )
@@ -3759,7 +3759,7 @@
           (reference "C1") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "C1") (unit 1)
         )
@@ -3790,7 +3790,7 @@
           (reference "R8") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R10") (unit 1)
         )
@@ -3821,7 +3821,7 @@
           (reference "R4") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "R5") (unit 1)
         )
@@ -3858,7 +3858,7 @@
           (reference "J2") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "J2") (unit 1)
         )
@@ -3888,7 +3888,7 @@
           (reference "#PWR028") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR07") (unit 1)
         )
@@ -3924,7 +3924,7 @@
           (reference "J1") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "J1") (unit 1)
         )
@@ -3954,7 +3954,7 @@
           (reference "#PWR021") (unit 1)
         )
       )
-      (project "SNES_Controller_NRF24L01_Exclude"
+      (project "NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "#PWR017") (unit 1)
         )
