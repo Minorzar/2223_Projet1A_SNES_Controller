@@ -56,7 +56,7 @@ static void MX_SPI1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint16_t SPI_Data;
 /* USER CODE END 0 */
 
 /**
@@ -89,17 +89,61 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+  //Constants and variables declaration (pins and addresses are arbitrary for now)
+  uint8_t SPI_Adress = 0;
+  uint16_t SPI_CS_Pin = 1;
+  uint16_t Data_Latch_Pin = 2;
+  uint16_t Data_Clock_Pin = 3;
+  uint16_t Serial_Data_Pin = 4;
+  GPIO_PinState Data_Latch = GPIO_PIN_RESET;
+  GPIO_PinState Data_Clock = GPIO_PIN_RESET;
+  GPIO_PinState Serial_Data = GPIO_PIN_RESET;
+  uint16_t i = 0;
 
+  HAL_GPIO_WritePin(GPIOx, SPI_CS_Pin, GPIO_PIN_SET);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  //Data Reception Setup
+	  HAL_GPIO_WritePin(GPIOx, SPI_CS_Pin, GPIO_PIN_RESET);
+	  HAL_SPI_Transmit(hspi, SPI_Adress, 1,1);
+
+	  //Loop that detects the Data_Latch rising edge while updating the controller state
+	  do {
+		  HAL_SPI_Receive(&hspi1, &SPI_Data, 1, 0);
+		  Data_Latch = HAL_GPIO_ReadPin(GPIOx, Data_Latch_Pin);
+	  }
+	  while(Data_Latch == 0);
+
+	  HAL_GPIO_WritePin(GPIOx, SPI_CS_Pin, GPIO_PIN_SET);
+
+	  //When the rising edge is detected, transmission of the button states begins:
+	  for(i=1;i<=32768; i = i<<1){
+
+		  if ((SPI_Data & i) == 0){
+			  HAL_GPIO_WritePin(GPIOx, Serial_Data_Pin, GPIO_PIN_SET);
+		  }
+		  else{
+			  HAL_GPIO_WritePin(GPIOx, Serial_Data_Pin, GPIO_PIN_RESET);
+		  }
+
+		  do{
+			  Data_Clock = HAL_GPIO_ReadPin(GPIOx, Data_Clock_Pin);
+		  }
+		  while(Data_Clock == 1);
+		  do{
+			  Data_Clock = HAL_GPIO_ReadPin(GPIOx, Data_Clock_Pin);
+		  }
+		  while(Data_Clock == 0);
+	  }
+	  HAL_GPIO_WritePin(GPIOx, Serial_Data_Pin, GPIO_PIN_RESET);
+
+
     /* USER CODE END WHILE */
-	  char * mot = "0x1234";
-	  HAL_SPI_Transmit(&hspi1, mot, 1, 10);
-	  HAL_Delay(500);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -168,7 +212,7 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_SLAVE;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
