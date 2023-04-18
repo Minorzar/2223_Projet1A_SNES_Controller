@@ -465,6 +465,14 @@
       {
         "netclass": "SNES",
         "pattern": "Data_Clock_SNES"
+      },
+      {
+        "netclass": "SNES",
+        "pattern": "Serial_Data1_SNES"
+      },
+      {
+        "netclass": "SNES",
+        "pattern": "Serial_Data1_STM32"
       }
     ]
   },

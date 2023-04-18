@@ -424,7 +424,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.3,
+        "clearance": 0.275,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -492,6 +492,23 @@
       },
       {
         "bus_width": 12,
+        "clearance": 0.25,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
         "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -514,8 +531,10 @@
     "net_colors": null,
     "netclass_assignments": {
       "+5V": "SNES",
-      "unconnected-(J1-Pin_5-Pad5)": "SNES",
-      "unconnected-(J1-Pin_6-Pad6)": "SNES",
+      "Net-(U2-BP)": "Power",
+      "Net-(U3-DVDD)": "NRF24L01",
+      "Net-(U3-IREF)": "NRF24L01",
+      "unconnected-(U2-EN-Pad1)": "Power",
       "unconnected-(U3-IRQ-Pad6)": "NRF24L01"
     },
     "netclass_patterns": [
@@ -594,6 +613,30 @@
       {
         "netclass": "Antenna",
         "pattern": "GND2"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "SNES",
+        "pattern": "Serial_Data1_STM32"
+      },
+      {
+        "netclass": "SNES",
+        "pattern": "Serial_Data1_SNES"
+      },
+      {
+        "netclass": "SNES",
+        "pattern": "IOBit_SNES"
+      },
+      {
+        "netclass": "SNES",
+        "pattern": "Serial_Data2_SNES"
       }
     ]
   },
