@@ -3592,7 +3592,7 @@
     (property "Value" "Conn_01x07_Socket" (at 24.765 106.045 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_1x07_P1.00mm_Vertical" (at 24.765 120.65 0)
+    (property "Footprint" "Connector_JST:JST_EH_B7B-EH-A_1x07_P2.50mm_Vertical" (at 24.765 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 24.765 120.65 0)
