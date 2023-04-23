@@ -20,9 +20,9 @@
       "graphics": false,
       "keepouts": false,
       "lockedItems": false,
-      "otherItems": true,
+      "otherItems": false,
       "pads": false,
-      "text": true,
+      "text": false,
       "tracks": false,
       "vias": false,
       "zones": false

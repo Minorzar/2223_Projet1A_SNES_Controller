@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 50,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_netclasses": [],
@@ -15,17 +15,17 @@
       "zones": 1.0
     },
     "selection_filter": {
-      "dimensions": true,
+      "dimensions": false,
       "footprints": true,
-      "graphics": true,
-      "keepouts": true,
+      "graphics": false,
+      "keepouts": false,
       "lockedItems": false,
       "otherItems": true,
-      "pads": true,
+      "pads": false,
       "text": true,
       "tracks": true,
       "vias": true,
-      "zones": true
+      "zones": false
     },
     "visible_items": [
       0,
@@ -67,7 +67,7 @@
     "zone_display_mode": 1
   },
   "meta": {
-    "filename": "SNES_Controller_NRF24L01_Exclude.kicad_prl",
+    "filename": "Plug_NRF24L01_Exclude.kicad_prl",
     "version": 3
   },
   "project": {
