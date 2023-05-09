@@ -90,24 +90,26 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
-  uint16_t B_Pin = 1;
-  uint16_t Y_Pin = 12;
-  uint16_t Select_Pin = 9;
-  uint16_t Start_Pin = 8;
-  uint16_t Joypad_Up_Pin = 1;
-  uint16_t Joypad_Down_Pin = 0;
-  uint16_t Joypad_Left_Pin = 15;
-  uint16_t Joypad_Right_Pin = 14;
-  uint16_t A_Pin = 0;
-  uint16_t X_Pin = 10;
-  uint16_t L_Pin = 7;
-  uint16_t R_Pin = 6;
+  uint16_t B_Pin = 0;
+  uint16_t Y_Pin = 8;
+  uint16_t Select_Pin = 1;
+  uint16_t Start_Pin = 12;
+  uint16_t Joypad_Up_Pin = 6;
+  uint16_t Joypad_Down_Pin = 3;
+  uint16_t Joypad_Left_Pin = 14;
+  uint16_t Joypad_Right_Pin = 7;
+  uint16_t A_Pin = 4;
+  uint16_t X_Pin = 0;
+  uint16_t L_Pin = 15;
+  uint16_t R_Pin = 10;
 
   uint16_t CE_Pin = 11;
 
   GPIO_PinState Logic_State = 1;
 
   uint16_t Button_Data = 0;
+
+  //A AJOUTER: allumage, config et appairage du module NRF24
 
   /* USER CODE END 2 */
 
@@ -117,13 +119,13 @@ int main(void)
   {
 	  Button_Data = 0;
 
-	  Logic_State = HAL_GPIO_ReadPin(GPIOB, R_Pin);
+	  Logic_State = HAL_GPIO_ReadPin(GPIOA, R_Pin);
 	  if (Logic_State){
 		  Button_Data++;
 	  }
 	  Button_Data = Button_Data<<1;
 
-	  Logic_State = HAL_GPIO_ReadPin(GPIOB, L_Pin);
+	  Logic_State = HAL_GPIO_ReadPin(GPIOC, L_Pin);
 	  if (Logic_State){
 		  Button_Data++;
 	  }
@@ -141,7 +143,7 @@ int main(void)
 	  }
 	  Button_Data = Button_Data<<1;
 
-	  Logic_State = HAL_GPIO_ReadPin(GPIOC, Joypad_Right_Pin);
+	  Logic_State = HAL_GPIO_ReadPin(GPIOB, Joypad_Right_Pin);
 	  if (Logic_State){
 		  Button_Data++;
 	  }
@@ -153,7 +155,7 @@ int main(void)
 	  }
 	  Button_Data = Button_Data<<1;
 
-	  Logic_State = HAL_GPIO_ReadPin(GPIOB, Joypad_Down_Pin);
+	  Logic_State = HAL_GPIO_ReadPin(GPIOH, Joypad_Down_Pin);
 	  if (Logic_State){
 		  Button_Data++;
 	  }
@@ -171,7 +173,7 @@ int main(void)
 	  }
 	  Button_Data = Button_Data<<1;
 
-	  Logic_State = HAL_GPIO_ReadPin(GPIOA, Select_Pin);
+	  Logic_State = HAL_GPIO_ReadPin(GPIOB, Select_Pin);
 	  if (Logic_State){
 		  Button_Data++;
 	  }
@@ -187,7 +189,7 @@ int main(void)
 	  if (Logic_State){
 		  Button_Data++;
 	  }
-
+	  //A AJOUTER: réception des données sans fil
 
 
 

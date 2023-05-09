@@ -91,16 +91,18 @@ int main(void)
   /* USER CODE BEGIN 2 */
   //Constants and variables declaration (pins and addresses are arbitrary for now)
   uint8_t SPI_Adress = 0;
-  uint16_t SPI_CS_Pin = 1;
-  uint16_t Data_Latch_Pin = 2;
+  uint16_t SPI_CE_Pin = 1;
+  uint16_t Data_Latch_Pin = 4;
   uint16_t Data_Clock_Pin = 3;
-  uint16_t Serial_Data_Pin = 4;
+  uint16_t Serial_Data_Pin = 5;
   GPIO_PinState Data_Latch = GPIO_PIN_RESET;
   GPIO_PinState Data_Clock = GPIO_PIN_RESET;
   GPIO_PinState Serial_Data = GPIO_PIN_RESET;
   uint16_t i = 0;
 
-  HAL_GPIO_WritePin(GPIOx, SPI_CS_Pin, GPIO_PIN_SET);
+  //A AJOUTER: allumage, config et appairage du module NRF24
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -108,38 +110,36 @@ int main(void)
   while (1)
   {
 	  //Data Reception Setup
-	  HAL_GPIO_WritePin(GPIOx, SPI_CS_Pin, GPIO_PIN_RESET);
 	  HAL_SPI_Transmit(hspi, SPI_Adress, 1,1);
 
 	  //Loop that detects the Data_Latch rising edge while updating the controller state
 	  do {
-		  HAL_SPI_Receive(&hspi1, &SPI_Data, 1, 0);
-		  Data_Latch = HAL_GPIO_ReadPin(GPIOx, Data_Latch_Pin);
+		  //A AJOUTER: réception des données sans fil
+		  Data_Latch = HAL_GPIO_ReadPin(GPIOB, Data_Latch_Pin);
 	  }
 	  while(Data_Latch == 0);
 
-	  HAL_GPIO_WritePin(GPIOx, SPI_CS_Pin, GPIO_PIN_SET);
 
 	  //When the rising edge is detected, transmission of the button states begins:
 	  for(i=1;i<=32768; i = i<<1){
 
 		  if ((SPI_Data & i) == 0){
-			  HAL_GPIO_WritePin(GPIOx, Serial_Data_Pin, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB, Serial_Data_Pin, GPIO_PIN_SET);
 		  }
 		  else{
-			  HAL_GPIO_WritePin(GPIOx, Serial_Data_Pin, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOB, Serial_Data_Pin, GPIO_PIN_RESET);
 		  }
 
 		  do{
-			  Data_Clock = HAL_GPIO_ReadPin(GPIOx, Data_Clock_Pin);
+			  Data_Clock = HAL_GPIO_ReadPin(GPIOB, Data_Clock_Pin);
 		  }
 		  while(Data_Clock == 1);
 		  do{
-			  Data_Clock = HAL_GPIO_ReadPin(GPIOx, Data_Clock_Pin);
+			  Data_Clock = HAL_GPIO_ReadPin(GPIOB, Data_Clock_Pin);
 		  }
 		  while(Data_Clock == 0);
 	  }
-	  HAL_GPIO_WritePin(GPIOx, Serial_Data_Pin, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin(GPIOB, Serial_Data_Pin, GPIO_PIN_RESET);
 
 
     /* USER CODE END WHILE */
