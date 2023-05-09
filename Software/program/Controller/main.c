@@ -1,28 +1,49 @@
 /* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.c
+  * @brief          : Main program body
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2023 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
 
 /* USER CODE BEGIN PV */
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -30,10 +51,12 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 /* USER CODE END 0 */
 
 /**
@@ -43,6 +66,7 @@ static void MX_SPI1_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -51,25 +75,126 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
+
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+
+  uint16_t B_Pin = 1;
+  uint16_t Y_Pin = 12;
+  uint16_t Select_Pin = 9;
+  uint16_t Start_Pin = 8;
+  uint16_t Joypad_Up_Pin = 1;
+  uint16_t Joypad_Down_Pin = 0;
+  uint16_t Joypad_Left_Pin = 15;
+  uint16_t Joypad_Right_Pin = 14;
+  uint16_t A_Pin = 0;
+  uint16_t X_Pin = 10;
+  uint16_t L_Pin = 7;
+  uint16_t R_Pin = 6;
+
+  uint16_t CE_Pin = 11;
+
+  GPIO_PinState Logic_State = 1;
+
+  uint16_t Button_Data = 0;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+	  Button_Data = 0;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOB, R_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOB, L_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOA, X_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOA, A_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOC, Joypad_Right_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOC, Joypad_Left_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOB, Joypad_Down_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOB, Joypad_Up_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOA, Start_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOA, Select_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOA, Y_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+	  Button_Data = Button_Data<<1;
+
+	  Logic_State = HAL_GPIO_ReadPin(GPIOA, B_Pin);
+	  if (Logic_State){
+		  Button_Data++;
+	  }
+
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+  }
   /* USER CODE END 3 */
 }
 
@@ -126,15 +251,17 @@ static void MX_SPI1_Init(void)
 {
 
   /* USER CODE BEGIN SPI1_Init 0 */
+
   /* USER CODE END SPI1_Init 0 */
 
   /* USER CODE BEGIN SPI1_Init 1 */
+
   /* USER CODE END SPI1_Init 1 */
   /* SPI1 parameter configuration*/
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_SLAVE;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
@@ -149,6 +276,7 @@ static void MX_SPI1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN SPI1_Init 2 */
+
   /* USER CODE END SPI1_Init 2 */
 
 }
@@ -165,13 +293,13 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
+
 /* USER CODE END 4 */
 
 /**
@@ -181,6 +309,11 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
   /* USER CODE END Error_Handler_Debug */
 }
 
@@ -195,6 +328,8 @@ void Error_Handler(void)
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
