@@ -3,10 +3,14 @@ uint8_t rx_command = 0b01100001;
 #define W_REGISTER_command 0x0
 #define CONFIG 0x0
 #define EN_AA 0x1
+#define EN_RXADDR 0x2
+#define SETUP_A 0x3
 uint8_t CONFIG_command = W_REGISTER_command + CONFIG;
 uint8_t CONFIG_value = 0b00000010;
 uint8_t EN_AA_command = W_REGISTER_command + EN_AA;
 uint8_t EN_AA_value = 0b00000000;
+uint8_t EN_RXADDR_command = W_REGISTER_command + EN_RXADDR;
+uint8_t EN_RXADDR_value = 0b00000000;
 
 //passage du mode STANDBY-1 au mode RX ou TX
 void nrf24_RX_TX_Enable(void){
@@ -41,3 +45,8 @@ void nrf24_W_REGISTER(uint8_t register, uint8_t value){
 	HAL_SPI_Transmit(&hspi1, &register, 1, 0);
 	HAL_SPI_Transmit(&hspi1, &value, 1, 0);
 }
+
+void nrf24_Init_Controller(){
+	nrf24_W_REGISTER(EN_AA_command,EN_AA_value);
+	nrf24_W_REGISTER(CONFIG_command,CONFIG_value);
+	nrf24_W_REGISTER(EN_RXADDR_command,EN_AA_value);
