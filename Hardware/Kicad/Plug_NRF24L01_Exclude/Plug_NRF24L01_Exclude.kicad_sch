@@ -4713,7 +4713,7 @@
     (property "Value" "Conn_01x08_Socket" (at 189.865 63.5 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_2x04_P1.00mm_Vertical_SMD" (at 180.975 77.47 0)
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical_SMD" (at 180.975 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 180.975 77.47 0)
