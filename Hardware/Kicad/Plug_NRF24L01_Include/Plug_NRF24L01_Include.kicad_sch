@@ -2036,6 +2036,10 @@
     (stroke (width 0) (type default))
     (uuid 59c96959-6508-40de-8287-12d24de23016)
   )
+  (wire (pts (xy 20.32 21.59) (xy 20.32 24.13))
+    (stroke (width 0) (type default))
+    (uuid 5a2ace29-b10c-4b1c-9a35-ea2eb7f7ba21)
+  )
   (wire (pts (xy 103.505 157.48) (xy 103.505 160.02))
     (stroke (width 0) (type default))
     (uuid 5aafc476-7129-4983-aa5d-2aba47dea38a)
@@ -2280,6 +2284,10 @@
   (wire (pts (xy 132.08 173.99) (xy 132.08 176.53))
     (stroke (width 0) (type default))
     (uuid 9b5490a2-5320-4640-b897-e8fc4b20e8ac)
+  )
+  (wire (pts (xy 20.32 29.21) (xy 20.32 31.75))
+    (stroke (width 0) (type default))
+    (uuid 9be7e484-fa00-4152-a4d2-aa8f5ccdcf7b)
   )
   (wire (pts (xy 48.26 38.1) (xy 48.26 35.56))
     (stroke (width 0) (type default))
@@ -3742,6 +3750,36 @@
     )
   )
 
+  (symbol (lib_id "power:+3.3V") (at 20.32 21.59 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 34e608ec-6382-4303-a5e7-b471a9f9ce43)
+    (property "Reference" "#PWR041" (at 20.32 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 20.32 18.415 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 20.32 21.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 20.32 21.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fa79e67e-c03f-44a1-8524-7c702031e140))
+    (instances
+      (project "Plug_NRF24L01_Include"
+        (path "/0058c30e-85d4-47b6-bff0-8d9f01f30c52"
+          (reference "#PWR041") (unit 1)
+        )
+      )
+      (project "Test"
+        (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
+          (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:L_Small") (at 132.08 115.57 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 35c28821-d424-494c-8468-99c744ba9dc8)
@@ -4654,6 +4692,32 @@
       (project "Plug_NRF24L01_Exclude"
         (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
           (reference "C1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C_Small") (at 20.32 26.67 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 84f299c8-f616-47ea-9f67-620784922ff8)
+    (property "Reference" "C16" (at 23.495 26.035 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10u" (at 23.495 28.575 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 20.32 26.67 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 20.32 26.67 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 921e66dd-09b7-429e-9631-10500b644cf3))
+    (pin "2" (uuid 789b0041-41e9-4ecd-a30e-543dde54688e))
+    (instances
+      (project "Plug_NRF24L01_Include"
+        (path "/0058c30e-85d4-47b6-bff0-8d9f01f30c52"
+          (reference "C16") (unit 1)
         )
       )
     )
@@ -5620,6 +5684,36 @@
       (project "Plug_NRF24L01_Include"
         (path "/0058c30e-85d4-47b6-bff0-8d9f01f30c52"
           (reference "#PWR027") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 20.32 31.75 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid e7a70d3d-0ac7-416a-9597-a3a9aab4199c)
+    (property "Reference" "#PWR042" (at 20.32 38.1 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 20.32 36.195 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 20.32 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 20.32 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 6da7eb97-f9ad-4512-82cc-851653dfdc1c))
+    (instances
+      (project "Plug_NRF24L01_Include"
+        (path "/0058c30e-85d4-47b6-bff0-8d9f01f30c52"
+          (reference "#PWR042") (unit 1)
+        )
+      )
+      (project "Test"
+        (path "/e27c4aed-f26e-4205-8842-b91be8be392b"
+          (reference "#PWR08") (unit 1)
         )
       )
     )
