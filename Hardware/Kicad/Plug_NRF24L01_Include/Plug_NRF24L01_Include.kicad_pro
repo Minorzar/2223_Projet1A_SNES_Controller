@@ -171,8 +171,10 @@
       ],
       "track_widths": [
         0.0,
+        0.0,
         0.01,
         0.1,
+        0.2,
         0.254,
         0.3,
         0.5,
@@ -470,7 +472,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.3,
         "via_diameter": 0.8,
-        "via_drill": 0.3,
+        "via_drill": 0.4,
         "wire_width": 6
       },
       {
@@ -485,9 +487,9 @@
         "name": "NRF24L01",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.1,
-        "via_diameter": 0.5,
-        "via_drill": 0.3,
+        "track_width": 0.2,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
         "wire_width": 6
       },
       {
