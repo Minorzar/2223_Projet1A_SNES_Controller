@@ -29,14 +29,14 @@ void nrf24_RX_TX_Disable(void){
 }
 
 //Transmitting data wirelessly
-void nrf24_Transmit(pData){
+void nrf24_Transmit(uint8_t* pData){
 	HAL_SPI_Transmit(&hspi1,&tx_command,1,0);
 	HAL_SPI_Transmit(&hspi1,pData+8,1,0);
 	HAL_SPI_Transmit(&hspi1,pData,1,0);
 }
 
 //Receiving wireless data
-void nrf24_Receive(pData){
+void nrf24_Receive(uint8_t* pData){
 	HAL_SPI_Transmit(&hspi1,&rx_command,1,0);
 	HAL_SPI_Receive(&hspi1,pData+8,1,0);
 	HAL_SPI_Receive(&hspi1,pData,1,0);
