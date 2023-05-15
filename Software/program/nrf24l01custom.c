@@ -29,26 +29,22 @@ void nrf24_RX_TX_Disable(void){
 }
 
 //Transmitting data wirelessly
-void nrf24_Transmit(pData){
-	nrf24_RX_TX_Enable();
+void nrf24_Transmit(uint8_t* pData){
 	HAL_SPI_Transmit(&hspi1,&tx_command,1,0);
 	HAL_SPI_Transmit(&hspi1,pData+8,1,0);
 	HAL_SPI_Transmit(&hspi1,pData,1,0);
-	nrf24_RX_TX_Disable();
 }
 
 //Receiving wireless data
-void nrf24_Receive(pData){
-	nrf24_RX_TX_Enable();
+void nrf24_Receive(uint8_t* pData){
 	HAL_SPI_Transmit(&hspi1,&rx_command,1,0);
 	HAL_SPI_Receive(&hspi1,pData+8,1,0);
 	HAL_SPI_Receive(&hspi1,pData,1,0);
-	nrf24_RX_TX_Disable();
 }
 
 //Writing in the nrf24 register
-void nrf24_W_REGISTER(uint8_t register, uint8_t value){
-	HAL_SPI_Transmit(&hspi1, &register, 1, 0);
+void nrf24_W_REGISTER(uint8_t reg, uint8_t value){
+	HAL_SPI_Transmit(&hspi1, &reg, 1, 0);
 	HAL_SPI_Transmit(&hspi1, &value, 1, 0);
 }
 
@@ -59,6 +55,7 @@ void nrf24_Init_Controller(){
 	nrf24_W_REGISTER(EN_RXADDR_command,EN_AA_value);
 	nrf24_W_REGISTER(SETUP_AW_command,SETUP_AW_value);
 	nrf24_W_REGISTER(SETUP_RETR_command,SETUP_RETR_value);
+	nrf24_RX_TX_Enable();
 }
 
 //Console Initialization
@@ -68,5 +65,6 @@ void nrf24_Init_plug(){
 	nrf24_W_REGISTER(EN_RXADDR_command,EN_AA_value);
 	nrf24_W_REGISTER(SETUP_AW_command,SETUP_AW_value);
 	nrf24_W_REGISTER(SETUP_RETR_command,SETUP_RETR_value);
+	nrf24_RX_TX_Enable();
 }
 
