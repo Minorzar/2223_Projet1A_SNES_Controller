@@ -30,25 +30,21 @@ void nrf24_RX_TX_Disable(void){
 
 //Transmitting data wirelessly
 void nrf24_Transmit(pData){
-	nrf24_RX_TX_Enable();
 	HAL_SPI_Transmit(&hspi1,&tx_command,1,0);
 	HAL_SPI_Transmit(&hspi1,pData+8,1,0);
 	HAL_SPI_Transmit(&hspi1,pData,1,0);
-	nrf24_RX_TX_Disable();
 }
 
 //Receiving wireless data
 void nrf24_Receive(pData){
-	nrf24_RX_TX_Enable();
 	HAL_SPI_Transmit(&hspi1,&rx_command,1,0);
 	HAL_SPI_Receive(&hspi1,pData+8,1,0);
 	HAL_SPI_Receive(&hspi1,pData,1,0);
-	nrf24_RX_TX_Disable();
 }
 
 //Writing in the nrf24 register
-void nrf24_W_REGISTER(uint8_t register, uint8_t value){
-	HAL_SPI_Transmit(&hspi1, &register, 1, 0);
+void nrf24_W_REGISTER(uint8_t reg, uint8_t value){
+	HAL_SPI_Transmit(&hspi1, &reg, 1, 0);
 	HAL_SPI_Transmit(&hspi1, &value, 1, 0);
 }
 
