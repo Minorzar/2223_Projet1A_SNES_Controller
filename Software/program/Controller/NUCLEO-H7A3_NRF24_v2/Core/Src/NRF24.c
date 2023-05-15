@@ -21,7 +21,6 @@ uint8_t SETUP_AW_command = W_REGISTER_command + SETUP_AW;
 uint8_t SETUP_AW_value = 0b00000000;
 uint8_t SETUP_RETR_command = W_REGISTER_command + SETUP_RETR;
 uint8_t SETUP_RETR_value = 0b00000000;
-extern SPI_HandleTypeDef hspi1;
 
 //Switching from STANDBY-1 mode to RX or TX mode
 void nrf24_RX_TX_Enable(void){

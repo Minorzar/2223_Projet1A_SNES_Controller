@@ -149,6 +149,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	uartTxBuffer[0]=uartRxBuffer[0];
 	HAL_UART_Transmit(&huart3, (uint8_t*) uartTxBuffer, 1, 100);
 	HAL_UART_Receive_IT(&huart3, (uint8_t*) uartRxBuffer, 1);
+
 }
 
 /* USER CODE END 1 */
