@@ -1,0 +1,7 @@
+../Core/Src/NRF24.c:27:6:nrf24_RX_TX_Enable	8	static
+../Core/Src/NRF24.c:32:6:nrf24_RX_TX_Disable	8	static
+../Core/Src/NRF24.c:37:6:nrf24_Transmit	16	static
+../Core/Src/NRF24.c:46:6:nrf24_Receive	16	static
+../Core/Src/NRF24.c:55:6:nrf24_W_REGISTER	16	static
+../Core/Src/NRF24.c:61:6:nrf24_Init_Controller	8	static
+../Core/Src/NRF24.c:70:6:nrf24_Init_plug	8	static
