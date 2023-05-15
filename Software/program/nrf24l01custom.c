@@ -59,6 +59,7 @@ void nrf24_Init_Controller(){
 	nrf24_W_REGISTER(EN_RXADDR_command,EN_AA_value);
 	nrf24_W_REGISTER(SETUP_AW_command,SETUP_AW_value);
 	nrf24_W_REGISTER(SETUP_RETR_command,SETUP_RETR_value);
+	nrf24_RX_TX_Enable();
 }
 
 //Console Initialization
@@ -68,5 +69,6 @@ void nrf24_Init_plug(){
 	nrf24_W_REGISTER(EN_RXADDR_command,EN_AA_value);
 	nrf24_W_REGISTER(SETUP_AW_command,SETUP_AW_value);
 	nrf24_W_REGISTER(SETUP_RETR_command,SETUP_RETR_value);
+	nrf24_RX_TX_Enable();
 }
 
