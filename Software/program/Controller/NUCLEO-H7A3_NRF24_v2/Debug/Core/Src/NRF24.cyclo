@@ -1,0 +1,7 @@
+NRF24.c:27:6:nrf24_RX_TX_Enable	1
+NRF24.c:32:6:nrf24_RX_TX_Disable	1
+NRF24.c:37:6:nrf24_Transmit	1
+NRF24.c:46:6:nrf24_Receive	1
+NRF24.c:55:6:nrf24_W_REGISTER	1
+NRF24.c:61:6:nrf24_Init_Controller	1
+NRF24.c:70:6:nrf24_Init_plug	1
