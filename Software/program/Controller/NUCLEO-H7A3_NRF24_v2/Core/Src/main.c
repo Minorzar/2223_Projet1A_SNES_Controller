@@ -22,11 +22,9 @@
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
-/*#include "NRF24.c"*/
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,9 +109,10 @@ int main(void)
   {
     /* USER CODE BEGIN 3 */
 	  if(uartFlag == 1){
-		  HAL_UART_Transmit(&huart3, (uint8_t*) msglu, strlen(msglu), 100) ;
 		  HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN) ;
+		  HAL_UART_Transmit(&huart3, (uint8_t*) msglu, 22, 100) ;
 		  uartFlag = 0 ;
+		  HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN) ;
 	  }
   /* USER CODE END 3 */
   }
