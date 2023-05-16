@@ -1,75 +1,223 @@
-#include "stm32h7xx_hal.h"
+#include "NRF24.h"
 
-//constants used for registers and commands
-uint8_t tx_command  = 0b10100000;
-uint8_t rx_command = 0b01100001;
-#define W_REGISTER_command 0x0
-#define CONFIG 0x0
-#define EN_AA 0x1
-#define EN_RXADDR 0x2
-#define SETUP_AW 0x3
-#define SETUP_RETR 0x4
-#define SPI_CE_Port GPIOC
-#define SPI_CE_Pin GPIO_PIN_5
-uint8_t CONFIG_command = W_REGISTER_command + CONFIG;
-uint8_t CONFIG_value = 0b00000010;
-uint8_t EN_AA_command = W_REGISTER_command + EN_AA;
-uint8_t EN_AA_value = 0b00000000;
-uint8_t EN_RXADDR_command = W_REGISTER_command + EN_RXADDR;
-uint8_t EN_RXADDR_value = 0b00000000;
-uint8_t SETUP_AW_command = W_REGISTER_command + SETUP_AW;
-uint8_t SETUP_AW_value = 0b00000000;
-uint8_t SETUP_RETR_command = W_REGISTER_command + SETUP_RETR;
-uint8_t SETUP_RETR_value = 0b00000000;
+/*
+ *
+ *
+ * Start of the initialisation of the NRF24
+ *
+ *
+ */
 
-//Switching from STANDBY-1 mode to RX or TX mode
-void nrf24_RX_TX_Enable(void){
-	HAL_GPIO_WritePin(SPI_CE_Port, SPI_CE_Pin, GPIO_PIN_SET);
+
+
+
+/*
+ *
+ * nrf24_ToggleCSCE will be used to select or unselect the device.
+ * As for the value of sel:
+ * 0 -> CS up
+ * 1 -> CS down
+ * 2 -> CE up
+ * 3 -> CE down
+ *
+ *
+ */
+void nrf24_ToggleCSCE(uint8_t sel){
+	switch (sel){
+	case 0: HAL_GPIO_WritePin(GPIO_CS_Port,GPIO_CS_Pin,GPIO_PIN_SET) ;
+			break ;
+	case 1: HAL_GPIO_WritePin(GPIO_CS_Port,GPIO_CS_Pin,GPIO_PIN_RESET) ;
+			break ;
+	case 2: HAL_GPIO_WritePin(GPIO_CE_Port,GPIO_CE_Pin,GPIO_PIN_SET) ;
+			break ;
+	case 3: HAL_GPIO_WritePin(GPIO_CE_Port,GPIO_CE_Pin,GPIO_PIN_RESET) ;
+			break ;
+	}
 }
 
-//Switching from RX or TX mode to STANDBY-1 mode
-void nrf24_RX_TX_Disable(void){
-	HAL_GPIO_WritePin(SPI_CE_Port, SPI_CE_Pin, GPIO_PIN_RESET);
+void nrf24_WriteRegister1bit(uint8_t reg , uint8_t data){
+	uint8_t buf[2] ;
+	buf[0] = reg | 1<<5 ;
+	buf[1] = data ;
+
+	nrf24_ToggleCSCE(1); // Put the CS pin low
+
+	HAL_SPI_Transmit(&hspi1,buf,2,1000);
+
+	nrf24_ToggleCSCE(0); // Put the CS pin up
 }
 
-//Transmitting data wirelessly
-void nrf24_Transmit(uint8_t* pData){
-	nrf24_RX_TX_Enable();
-	HAL_SPI_Transmit(&hspi1,&tx_command,1,0);
-	HAL_SPI_Transmit(&hspi1,pData+8,1,0);
-	HAL_SPI_Transmit(&hspi1,pData,1,0);
-	nrf24_RX_TX_Disable();
+void nrf24_WriteRegisterNbit(uint8_t reg , uint8_t* data ,int size){
+	uint8_t buf[2] ;
+	buf[0] = reg | 1<<5 ;
+
+	nrf24_ToggleCSCE(1); // Put the CS pin low
+
+	HAL_SPI_Transmit(&hspi1,buf,1,100);
+	HAL_SPI_Transmit(&hspi1,data,size,1000);
+
+
+	nrf24_ToggleCSCE(0); // Put the CS pin up
 }
 
-//Receiving wireless data
-void nrf24_Receive(uint8_t* pData){
-	nrf24_RX_TX_Enable();
-	HAL_SPI_Transmit(&hspi1,&rx_command,1,0);
-	HAL_SPI_Receive(&hspi1,pData+8,1,0);
-	HAL_SPI_Receive(&hspi1,pData,1,0);
-	nrf24_RX_TX_Disable();
+uint8_t nrf24_ReadRegister1bit(uint8_t reg){
+	uint8_t data ;
+
+	nrf24_ToggleCSCE(0) ;
+
+	HAL_SPI_Transmit(&hspi1,&reg,1,100) ;
+	HAL_SPI_Receive(&hspi1,&data,1,100) ;
+
+	nrf24_ToggleCSCE(1) ;
+
+	return data ;
 }
 
-//Writing in the nrf24 register
-void nrf24_W_REGISTER(uint8_t reg, uint8_t value){
-	HAL_SPI_Transmit(&hspi1, &reg, 1, 0);
-	HAL_SPI_Transmit(&hspi1, &value, 1, 0);
+void nrf24_ReadRegisterNbit(uint8_t reg, uint8_t *data, int size){
+	nrf24_ToggleCSCE(0) ;
+
+	HAL_SPI_Transmit(&hspi1, &reg, 1, 100);
+	HAL_SPI_Receive(&hspi1, data, size, 1000);
+
+	nrf24_ToggleCSCE(1) ;
 }
 
-//Controller Initialization
-void nrf24_Init_Controller(){
-	nrf24_W_REGISTER(EN_AA_command,EN_AA_value);
-	nrf24_W_REGISTER(CONFIG_command,CONFIG_value);
-	nrf24_W_REGISTER(EN_RXADDR_command,EN_AA_value);
-	nrf24_W_REGISTER(SETUP_AW_command,SETUP_AW_value);
-	nrf24_W_REGISTER(SETUP_RETR_command,SETUP_RETR_value);
+void nrf24_CmdTransmit(uint8_t cmd){
+	nrf24_ToggleCSCE(0) ;
+
+	HAL_SPI_Transmit(&hspi1,&cmd,1,100) ;
+
+	nrf24_ToggleCSCE(1) ;
 }
 
-//Console Initialization
-void nrf24_Init_plug(){
-	nrf24_W_REGISTER(EN_AA_command,EN_AA_value);
-	nrf24_W_REGISTER(CONFIG_command,CONFIG_value);
-	nrf24_W_REGISTER(EN_RXADDR_command,EN_AA_value);
-	nrf24_W_REGISTER(SETUP_AW_command,SETUP_AW_value);
-	nrf24_W_REGISTER(SETUP_RETR_command,SETUP_RETR_value);
+void nrf24_reset(uint8_t Reg){
+
+	switch(Reg){
+
+	case STATUS:
+		nrf24_WriteRegister1bit(STATUS, 0x00);
+		break ;
+
+	case FIFO_STATUS:
+		nrf24_WriteRegister1bit(FIFO_STATUS, 0x11);
+		break ;
+
+	default:
+		nrf24_WriteRegister1bit(CONFIG, 0x08);
+		nrf24_WriteRegister1bit(EN_AA, 0x3F);
+		nrf24_WriteRegister1bit(EN_RXADDR, 0x03);
+		nrf24_WriteRegister1bit(SETUP_AW, 0x03);
+		nrf24_WriteRegister1bit(SETUP_RETR, 0x03);
+		nrf24_WriteRegister1bit(RF_CH, 0x02);
+		nrf24_WriteRegister1bit(RF_SETUP, 0x0E);
+		nrf24_WriteRegister1bit(STATUS, 0x00);
+		nrf24_WriteRegister1bit(OBSERVE_TX, 0x00);
+		nrf24_WriteRegister1bit(CD, 0x00);
+
+		uint8_t rx_addr_p0_def[5] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
+		nrf24_WriteRegisterNbit(RX_ADDR_P0, rx_addr_p0_def, 5);
+
+		uint8_t rx_addr_p1_def[5] = {0xC2, 0xC2, 0xC2, 0xC2, 0xC2};
+		nrf24_WriteRegisterNbit(RX_ADDR_P1, rx_addr_p1_def, 5);
+
+		nrf24_WriteRegister1bit(RX_ADDR_P2, 0xC3);
+		nrf24_WriteRegister1bit(RX_ADDR_P3, 0xC4);
+		nrf24_WriteRegister1bit(RX_ADDR_P4, 0xC5);
+		nrf24_WriteRegister1bit(RX_ADDR_P5, 0xC6);
+
+		uint8_t tx_addr_def[5] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
+		nrf24_WriteRegisterNbit(TX_ADDR, tx_addr_def, 5);
+
+		nrf24_WriteRegister1bit(RX_PW_P0, 0);
+		nrf24_WriteRegister1bit(RX_PW_P1, 0);
+		nrf24_WriteRegister1bit(RX_PW_P2, 0);
+		nrf24_WriteRegister1bit(RX_PW_P3, 0);
+		nrf24_WriteRegister1bit(RX_PW_P4, 0);
+		nrf24_WriteRegister1bit(RX_PW_P5, 0);
+		nrf24_WriteRegister1bit(FIFO_STATUS, 0x11);
+		nrf24_WriteRegister1bit(DYNPD, 0);
+		nrf24_WriteRegister1bit(FEATURE, 0);
+	}
 }
+
+
+
+
+void nrf24_Init(){
+	nrf24_ToggleCSCE(3);
+	nrf24_ToggleCSCE(1);
+
+	nrf24_reset (0);
+	nrf24_WriteRegister1bit(CONFIG, 0);
+	nrf24_WriteRegister1bit(EN_AA, 0);  // No Auto ACK
+	nrf24_WriteRegister1bit (EN_RXADDR, 0);
+	nrf24_WriteRegister1bit (SETUP_AW, 0x03); // Define the 5 byte for adresses
+	nrf24_WriteRegister1bit (SETUP_RETR, 0);
+	nrf24_WriteRegister1bit (RF_CH, 0);  // will be setup during Tx or RX, currently disable
+
+	nrf24_WriteRegister1bit (RF_SETUP, 0x0E);   // Setup the Power at 0db and data rate at 2Mbps
+
+	nrf24_ToggleCSCE(2);
+	nrf24_ToggleCSCE(0);
+
+}
+
+/*
+ *
+ *
+ * End of the initialisation of the NRF24
+ *
+ *
+ */
+
+
+
+/*
+ *
+ *
+ * Start of the TX configuration
+ *
+ *
+ */
+
+void nrf24_TxMode(uint8_t *Address, uint8_t channel){
+	nrf24_ToggleCSCE(3);
+
+	nrf24_WriteRegister1bit(RF_CH, channel);
+	nrf24_WriteRegisterNbit(TX_ADDR, Address, 5);
+
+	uint8_t config = nrf24_ReadRegister1bit(CONFIG);
+	config = config & (0xF2);
+	nrf24_WriteRegister1bit(CONFIG, config);
+
+	nrf24_ToggleCSCE(2);
+}
+
+int nrf24_Transmit (uint8_t *data){
+	uint8_t cmd;
+
+	nrf24_ToggleCSCE(0);
+
+	cmd = W_TX_PAYLOAD;
+
+	HAL_SPI_Transmit(&hspi1, &cmd, 1, 100);
+	HAL_SPI_Transmit(&hspi1, data, 32, 1000);
+
+	nrf24_ToggleCSCE(1);
+
+	HAL_Delay(1);
+
+	uint8_t fifostatus = nrf24_ReadRegister1bit(FIFO_STATUS);
+
+	if ((fifostatus&(1<<4)) && (!(fifostatus&(1<<3)))){
+		cmd = FLUSH_TX;
+		nrf24_CmdTransmit(cmd);
+
+		nrf24_reset(FIFO_STATUS);
+
+		return 1;
+	}
+	return 0;
+}
+
+

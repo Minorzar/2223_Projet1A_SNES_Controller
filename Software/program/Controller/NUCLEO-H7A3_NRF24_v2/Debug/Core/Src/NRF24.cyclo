@@ -1,7 +1,10 @@
-NRF24.c:27:6:nrf24_RX_TX_Enable	1
-NRF24.c:32:6:nrf24_RX_TX_Disable	1
-NRF24.c:37:6:nrf24_Transmit	1
-NRF24.c:46:6:nrf24_Receive	1
-NRF24.c:55:6:nrf24_W_REGISTER	1
-NRF24.c:61:6:nrf24_Init_Controller	1
-NRF24.c:70:6:nrf24_Init_plug	1
+NRF24.c:25:6:nrf24_ToggleCSCE	5
+NRF24.c:38:6:nrf24_WriteRegister1bit	1
+NRF24.c:50:6:nrf24_WriteRegisterNbit	1
+NRF24.c:63:9:nrf24_ReadRegister1bit	1
+NRF24.c:76:6:nrf24_ReadRegisterNbit	1
+NRF24.c:85:6:nrf24_CmdTransmit	1
+NRF24.c:93:6:nrf24_reset	3
+NRF24.c:146:6:nrf24_Init	1
+NRF24.c:183:6:nrf24_TxMode	1
+NRF24.c:196:5:nrf24_Transmit	3
