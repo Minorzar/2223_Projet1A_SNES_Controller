@@ -7,7 +7,7 @@ NRF24.c:143:6:nrf24_CmdTransmit	1
 NRF24.c:160:6:nrf24_reset	3
 NRF24.c:220:6:nrf24_Init	1
 NRF24.c:264:6:nrf24_TxMode	1
-NRF24.c:287:5:nrf24_Transmit	3
-NRF24.c:339:6:nrf24_RxMode	1
-NRF24.c:379:9:nrf24_DataAvailable	3
-NRF24.c:400:6:nrf24_Receive	1
+NRF24.c:287:19:nrf24_Transmit	1
+NRF24.c:329:6:nrf24_RxMode	1
+NRF24.c:370:9:nrf24_DataAvailable	3
+NRF24.c:391:19:nrf24_Receive	1

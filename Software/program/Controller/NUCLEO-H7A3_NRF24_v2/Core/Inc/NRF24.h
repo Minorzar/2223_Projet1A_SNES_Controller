@@ -46,8 +46,8 @@
 
 #define GPIO_CS_Port GPIOA
 #define GPIO_CE_Port GPIOC
-#define GPIO_CS_Pin 4
-#define GPIO_CE_Pin 5
+#define GPIO_CS_Pin GPIO_PIN_4
+#define GPIO_CE_Pin GPIO_PIN_5
 extern SPI_HandleTypeDef hspi1;
 
 // Constant Mnemonic
@@ -76,7 +76,7 @@ void nrf24_CmdTransmit(uint8_t) ;
 void nrf24_reset(uint8_t) ;
 void nrf24_Init(void) ;
 void nrf24_TxMode (uint8_t* , uint8_t) ;
-int nrf24_Transmit (uint8_t*) ;
+HAL_StatusTypeDef nrf24_Transmit (uint8_t*) ;
 void nrf24_RxMode(uint8_t*, uint8_t) ;
 uint8_t nrf24_DataAvailable(int) ;
-void nrf24_Receive(uint8_t*) ;
+HAL_StatusTypeDef nrf24_Receive(uint8_t*) ;

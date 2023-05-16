@@ -284,7 +284,7 @@ void nrf24_TxMode(uint8_t *Address, uint8_t channel){
  *
  *
  */
-int nrf24_Transmit(uint8_t *data){
+HAL_StatusTypeDef nrf24_Transmit(uint8_t *data){
 	uint8_t cmd;
 
 	nrf24_ToggleCSCE(0);
@@ -292,23 +292,13 @@ int nrf24_Transmit(uint8_t *data){
 	cmd = W_TX_PAYLOAD;
 
 	HAL_SPI_Transmit(&hspi1, &cmd, 1, 100);
-	HAL_SPI_Transmit(&hspi1, data, 32, 1000);
+	HAL_StatusTypeDef hal_status = HAL_SPI_Transmit(&hspi1, data, 32, 1000);
 
 	nrf24_ToggleCSCE(1);
 
 	HAL_Delay(100);
 
-	uint8_t fifostatus = nrf24_ReadRegister1bit(FIFO_STATUS);
-
-	if ((fifostatus&(1<<4)) && (!(fifostatus&(1<<3)))){
-		cmd = FLUSH_TX;
-		nrf24_CmdTransmit(cmd);
-
-		nrf24_reset(FIFO_STATUS);
-
-		return 1;
-	}
-	return 0;
+	return hal_status;
 }
 
 /*
@@ -354,10 +344,11 @@ void nrf24_RxMode(uint8_t *Address, uint8_t channel){
 	 * Pipe 3 ADDR = 0xAABBCCDD33
 	 *
 	 */
+
 	nrf24_WriteRegisterNbit(RX_ADDR_P1, Address, 5);
 	nrf24_WriteRegister1bit(RX_ADDR_P2, 0xEE);
 
-	nrf24_WriteRegister1bit(RX_PW_P2, 2);   // Size of 2 bytes for the data pipe 2
+	nrf24_WriteRegister1bit(RX_PW_P2, 32);   // Size of 2 bytes for the data pipe 2 (will be set as 2)
 
 	uint8_t config = nrf24_ReadRegister1bit(CONFIG);
 	config = config | (1<<1) | (1<<0);
@@ -397,7 +388,7 @@ uint8_t nrf24_DataAvailable(int pipe){
  *
  *
  */
-void nrf24_Receive(uint8_t *data){
+HAL_StatusTypeDef nrf24_Receive(uint8_t *data){
 	uint8_t cmd = 0;
 
 	nrf24_ToggleCSCE(0);
@@ -405,7 +396,7 @@ void nrf24_Receive(uint8_t *data){
 	cmd = R_RX_PAYLOAD;
 
 	HAL_SPI_Transmit(&hspi1, &cmd, 1, 100);
-	HAL_SPI_Receive(&hspi1, data, 8, 1000);
+	HAL_StatusTypeDef hal_status = HAL_SPI_Receive(&hspi1, data, 32, 1000);
 
 	nrf24_ToggleCSCE(1);
 
@@ -413,6 +404,8 @@ void nrf24_Receive(uint8_t *data){
 
 	cmd = FLUSH_RX;
 	nrf24_CmdTransmit(cmd);
+
+	return hal_status ;
 }
 
 /*

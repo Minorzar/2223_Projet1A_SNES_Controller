@@ -7,7 +7,7 @@
 ../Core/Src/NRF24.c:160:6:nrf24_reset	40	static
 ../Core/Src/NRF24.c:220:6:nrf24_Init	8	static
 ../Core/Src/NRF24.c:264:6:nrf24_TxMode	24	static
-../Core/Src/NRF24.c:287:5:nrf24_Transmit	24	static
-../Core/Src/NRF24.c:339:6:nrf24_RxMode	24	static
-../Core/Src/NRF24.c:379:9:nrf24_DataAvailable	24	static
-../Core/Src/NRF24.c:400:6:nrf24_Receive	24	static
+../Core/Src/NRF24.c:287:19:nrf24_Transmit	24	static
+../Core/Src/NRF24.c:329:6:nrf24_RxMode	24	static
+../Core/Src/NRF24.c:370:9:nrf24_DataAvailable	24	static
+../Core/Src/NRF24.c:391:19:nrf24_Receive	24	static

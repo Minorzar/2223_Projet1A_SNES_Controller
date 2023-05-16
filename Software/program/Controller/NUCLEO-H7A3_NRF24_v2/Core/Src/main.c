@@ -39,6 +39,10 @@
 #define UARTRXBUFFERSIZE 32
 #define LED1_PORT GPIOB
 #define LED1_PIN GPIO_PIN_0
+#define LED2_PORT GPIOE
+#define LED2_PIN GPIO_PIN_1
+#define LED3_PORT GPIOB
+#define LED3_PIN GPIO_PIN_14
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -58,10 +62,17 @@ extern uint8_t is_Transmiting ;
 uint8_t TxAddress[] = {0xEE,0xDD,0xCC,0xBB,0xAA};
 char* TxData = "\r\nFonctionne stp\r\n";
 char* msglu = "\r\nMessage recu !\r\n";
+
+uint8_t RxAddress[] = {0x00,0xDD,0xCC,0xBB,0xAA};
+uint8_t RxData[32];
+
+
+uint8_t data[50];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void PeriphCommonClock_Config(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -92,6 +103,9 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 
+/* Configure the peripherals common clocks */
+  PeriphCommonClock_Config();
+
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -104,7 +118,13 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	nrf24_Init();
 
-	nrf24_TxMode(TxAddress, 10);
+
+	// TX mode
+	//nrf24_TxMode(TxAddress, 10);
+
+
+	//RX mode
+	nrf24_RxMode(RxAddress, 10);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,15 +134,38 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		 if(uartFlag == 1){
-			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN) ;
-			HAL_UART_Transmit(&huart3, (uint8_t*) msglu, 22, 100) ;
+			HAL_GPIO_TogglePin(LED2_PORT,  LED2_PIN) ;
+			HAL_UART_Transmit(&huart3, (uint8_t*) msglu, 32, 100) ;
 			uartFlag = 0 ;
-			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN) ;
+			HAL_GPIO_TogglePin(LED2_PORT,  LED2_PIN) ;
 		}
 
-		if (nrf24_Transmit((uint8_t*)TxData) == 1){
+		if (nrf24_DataAvailable(2) == 1){
+			nrf24_Receive(RxData) ;
+			HAL_UART_Transmit(&huart3, RxData, 32, 100);
+			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN);
+			HAL_Delay(10);
 			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN);
 		}
+		else{
+			HAL_GPIO_TogglePin(LED3_PORT,  LED3_PIN);
+			HAL_Delay(50);
+			HAL_GPIO_TogglePin(LED3_PORT,  LED3_PIN);
+			HAL_Delay(50);
+		}
+
+		/*// Part for the transmission, will be put on one device the comment to upload the receive on another one
+		if (nrf24_Transmit((uint8_t*)TxData) == HAL_OK){
+			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN);
+			HAL_Delay(10);
+			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN);
+		}
+		else{
+			HAL_GPIO_TogglePin(LED3_PORT,  LED3_PIN);
+			HAL_Delay(10);
+			HAL_GPIO_TogglePin(LED3_PORT,  LED3_PIN);
+		}
+		*///
 
 		//HAL_Delay(1000);
 	}
@@ -154,8 +197,11 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_HSI
+                              |RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+  RCC_OscInitStruct.HSIState = RCC_HSI_DIV4;
+  RCC_OscInitStruct.HSICalibrationValue = 64;
   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
@@ -186,6 +232,24 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_7) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief Peripherals Common Clock Configuration
+  * @retval None
+  */
+void PeriphCommonClock_Config(void)
+{
+  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+
+  /** Initializes the peripherals clock
+  */
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_CKPER;
+  PeriphClkInitStruct.CkperClockSelection = RCC_CLKPSOURCE_HSI;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
