@@ -1,6 +1,7 @@
 //constants used for registers and commands
 uint8_t tx_command  = 0b10100000;
 uint8_t rx_command = 0b01100001;
+uint8_t nop_command = 0b11111111;
 #define W_REGISTER_command 0x0
 #define CONFIG 0x0
 #define EN_AA 0x1
@@ -68,6 +69,13 @@ void nrf24_R_REGISTER(uint8_t reg, uint8_t* pData){
 	nrf24_CSN_Enable();
 	HAL_SPI_Transmit(&hspi1, &reg, 1, 0);
 	HAL_SPI_Receive(&hspi1,pData,1,0);
+	nrf24_CSN_Disable();
+}
+
+// Reading status
+void nrf24_STATUS(uint8_t* pData){
+	nrf24_CSN_Enable();
+	HAL_SPI_TransmitReceive(&hspi1 ,&nop_command, pData,1,0);
 	nrf24_CSN_Disable();
 }
 
