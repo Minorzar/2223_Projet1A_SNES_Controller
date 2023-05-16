@@ -1,3 +1,14 @@
+/*
+ *
+ * NRF24 Library for project Snes_ENSEA2025
+ * Date: 16/05/2023
+ * Author: Gauthier BIEHLER
+ * Document: NRF24.h
+ *
+ */
+
+
+
 #include "stm32h7xx_hal.h"
 
 
@@ -64,5 +75,8 @@ void nrf24_ReadRegisterNbit(uint8_t, uint8_t*, int) ;
 void nrf24_CmdTransmit(uint8_t) ;
 void nrf24_reset(uint8_t) ;
 void nrf24_Init(void) ;
-void nrf24_TxMode (uint8_t* , uint8_t);
-int nrf24_Transmit (uint8_t*);
+void nrf24_TxMode (uint8_t* , uint8_t) ;
+int nrf24_Transmit (uint8_t*) ;
+void nrf24_RxMode(uint8_t*, uint8_t) ;
+uint8_t nrf24_DataAvailable(int) ;
+void nrf24_Receive(uint8_t*) ;

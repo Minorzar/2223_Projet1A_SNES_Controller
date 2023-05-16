@@ -102,9 +102,9 @@ int main(void)
   MX_USB_OTG_HS_USB_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-	//nrf24_Init();
+	nrf24_Init();
 
-	//nrf24_TxMode(TxAddress, 10);
+	nrf24_TxMode(TxAddress, 10);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -120,9 +120,9 @@ int main(void)
 			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN) ;
 		}
 
-		//if (nrf24_Transmit((uint8_t*)TxData) == 1){
-		//	HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN);
-		//}
+		if (nrf24_Transmit((uint8_t*)TxData) == 1){
+			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN);
+		}
 
 		//HAL_Delay(1000);
 	}

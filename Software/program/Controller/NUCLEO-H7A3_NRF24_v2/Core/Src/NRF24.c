@@ -1,3 +1,14 @@
+/*
+ *
+ * NRF24 Library for project Snes_ENSEA2025
+ * Date: 16/05/2023
+ * Author: Gauthier BIEHLER
+ * Document: NRF24.c
+ *
+ */
+
+
+
 #include "NRF24.h"
 
 /*
@@ -35,6 +46,15 @@ void nrf24_ToggleCSCE(uint8_t sel){
 	}
 }
 
+
+
+/*
+ *
+ *
+ * nrf24_WriteRegister1bit will be use to write 1 bit of data inside one register using SPI connection
+ *
+ *
+ */
 void nrf24_WriteRegister1bit(uint8_t reg , uint8_t data){
 	uint8_t buf[2] ;
 	buf[0] = reg | 1<<5 ;
@@ -47,6 +67,15 @@ void nrf24_WriteRegister1bit(uint8_t reg , uint8_t data){
 	nrf24_ToggleCSCE(0); // Put the CS pin up
 }
 
+
+
+/*
+ *
+ *
+ * nrf24_WriteRegisterNbit will be use to write N bit (N = size) of data inside one register using SPI connection
+ *
+ *
+ */
 void nrf24_WriteRegisterNbit(uint8_t reg , uint8_t* data ,int size){
 	uint8_t buf[2] ;
 	buf[0] = reg | 1<<5 ;
@@ -60,6 +89,16 @@ void nrf24_WriteRegisterNbit(uint8_t reg , uint8_t* data ,int size){
 	nrf24_ToggleCSCE(0); // Put the CS pin up
 }
 
+
+
+/*
+ *
+ *
+ * nrf24_ReadRegister1bit will be use to read 1 bit of data inside one register using SPI connection.
+ * It will be return inside a uint8_t data.
+ *
+ *
+ */
 uint8_t nrf24_ReadRegister1bit(uint8_t reg){
 	uint8_t data ;
 
@@ -73,6 +112,16 @@ uint8_t nrf24_ReadRegister1bit(uint8_t reg){
 	return data ;
 }
 
+
+
+/*
+ *
+ *
+ * nrf24_ReadRegisterNbit will be use to read N bit (N = size) of data inside one register using SPI connection.
+ * It will be stored inside a uint8_t data.
+ *
+ *
+ */
 void nrf24_ReadRegisterNbit(uint8_t reg, uint8_t *data, int size){
 	nrf24_ToggleCSCE(0) ;
 
@@ -82,6 +131,15 @@ void nrf24_ReadRegisterNbit(uint8_t reg, uint8_t *data, int size){
 	nrf24_ToggleCSCE(1) ;
 }
 
+
+
+/*
+ *
+ *
+ * nrf24_CmdTransmit will be use to send a command to the nrf24 using SPI connection.
+ *
+ *
+ */
 void nrf24_CmdTransmit(uint8_t cmd){
 	nrf24_ToggleCSCE(0) ;
 
@@ -90,6 +148,15 @@ void nrf24_CmdTransmit(uint8_t cmd){
 	nrf24_ToggleCSCE(1) ;
 }
 
+
+
+/*
+ *
+ *
+ * nrf24_reset will be use to reset the registers of the nrf24 to their original value.
+ *
+ *
+ */
 void nrf24_reset(uint8_t Reg){
 
 	switch(Reg){
@@ -143,7 +210,13 @@ void nrf24_reset(uint8_t Reg){
 
 
 
-
+/*
+ *
+ *
+ * nrf24_Init will initialise the nrf24.
+ *
+ *
+ */
 void nrf24_Init(){
 	nrf24_ToggleCSCE(3);
 
@@ -179,6 +252,15 @@ void nrf24_Init(){
  *
  */
 
+
+
+/*
+ *
+ *
+ * nrf24_TxMode will be use to activate the Transmit mode.
+ *
+ *
+ */
 void nrf24_TxMode(uint8_t *Address, uint8_t channel){
 	nrf24_ToggleCSCE(3);
 
@@ -192,7 +274,17 @@ void nrf24_TxMode(uint8_t *Address, uint8_t channel){
 	nrf24_ToggleCSCE(2);
 }
 
-int nrf24_Transmit (uint8_t *data){
+
+
+/*
+ *
+ *
+ * nrf24_Transmit will be use to transmit data using the nrf24.
+ * It will return a 1 if it succeed to send the data, otherwise it will return a 0.
+ *
+ *
+ */
+int nrf24_Transmit(uint8_t *data){
 	uint8_t cmd;
 
 	nrf24_ToggleCSCE(0);
@@ -204,7 +296,7 @@ int nrf24_Transmit (uint8_t *data){
 
 	nrf24_ToggleCSCE(1);
 
-	HAL_Delay(1);
+	HAL_Delay(100);
 
 	uint8_t fifostatus = nrf24_ReadRegister1bit(FIFO_STATUS);
 
@@ -219,4 +311,114 @@ int nrf24_Transmit (uint8_t *data){
 	return 0;
 }
 
+/*
+ *
+ *
+ * End of the TX configuration
+ *
+ *
+ */
 
+/*
+ *
+ *
+ * Start of the RX configuration
+ *
+ *
+ */
+
+
+
+/*
+ *
+ *
+ * nrf24_RxMode will be use to activate the Receive mode.
+ *
+ *
+ */
+void nrf24_RxMode(uint8_t *Address, uint8_t channel){
+	nrf24_ToggleCSCE(3);
+
+	nrf24_reset(STATUS);
+
+	nrf24_WriteRegister1bit(RF_CH, channel);
+
+	uint8_t en_rxaddr = nrf24_ReadRegister1bit(EN_RXADDR);
+	en_rxaddr = en_rxaddr | (1<<2);
+	nrf24_WriteRegister1bit(EN_RXADDR, en_rxaddr);
+
+	/*
+	 *
+	 * Pipe 1 ADDR = 0xAABBCCDD11
+	 * Pipe 2 ADDR = 0xAABBCCDD22
+	 * Pipe 3 ADDR = 0xAABBCCDD33
+	 *
+	 */
+	nrf24_WriteRegisterNbit(RX_ADDR_P1, Address, 5);
+	nrf24_WriteRegister1bit(RX_ADDR_P2, 0xEE);
+
+	nrf24_WriteRegister1bit(RX_PW_P2, 2);   // Size of 2 bytes for the data pipe 2
+
+	uint8_t config = nrf24_ReadRegister1bit(CONFIG);
+	config = config | (1<<1) | (1<<0);
+	nrf24_WriteRegister1bit(CONFIG, config);
+
+	nrf24_ToggleCSCE(2);
+}
+
+
+
+/*
+ *
+ *
+ * nrf24_DataAvailable will be use to determine if their has been data received in the pipe in entry.
+ * If their is, it will return a 1, otherwise a 0.
+ *
+ *
+ */
+uint8_t nrf24_DataAvailable(int pipe){
+	uint8_t status = nrf24_ReadRegister1bit(STATUS);
+
+	if ((status&(1<<6))&&(status&(pipe<<1))){
+
+		nrf24_WriteRegister1bit(STATUS, (1<<6));
+
+		return 1;
+	}
+	return 0;
+}
+
+
+
+/*
+ *
+ *
+ * nrf24_Receive will be use to receive data using the nrf24.
+ *
+ *
+ */
+void nrf24_Receive(uint8_t *data){
+	uint8_t cmd = 0;
+
+	nrf24_ToggleCSCE(0);
+
+	cmd = R_RX_PAYLOAD;
+
+	HAL_SPI_Transmit(&hspi1, &cmd, 1, 100);
+	HAL_SPI_Receive(&hspi1, data, 8, 1000);
+
+	nrf24_ToggleCSCE(1);
+
+	HAL_Delay(100);
+
+	cmd = FLUSH_RX;
+	nrf24_CmdTransmit(cmd);
+}
+
+/*
+ *
+ *
+ * End of the RX configuration
+ *
+ *
+ */
