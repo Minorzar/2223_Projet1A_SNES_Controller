@@ -137,6 +137,7 @@ void nrf24_reset(uint8_t Reg){
 		nrf24_WriteRegister1bit(FIFO_STATUS, 0x11);
 		nrf24_WriteRegister1bit(DYNPD, 0);
 		nrf24_WriteRegister1bit(FEATURE, 0);
+		break;
 	}
 }
 
@@ -145,20 +146,18 @@ void nrf24_reset(uint8_t Reg){
 
 void nrf24_Init(){
 	nrf24_ToggleCSCE(3);
-	nrf24_ToggleCSCE(1);
 
-	nrf24_reset (0);
+	nrf24_reset(0);
 	nrf24_WriteRegister1bit(CONFIG, 0);
 	nrf24_WriteRegister1bit(EN_AA, 0);  // No Auto ACK
-	nrf24_WriteRegister1bit (EN_RXADDR, 0);
-	nrf24_WriteRegister1bit (SETUP_AW, 0x03); // Define the 5 byte for adresses
-	nrf24_WriteRegister1bit (SETUP_RETR, 0);
-	nrf24_WriteRegister1bit (RF_CH, 0);  // will be setup during Tx or RX, currently disable
+	nrf24_WriteRegister1bit(EN_RXADDR, 0);
+	nrf24_WriteRegister1bit(SETUP_AW, 0x03); // Define the 5 byte for adresses
+	nrf24_WriteRegister1bit(SETUP_RETR, 0);
+	nrf24_WriteRegister1bit(RF_CH, 0);  // will be setup during Tx or RX, currently disable
 
 	nrf24_WriteRegister1bit (RF_SETUP, 0x0E);   // Setup the Power at 0db and data rate at 2Mbps
 
 	nrf24_ToggleCSCE(2);
-	nrf24_ToggleCSCE(0);
 
 }
 

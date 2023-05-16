@@ -5,6 +5,6 @@
 ../Core/Src/NRF24.c:76:6:nrf24_ReadRegisterNbit	24	static
 ../Core/Src/NRF24.c:85:6:nrf24_CmdTransmit	16	static
 ../Core/Src/NRF24.c:93:6:nrf24_reset	40	static
-../Core/Src/NRF24.c:146:6:nrf24_Init	8	static
-../Core/Src/NRF24.c:183:6:nrf24_TxMode	24	static
-../Core/Src/NRF24.c:196:5:nrf24_Transmit	24	static
+../Core/Src/NRF24.c:147:6:nrf24_Init	8	static
+../Core/Src/NRF24.c:182:6:nrf24_TxMode	24	static
+../Core/Src/NRF24.c:195:5:nrf24_Transmit	24	static

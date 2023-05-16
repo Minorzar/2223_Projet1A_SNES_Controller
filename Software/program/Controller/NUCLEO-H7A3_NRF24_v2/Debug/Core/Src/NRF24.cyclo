@@ -5,6 +5,6 @@ NRF24.c:63:9:nrf24_ReadRegister1bit	1
 NRF24.c:76:6:nrf24_ReadRegisterNbit	1
 NRF24.c:85:6:nrf24_CmdTransmit	1
 NRF24.c:93:6:nrf24_reset	3
-NRF24.c:146:6:nrf24_Init	1
-NRF24.c:183:6:nrf24_TxMode	1
-NRF24.c:196:5:nrf24_Transmit	3
+NRF24.c:147:6:nrf24_Init	1
+NRF24.c:182:6:nrf24_TxMode	1
+NRF24.c:195:5:nrf24_Transmit	3
