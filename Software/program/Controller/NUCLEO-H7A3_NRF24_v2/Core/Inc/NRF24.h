@@ -30,7 +30,6 @@
 #define RX_ADDR_P3 0x0D
 #define RX_ADDR_P4 0x0E
 #define RX_ADDR_P5 0x0F
-#define CD 0x09
 #define TX_ADDR 0x10
 #define RX_PW_P0 0x11
 #define RX_PW_P1 0x12
@@ -65,11 +64,19 @@ extern SPI_HandleTypeDef hspi1;
 #define REUSE_TX_PL   0xE3
 #define NOP           0xFF
 
+// Macro declaration
+
+#define CS_UP 0b0001
+#define CS_DOWN 0b0010
+#define CE_UP 0b0100
+#define CE_DOWN 0b1000
+
 // Declaration of function
 
 void nrf24_ToggleCSCE(uint8_t) ;
 void nrf24_WriteRegister1bit(uint8_t, uint8_t) ;
 void nrf24_WriteRegisterNbit(uint8_t, uint8_t*, int) ;
+void nrf24_ShowMemory(void) ;
 uint8_t nrf24_ReadRegister1bit(uint8_t) ;
 void nrf24_ReadRegisterNbit(uint8_t, uint8_t*, int) ;
 void nrf24_CmdTransmit(uint8_t) ;
