@@ -1288,7 +1288,10 @@
   (junction (at 53.34 20.32) (diameter 0) (color 0 0 0 0)
     (uuid 795e4a59-4d1a-4d27-9876-545e1b1edbb1)
   )
-  (junction (at 50.8 34.29) (diameter 0) (color 0 0 0 0)
+  (junction (at 36.83 34.29) (diameter 0) (color 0 0 0 0)
+    (uuid 7bd56f08-a457-44bc-a085-f68cc6d433f9)
+  )
+  (junction (at 44.45 34.29) (diameter 0) (color 0 0 0 0)
     (uuid 83325e97-f074-4535-ad85-4a0cfbe1f496)
   )
   (junction (at 255.27 93.98) (diameter 0) (color 0 0 0 0)
@@ -1327,14 +1330,11 @@
   (junction (at 66.04 27.94) (diameter 0) (color 0 0 0 0)
     (uuid bd3d75b2-fbc2-4f07-87f2-54ddbe8e5f2c)
   )
-  (junction (at 48.26 34.29) (diameter 0) (color 0 0 0 0)
+  (junction (at 41.91 34.29) (diameter 0) (color 0 0 0 0)
     (uuid cd4f487f-0372-4012-a913-1c37aa01d8d1)
   )
   (junction (at 138.43 171.45) (diameter 0) (color 0 0 0 0)
     (uuid cdb21195-655a-44e9-b816-e280fabfd87f)
-  )
-  (junction (at 36.83 34.29) (diameter 0) (color 0 0 0 0)
-    (uuid ce5829a9-0ec2-4f7f-be72-d4db6ed34b63)
   )
   (junction (at 182.88 48.26) (diameter 0) (color 0 0 0 0)
     (uuid d28dc3bb-319c-4747-b548-59a76c64baf3)
@@ -1363,13 +1363,11 @@
 
   (no_connect (at 107.95 76.2) (uuid 111a6aa3-ae70-4e56-95e3-e14b523a5f7a))
   (no_connect (at 149.86 138.43) (uuid 1cff557b-38fc-4588-99f0-b91a86a00624))
-  (no_connect (at 63.5 82.55) (uuid 25751eaf-5335-4fae-9894-c90fc55aa11d))
   (no_connect (at 149.86 140.97) (uuid 3110dc21-a82e-46a1-bc18-1e1f5315cc4c))
   (no_connect (at 137.16 140.97) (uuid 37a0e7a5-1f4e-4a0a-a386-fc6c41cbda2f))
   (no_connect (at 149.86 130.81) (uuid 55c65bcb-edfd-4ae3-aa58-7c3967972ee6))
   (no_connect (at 58.42 154.94) (uuid 8806162a-d181-4cc3-8469-e3891f8e0d4d))
   (no_connect (at 137.16 130.81) (uuid a4b16517-1d9b-498d-b08d-02758a8777a1))
-  (no_connect (at 58.42 149.86) (uuid ef92894d-27b3-477f-858e-2c768141526e))
 
   (polyline (pts (xy 15.24 110.49) (xy 81.28 110.49))
     (stroke (width 0) (type default))
@@ -1545,7 +1543,7 @@
     (uuid 4ab660df-579c-4452-b1d7-5fba6d1e905a)
   )
 
-  (wire (pts (xy 53.34 34.29) (xy 53.34 39.37))
+  (wire (pts (xy 46.99 34.29) (xy 46.99 39.37))
     (stroke (width 0) (type default))
     (uuid 4b9ae9ac-90c2-4f19-889c-bb9f172d0958)
   )
@@ -1636,7 +1634,7 @@
     (stroke (width 0) (type default))
     (uuid 68401dab-70cc-45f2-acba-4d22e3254aa1)
   )
-  (wire (pts (xy 48.26 34.29) (xy 48.26 39.37))
+  (wire (pts (xy 41.91 34.29) (xy 41.91 39.37))
     (stroke (width 0) (type default))
     (uuid 6c341d5c-0807-4b3a-813e-0f1dabb3c76e)
   )
@@ -1651,11 +1649,6 @@
   (polyline (pts (xy 13.97 115.57) (xy 13.97 189.23))
     (stroke (width 0) (type default))
     (uuid 6da3a7de-45d5-4dec-a3c8-af42db5834c3)
-  )
-
-  (wire (pts (xy 34.29 34.29) (xy 36.83 34.29))
-    (stroke (width 0) (type default))
-    (uuid 7091dff2-84f5-4639-be82-5a0c6bce7279)
   )
   (polyline (pts (xy 158.75 57.15) (xy 158.75 110.49))
     (stroke (width 0) (type default))
@@ -1774,7 +1767,7 @@
     (stroke (width 0) (type default))
     (uuid 94788fae-e653-4751-9cde-0b84aa5ed67d)
   )
-  (wire (pts (xy 50.8 34.29) (xy 53.34 34.29))
+  (wire (pts (xy 44.45 34.29) (xy 46.99 34.29))
     (stroke (width 0) (type default))
     (uuid 947cdd74-07b5-4d74-bb2c-e5fd61ea5dce)
   )
@@ -1879,6 +1872,10 @@
     (uuid b72b3e45-8eae-4e92-ac80-e8a390d8834d)
   )
 
+  (wire (pts (xy 36.83 34.29) (xy 41.91 34.29))
+    (stroke (width 0) (type default))
+    (uuid b77d9c7b-d048-47e8-8177-0c8daea984d3)
+  )
   (wire (pts (xy 167.64 20.32) (xy 167.64 24.13))
     (stroke (width 0) (type default))
     (uuid b9821ba3-b0c0-4b56-852f-c1608f9ec37c)
@@ -1887,7 +1884,7 @@
     (stroke (width 0) (type default))
     (uuid b9f0213a-fc63-476a-a495-07b688b97a03)
   )
-  (wire (pts (xy 50.8 34.29) (xy 50.8 39.37))
+  (wire (pts (xy 44.45 34.29) (xy 44.45 39.37))
     (stroke (width 0) (type default))
     (uuid bb74db9a-264f-4a0d-b383-6e3654607258)
   )
@@ -1896,7 +1893,7 @@
     (uuid c06426d8-5842-47c3-98ae-4d08f2aec646)
   )
 
-  (wire (pts (xy 48.26 34.29) (xy 50.8 34.29))
+  (wire (pts (xy 41.91 34.29) (xy 44.45 34.29))
     (stroke (width 0) (type default))
     (uuid c20003b6-49dc-416c-be3a-39189e763427)
   )
@@ -2026,7 +2023,7 @@
     (stroke (width 0) (type default))
     (uuid f88a871d-27f9-49d9-b713-42c87dc504ea)
   )
-  (wire (pts (xy 36.83 34.29) (xy 48.26 34.29))
+  (wire (pts (xy 27.94 34.29) (xy 36.83 34.29))
     (stroke (width 0) (type default))
     (uuid f8f06acd-0adf-493b-aa66-6bc9de4e4e25)
   )
@@ -2095,10 +2092,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "SWDCK" (shape input) (at 63.5 80.01 0) (fields_autoplaced)
+  (global_label "SWDCK" (shape input) (at 57.15 80.01 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 084cbfaa-435d-45c4-bf11-7b6e21427f5d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.8767 80.01 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.5267 80.01 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2123,10 +2120,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "Order_Search" (shape input) (at 63.5 46.99 0) (fields_autoplaced)
+  (global_label "Order_Search" (shape input) (at 57.15 46.99 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 1677bb74-b38a-47a4-a705-860c9ae1c895)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 78.9848 46.99 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.6348 46.99 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2165,17 +2162,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "Y_Button" (shape input) (at 63.5 64.77 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 26ffe9cc-23f1-44c4-86fc-cca80c571f21)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 74.6304 64.77 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "MOSI" (shape input) (at 63.5 62.23 0) (fields_autoplaced)
+  (global_label "MOSI" (shape input) (at 57.15 62.23 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 2834c454-5312-4778-b465-db01a1dedfe2)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 71.002 62.23 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 64.652 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2184,13 +2174,6 @@
     (uuid 2e265885-9161-4aeb-a210-dc13a192897d)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 35.5571 149.86 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "ST_Button" (shape input) (at 63.5 74.93 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 315b82f5-5b54-4210-b168-2c6a781eb837)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 75.7189 74.93 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
   (global_label "SWDCK" (shape input) (at 151.13 135.89 0) (fields_autoplaced)
@@ -2207,31 +2190,31 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "Pin_Clock" (shape input) (at 63.5 57.15 0) (fields_autoplaced)
+  (global_label "Pin_Clock" (shape input) (at 57.15 57.15 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 3698c740-cefe-483a-8f5b-71ec6c2ce2ea)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 75.5981 57.15 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 69.2481 57.15 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "X_Button" (shape input) (at 38.1 62.23 180) (fields_autoplaced)
+  (global_label "X_Button" (shape input) (at 31.75 62.23 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 36c774e7-0f12-4b1f-b12f-decb51b69eb1)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 26.8487 62.23 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 20.4987 62.23 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "Glob_Alim" (shape input) (at 34.29 34.29 180) (fields_autoplaced)
+  (global_label "Glob_Alim" (shape input) (at 27.94 34.29 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27) bold) (justify right))
     (uuid 4917258b-e79e-4169-94fc-1cfdbab6dc5e)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 21.7031 34.29 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 15.3531 34.29 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "LC_Button" (shape input) (at 38.1 54.61 180) (fields_autoplaced)
+  (global_label "LC_Button" (shape input) (at 31.75 54.61 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 4bf95920-7747-4258-8b49-f7af4363e65f)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 25.7601 54.61 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 19.4101 54.61 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2242,10 +2225,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "B_Button" (shape input) (at 63.5 44.45 0) (fields_autoplaced)
+  (global_label "B_Button" (shape input) (at 57.15 44.45 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 52d14c63-677d-4af4-a072-01424743cd91)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 74.8118 44.45 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 68.4618 44.45 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2263,17 +2246,17 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "USART2_RX" (shape input) (at 63.5 52.07 0) (fields_autoplaced)
+  (global_label "USART2_RX" (shape input) (at 57.15 52.07 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 59753b21-971f-4ee3-83a1-e99fc476531d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 76.9286 52.07 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 70.5786 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "SWDIO" (shape input) (at 63.5 77.47 0) (fields_autoplaced)
+  (global_label "SWDIO" (shape input) (at 57.15 77.47 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 5d722b55-073a-47e6-9d2e-76bee8861b71)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.272 77.47 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 65.922 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2284,10 +2267,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "L" (shape input) (at 38.1 57.15 180) (fields_autoplaced)
+  (global_label "L" (shape input) (at 31.75 57.15 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 69490e0d-38b6-4be4-9daa-ea310c9169f4)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 34.1661 57.15 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 27.8161 57.15 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2312,17 +2295,17 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "SE_Button" (shape input) (at 38.1 64.77 180) (fields_autoplaced)
+  (global_label "SE_Button" (shape input) (at 31.75 64.77 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 87901082-c3c5-4cfd-a2df-a7d44cda4952)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 25.6997 64.77 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 19.3497 64.77 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "POWER_CHECK" (shape input) (at 38.1 69.85 180) (fields_autoplaced)
+  (global_label "POWER_CHECK" (shape input) (at 31.75 69.85 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 89e389bf-55f0-4b66-903f-f72add49f323)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 21.4662 69.85 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 15.1162 69.85 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2354,11 +2337,18 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "UC_Button" (shape input) (at 38.1 74.93 180) (fields_autoplaced)
+  (global_label "UC_Button" (shape input) (at 31.75 74.93 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid a717f764-766b-4ed3-b00b-f725fe3caee6)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 25.4577 74.93 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 19.1077 74.93 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "GPIO_EX_CLK" (shape input) (at 57.15 64.77 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid a8a69938-ec2d-48ca-95e0-a3bf074ccce1)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.3929 64.77 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
   (global_label "L" (shape input) (at 138.43 181.61 90) (fields_autoplaced)
@@ -2368,11 +2358,25 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "Reset_Buton " (shape input) (at 38.1 44.45 180) (fields_autoplaced)
+  (global_label "CSN_nRF24" (shape input) (at 57.15 82.55 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid abc9a1b7-d627-4309-a2e1-ff8e2bb9f5f6)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 70.76 82.55 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "Reset_Buton " (shape input) (at 31.75 44.45 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid ac1fa5fd-9e47-4e91-be5f-eb3ad99626ac)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 22.8209 44.45 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 16.4709 44.45 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "GPIO_EX_SERIAL_DATA" (shape input) (at 57.15 74.93 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid accff4f7-b2eb-4982-8531-530967d8f5f9)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 80.5572 74.93 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
   (global_label "RC_Button" (shape input) (at 199.39 20.32 180) (fields_autoplaced)
@@ -2389,10 +2393,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "USART2_TX" (shape input) (at 63.5 49.53 0) (fields_autoplaced)
+  (global_label "USART2_TX" (shape input) (at 57.15 49.53 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid c2758ec6-855e-414d-9950-c3cf670a62a8)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 76.6262 49.53 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 70.2762 49.53 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2410,31 +2414,38 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "RX{slash}TX" (shape input) (at 63.5 72.39 0) (fields_autoplaced)
+  (global_label "CSN_nRF24" (shape input) (at 58.42 149.86 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid d234b733-84c1-4c45-9cee-c06363dff90d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.3929 72.39 0)
+    (uuid d180ef62-752b-429d-bca6-4d0aba556182)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 72.03 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "RC_Button" (shape input) (at 38.1 77.47 180) (fields_autoplaced)
+  (global_label "RX{slash}TX" (shape input) (at 57.15 72.39 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d234b733-84c1-4c45-9cee-c06363dff90d)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.0429 72.39 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "RC_Button" (shape input) (at 31.75 77.47 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid d41d6a7a-6da1-4ff0-8d8d-270c25829180)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 25.5182 77.47 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 19.1682 77.47 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "NES{slash}SNES_switcher" (shape input) (at 63.5 67.31 0) (fields_autoplaced)
+  (global_label "NES{slash}SNES_switcher" (shape input) (at 57.15 67.31 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid d73aba5b-0a51-453c-8b5c-62098335c584)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.0929 67.31 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 78.7429 67.31 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "DIODE_SDA" (shape input) (at 38.1 72.39 180) (fields_autoplaced)
+  (global_label "DIODE_SDA" (shape input) (at 31.75 72.39 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid d8ceba90-649a-458a-8dc3-122ab0431afa)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 25.0342 72.39 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 18.6842 72.39 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2452,38 +2463,38 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "DIODE_CLK" (shape input) (at 38.1 67.31 180) (fields_autoplaced)
+  (global_label "DIODE_CLK" (shape input) (at 31.75 67.31 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid e425b9ef-f8f4-4d87-9f0b-779f4a6c1fa4)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 25.0342 67.31 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 18.6842 67.31 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "A_Button" (shape input) (at 63.5 54.61 0) (fields_autoplaced)
+  (global_label "A_Button" (shape input) (at 57.15 54.61 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid e5e7bdb9-ed4a-42b7-a8ab-c6c38c66dac7)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 74.6304 54.61 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 68.2804 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "Digital_Out_Put" (shape input) (at 63.5 59.69 0) (fields_autoplaced)
+  (global_label "Digital_Out_Put" (shape input) (at 57.15 59.69 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid e788ef69-532d-444c-9e0e-0543f2bb0189)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 80.8594 59.69 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 74.5094 59.69 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "DC_Button" (shape input) (at 38.1 49.53 180) (fields_autoplaced)
+  (global_label "DC_Button" (shape input) (at 31.75 49.53 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid eba663c2-90ac-44d0-9ba4-a6a9edab4987)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 25.5182 49.53 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 19.1682 49.53 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "R" (shape input) (at 63.5 69.85 0) (fields_autoplaced)
+  (global_label "R" (shape input) (at 57.15 69.85 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid ecc402f1-562a-43ba-a324-5efe0111ca79)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 67.6758 69.85 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 61.3258 69.85 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2494,7 +2505,7 @@
     (property "Reference" "R3" (at 135.89 78.105 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R_Small" (at 135.89 80.645 0)
+    (property "Value" "1K" (at 135.89 80.645 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 133.35 78.74 0)
@@ -2506,7 +2517,7 @@
     (pin "1" (uuid 59ac3232-6950-434b-a5ce-a29a887910ff))
     (pin "2" (uuid 0868bcd6-9def-471a-99b6-e29fb1224a0d))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R3") (unit 1)
         )
@@ -2531,7 +2542,7 @@
     )
     (pin "1" (uuid 41f7c2db-ba72-4c8b-9892-78efd4864c82))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR01") (unit 1)
         )
@@ -2562,7 +2573,7 @@
           (reference "SW4") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW5") (unit 1)
         )
@@ -2593,7 +2604,7 @@
           (reference "C11") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C9") (unit 1)
         )
@@ -2623,7 +2634,7 @@
           (reference "H5") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H5") (unit 1)
         )
@@ -2653,7 +2664,7 @@
           (reference "H6") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H6") (unit 1)
         )
@@ -2678,7 +2689,7 @@
     )
     (pin "1" (uuid 710a5ab7-28f9-4e14-8416-b414b9945188))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR04") (unit 1)
         )
@@ -2708,7 +2719,7 @@
     )
     (pin "1" (uuid fdd251db-75f0-46bb-b058-79aba6944851))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR021") (unit 1)
         )
@@ -2739,7 +2750,7 @@
           (reference "D1") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "D2") (unit 1)
         )
@@ -2766,7 +2777,7 @@
     (pin "2" (uuid 12180585-2923-4b6c-adb1-e7d5e750e2fd))
     (pin "3" (uuid 1aa9dcc9-f8bb-4651-9873-e491e7a75bed))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "J3") (unit 1)
         )
@@ -2796,7 +2807,7 @@
           (reference "#PWR03") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR018") (unit 1)
         )
@@ -2827,7 +2838,7 @@
           (reference "SW3") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW4") (unit 1)
         )
@@ -2857,7 +2868,7 @@
           (reference "#PWR011") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR011") (unit 1)
         )
@@ -2887,7 +2898,7 @@
           (reference "#PWR018") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR019") (unit 1)
         )
@@ -2917,7 +2928,7 @@
           (reference "H3") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H3") (unit 1)
         )
@@ -2948,7 +2959,7 @@
           (reference "J1") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "J1") (unit 1)
         )
@@ -2979,7 +2990,7 @@
           (reference "C13") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C4") (unit 1)
         )
@@ -2996,7 +3007,7 @@
     (property "Value" "10u" (at 77.47 26.0413 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 74.93 24.13 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 74.93 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 74.93 24.13 0)
@@ -3005,7 +3016,7 @@
     (pin "1" (uuid c024eedc-c902-45ae-a6f2-f72ba44de414))
     (pin "2" (uuid 6d05a436-cd8e-4fb4-ab6f-5d79db7300ac))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C6") (unit 1)
         )
@@ -3036,7 +3047,7 @@
           (reference "SW9") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW12") (unit 1)
         )
@@ -3067,7 +3078,7 @@
           (reference "SW11") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW1") (unit 1)
         )
@@ -3097,7 +3108,7 @@
           (reference "#PWR07") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR022") (unit 1)
         )
@@ -3127,7 +3138,7 @@
           (reference "#FLG03") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG02") (unit 1)
         )
@@ -3158,7 +3169,7 @@
           (reference "R5") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R13") (unit 1)
         )
@@ -3188,7 +3199,7 @@
           (reference "#PWR017") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR014") (unit 1)
         )
@@ -3218,7 +3229,7 @@
           (reference "H4") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H4") (unit 1)
         )
@@ -3235,7 +3246,7 @@
     (property "Value" "100uF" (at 51.689 132.08 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4" (at 46.99 136.8552 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 46.99 136.8552 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 50.8 135.89 0)
@@ -3244,7 +3255,7 @@
     (pin "1" (uuid 8a2e11fa-4426-4c5a-a07b-cf8eb53e9cae))
     (pin "2" (uuid 127cb7dc-6640-4651-af75-be6080df5f64))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C1") (unit 1)
         )
@@ -3261,7 +3272,7 @@
     (property "Value" "100n" (at 68.58 26.0413 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 66.04 24.13 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 66.04 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 66.04 24.13 0)
@@ -3270,7 +3281,7 @@
     (pin "1" (uuid af110ada-b525-434b-8bcd-ccdda034ce7d))
     (pin "2" (uuid 2937fcce-273e-42d9-aea4-a7feb9ca35ff))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C5") (unit 1)
         )
@@ -3300,7 +3311,7 @@
           (reference "#PWR02") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR05") (unit 1)
         )
@@ -3331,7 +3342,7 @@
           (reference "SW1") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW2") (unit 1)
         )
@@ -3361,7 +3372,7 @@
           (reference "#FLG04") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG05") (unit 1)
         )
@@ -3369,19 +3380,19 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 50.8 90.17 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 44.45 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9afd407b-7b4f-487d-bccd-6ee71c1ce84b)
-    (property "Reference" "#PWR07" (at 50.8 96.52 0)
+    (property "Reference" "#PWR07" (at 44.45 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 50.8 95.25 0)
+    (property "Value" "GND" (at 44.45 95.25 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 50.8 90.17 0)
+    (property "Footprint" "" (at 44.45 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 50.8 90.17 0)
+    (property "Datasheet" "" (at 44.45 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4851dc90-214d-4971-b638-0099ca4c4138))
@@ -3391,7 +3402,7 @@
           (reference "#PWR07") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR02") (unit 1)
         )
@@ -3423,7 +3434,7 @@
     (pin "7" (uuid a749ffc9-55c6-430c-8e97-9b65e4dccf69))
     (pin "8" (uuid 7b6724a4-e8fa-440a-a20f-b30381f08b61))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "U2") (unit 1)
         )
@@ -3454,7 +3465,7 @@
           (reference "SW8") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW11") (unit 1)
         )
@@ -3471,7 +3482,7 @@
     (property "Value" "100n" (at 55.88 26.0413 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 53.34 24.13 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 53.34 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 53.34 24.13 0)
@@ -3480,7 +3491,7 @@
     (pin "1" (uuid c8b3babd-f859-4b9f-bb1b-7f0969b849f9))
     (pin "2" (uuid 7f877678-9b71-4a85-a727-4efd6f6f852f))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C3") (unit 1)
         )
@@ -3511,7 +3522,7 @@
           (reference "SW7") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW7") (unit 1)
         )
@@ -3541,7 +3552,7 @@
           (reference "#PWR016") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR03") (unit 1)
         )
@@ -3572,7 +3583,7 @@
           (reference "SW10") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW13") (unit 1)
         )
@@ -3602,7 +3613,7 @@
           (reference "#PWR05") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR015") (unit 1)
         )
@@ -3632,7 +3643,7 @@
           (reference "#PWR015") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR09") (unit 1)
         )
@@ -3663,7 +3674,7 @@
           (reference "SW2") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW3") (unit 1)
         )
@@ -3693,7 +3704,7 @@
           (reference "#PWR01") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR07") (unit 1)
         )
@@ -3724,7 +3735,7 @@
           (reference "SW13") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW10") (unit 1)
         )
@@ -3755,7 +3766,7 @@
           (reference "R4") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R2") (unit 1)
         )
@@ -3786,7 +3797,7 @@
           (reference "SW5") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW6") (unit 1)
         )
@@ -3816,7 +3827,7 @@
           (reference "H2") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H2") (unit 1)
         )
@@ -3841,7 +3852,7 @@
     )
     (pin "1" (uuid 27dba71e-100a-494a-a448-970b18d4b2f5))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG03") (unit 1)
         )
@@ -3871,7 +3882,7 @@
           (reference "#PWR04") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR016") (unit 1)
         )
@@ -3902,7 +3913,7 @@
           (reference "C1") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "C10") (unit 1)
         )
@@ -3940,7 +3951,7 @@
     (pin "8" (uuid c9d2000c-c828-4c23-a889-e72025fe9847))
     (pin "9" (uuid 86ab14f9-af19-42f9-9316-3418d7ae667b))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "J2") (unit 1)
         )
@@ -3972,7 +3983,7 @@
     (pin "2" (uuid f9e656a2-903b-470d-9c87-20d33ae3c69d))
     (pin "3" (uuid f1826553-b21c-47fb-96f3-fe288c50cdca))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "J4") (unit 1)
         )
@@ -4002,7 +4013,7 @@
           (reference "#PWR018") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR017") (unit 1)
         )
@@ -4032,7 +4043,7 @@
           (reference "#FLG01") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG04") (unit 1)
         )
@@ -4057,7 +4068,7 @@
     )
     (pin "1" (uuid 0eb498ab-c876-4821-84e5-e8129c0633f4))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#FLG01") (unit 1)
         )
@@ -4094,7 +4105,7 @@
           (reference "U2") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "U3") (unit 1)
         )
@@ -4125,7 +4136,7 @@
           (reference "SW7") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW9") (unit 1)
         )
@@ -4155,7 +4166,7 @@
           (reference "H1") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "H1") (unit 1)
         )
@@ -4185,7 +4196,7 @@
           (reference "#PWR016") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "#PWR06") (unit 1)
         )
@@ -4193,19 +4204,19 @@
     )
   )
 
-  (symbol (lib_id "MCU_ST_STM32L4:STM32L412KBTx") (at 50.8 64.77 0) (unit 1)
+  (symbol (lib_id "MCU_ST_STM32L4:STM32L412KBTx") (at 44.45 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f4e7c5bc-c1c1-40ed-9bf9-9dd4630b81a0)
-    (property "Reference" "U1" (at 52.7559 90.17 0)
+    (property "Reference" "U1" (at 46.4059 90.17 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "STM32L412KBTx" (at 52.7559 92.71 0)
+    (property "Value" "STM32L412KBTx" (at 46.4059 92.71 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_QFP:LQFP-32_7x7mm_P0.8mm" (at 40.64 87.63 0)
+    (property "Footprint" "Package_QFP:LQFP-32_7x7mm_P0.8mm" (at 34.29 87.63 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32l412kb.pdf" (at 50.8 64.77 0)
+    (property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32l412kb.pdf" (at 44.45 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid cbac0a8e-b3df-46ff-99c1-7c634e812083))
@@ -4246,7 +4257,7 @@
           (reference "U1") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "U1") (unit 1)
         )
@@ -4277,7 +4288,7 @@
           (reference "R19") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "R1") (unit 1)
         )
@@ -4308,7 +4319,7 @@
           (reference "SW6") (unit 1)
         )
       )
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
           (reference "SW8") (unit 1)
         )
@@ -4327,7 +4338,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115" (page "3"))
       )
     )
@@ -4344,7 +4355,7 @@
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115" (page "2"))
       )
     )
