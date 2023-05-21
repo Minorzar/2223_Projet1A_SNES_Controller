@@ -1,3 +1,14 @@
+/*
+ *
+ * NRF24 Library for project Snes_ENSEA2025
+ * Date: 16/05/2023
+ * Author: Gauthier BIEHLER
+ * Document: NRF24.h
+ *
+ */
+
+
+
 #include "stm32h7xx_hal.h"
 
 
@@ -19,7 +30,6 @@
 #define RX_ADDR_P3 0x0D
 #define RX_ADDR_P4 0x0E
 #define RX_ADDR_P5 0x0F
-#define CD 0x09
 #define TX_ADDR 0x10
 #define RX_PW_P0 0x11
 #define RX_PW_P1 0x12
@@ -35,8 +45,8 @@
 
 #define GPIO_CS_Port GPIOA
 #define GPIO_CE_Port GPIOC
-#define GPIO_CS_Pin 4
-#define GPIO_CE_Pin 5
+#define GPIO_CS_Pin GPIO_PIN_4
+#define GPIO_CE_Pin GPIO_PIN_5
 extern SPI_HandleTypeDef hspi1;
 
 // Constant Mnemonic
@@ -54,15 +64,26 @@ extern SPI_HandleTypeDef hspi1;
 #define REUSE_TX_PL   0xE3
 #define NOP           0xFF
 
+// Macro declaration
+
+#define CS_UP 0b0001
+#define CS_DOWN 0b0010
+#define CE_UP 0b0100
+#define CE_DOWN 0b1000
+
 // Declaration of function
 
 void nrf24_ToggleCSCE(uint8_t) ;
 void nrf24_WriteRegister1bit(uint8_t, uint8_t) ;
 void nrf24_WriteRegisterNbit(uint8_t, uint8_t*, int) ;
+void nrf24_ShowMemory(void) ;
 uint8_t nrf24_ReadRegister1bit(uint8_t) ;
 void nrf24_ReadRegisterNbit(uint8_t, uint8_t*, int) ;
 void nrf24_CmdTransmit(uint8_t) ;
 void nrf24_reset(uint8_t) ;
 void nrf24_Init(void) ;
-void nrf24_TxMode (uint8_t* , uint8_t);
-int nrf24_Transmit (uint8_t*);
+void nrf24_TxMode (uint8_t* , uint8_t) ;
+HAL_StatusTypeDef nrf24_Transmit (uint8_t*) ;
+void nrf24_RxMode(uint8_t*, uint8_t) ;
+uint8_t nrf24_DataAvailable(int) ;
+HAL_StatusTypeDef nrf24_Receive(uint8_t*) ;

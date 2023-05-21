@@ -152,4 +152,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 }
 
+HAL_StatusTypeDef HAL_UART_Print(char* buffer){
+	return HAL_UART_Transmit(&huart3, buffer, strlen(buffer), 100);
+}
+
 /* USER CODE END 1 */
