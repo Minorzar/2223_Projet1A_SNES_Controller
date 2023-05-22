@@ -392,7 +392,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Controler_NRF24L01_Exclude.kicad_pro",
+    "filename": "Controler_NRF24L01_Exclude_v2.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -475,6 +475,10 @@
     [
       "afa1107b-0419-432b-b3a6-c7617e352999",
       "Diode"
+    ],
+    [
+      "62e3f816-de13-4628-90ba-e6c17a72e9c0",
+      "GPIO_extender"
     ]
   ],
   "text_variables": {}
