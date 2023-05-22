@@ -446,7 +446,7 @@
     )
     (pin "1" (uuid 9688e30b-b515-4193-970e-eef0b294bd74))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115/62e3f816-de13-4628-90ba-e6c17a72e9c0"
           (reference "#PWR08") (unit 1)
         )
@@ -472,7 +472,7 @@
     (pin "1" (uuid 95fb5885-13ec-471d-8364-d956a1be2da0))
     (pin "2" (uuid 58fa9d1b-e723-483d-914c-852563dc680e))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115/62e3f816-de13-4628-90ba-e6c17a72e9c0"
           (reference "C7") (unit 1)
         )
@@ -498,7 +498,7 @@
     (pin "1" (uuid fd5c5c67-2cf7-4717-8ed4-6fdf1f486ce3))
     (pin "2" (uuid 6ac9a5b1-34b6-4a03-a5df-0c968a72a86a))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115/62e3f816-de13-4628-90ba-e6c17a72e9c0"
           (reference "R6") (unit 1)
         )
@@ -524,7 +524,7 @@
     (pin "1" (uuid bd276174-be46-41cc-9a0d-ae72fb7ceae1))
     (pin "2" (uuid 75de6535-d388-4236-b144-7188dce4023f))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115/62e3f816-de13-4628-90ba-e6c17a72e9c0"
           (reference "R4") (unit 1)
         )
@@ -550,7 +550,7 @@
     (pin "1" (uuid f47826cf-416e-46e0-96fc-de14e9ff6a2a))
     (pin "2" (uuid 28c9d92c-272b-420a-a032-b5b3bfd7d512))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115/62e3f816-de13-4628-90ba-e6c17a72e9c0"
           (reference "R5") (unit 1)
         )
@@ -594,7 +594,7 @@
     (pin "8" (uuid e1dfd1ec-8f92-436f-ba49-138abdf2835a))
     (pin "9" (uuid 5c8be94e-bf09-497c-8818-933370fdff2f))
     (instances
-      (project "Controler_NRF24L01_Exclude"
+      (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115/62e3f816-de13-4628-90ba-e6c17a72e9c0"
           (reference "U5") (unit 1)
         )
