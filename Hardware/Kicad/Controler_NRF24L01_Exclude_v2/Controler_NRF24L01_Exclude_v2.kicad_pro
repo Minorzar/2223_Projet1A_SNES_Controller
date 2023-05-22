@@ -388,7 +388,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "error",
@@ -410,7 +410,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.25,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -420,24 +420,24 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "track_width": 0.4,
+        "via_diameter": 1.6,
+        "via_drill": 0.8,
         "wire_width": 6
       },
       {
         "bus_width": 12,
-        "clearance": 0.5,
+        "clearance": 0.25,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
-        "microvia_diameter": 0.3,
+        "microvia_diameter": 1.6,
         "microvia_drill": 0.1,
         "name": "Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
+        "track_width": 0.4,
         "via_diameter": 1.6,
         "via_drill": 0.8,
         "wire_width": 6
@@ -460,34 +460,6 @@
       {
         "netclass": "Power",
         "pattern": "Li-ion"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "Order_Search"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "NES{slash}SNES_switcher"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "R"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "POWER_CHECK"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "DIO{slash}EX_CLK"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "DIO{slash}EX_SDA"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "DIODE_OE"
       }
     ]
   },
