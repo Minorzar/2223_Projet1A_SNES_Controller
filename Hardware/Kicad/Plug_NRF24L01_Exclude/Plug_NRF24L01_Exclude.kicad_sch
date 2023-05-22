@@ -7,7 +7,7 @@
   (title_block
     (title "SNES Wireless Receiver (NRF24L01 Exclude)")
     (date "2023-04-20")
-    (rev "2.1")
+    (rev "2.1b")
     (company "ENSEA")
   )
 
@@ -1414,7 +1414,6 @@
       )
     )
   )
-
 
   (junction (at 34.925 111.125) (diameter 0) (color 0 0 0 0)
     (uuid 03724e94-190a-455f-a79c-5a1d05117277)
