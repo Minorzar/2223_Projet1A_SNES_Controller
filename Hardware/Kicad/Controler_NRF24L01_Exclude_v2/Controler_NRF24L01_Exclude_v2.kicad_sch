@@ -3280,10 +3280,10 @@
     (property "Reference" "C1" (at 51.689 129.54 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "100uF" (at 51.689 132.08 90)
+    (property "Value" "22uF" (at 51.689 132.08 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 46.99 136.8552 0)
+    (property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4" (at 46.99 136.8552 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 50.8 135.89 0)
@@ -3411,7 +3411,7 @@
       )
       (project "Controler_NRF24L01_Exclude_v2"
         (path "/76ef48f1-60b7-4c4b-a0ce-73b6af33b115"
-          (reference "FLG05") (unit 1)
+          (reference "#FLG05") (unit 1)
         )
       )
     )
