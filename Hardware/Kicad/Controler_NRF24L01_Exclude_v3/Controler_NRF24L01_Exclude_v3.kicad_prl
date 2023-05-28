@@ -65,7 +65,7 @@
       40
     ],
     "visible_layers": "fffffff_ffffffff",
-    "zone_display_mode": 0
+    "zone_display_mode": 1
   },
   "meta": {
     "filename": "Controler_NRF24L01_Exclude_v3.kicad_prl",
