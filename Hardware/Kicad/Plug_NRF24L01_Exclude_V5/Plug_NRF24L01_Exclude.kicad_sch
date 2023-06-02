@@ -7,7 +7,7 @@
   (title_block
     (title "SNES Wireless Receiver (NRF24L01 Exclude)")
     (date "2023-04-20")
-    (rev "4.0a")
+    (rev "5.0b")
     (company "ENSEA")
   )
 
@@ -1513,15 +1513,20 @@
   )
 
   (no_connect (at 66.04 39.37) (uuid 24863d79-af58-4584-bae3-57cbfb6ee601))
+  (no_connect (at 49.53 113.03) (uuid 26b15248-d1f5-4cc4-bd49-30437dcd0497))
   (no_connect (at 66.04 67.31) (uuid 33422a16-c32c-4e27-b5c1-2438b5a03e8f))
   (no_connect (at 40.64 54.61) (uuid 3748244e-da56-43c8-adee-2fe188d9b15f))
   (no_connect (at 40.64 41.91) (uuid 5717dd25-5b6d-4021-90c6-59068da90460))
   (no_connect (at 40.64 49.53) (uuid 57afbe22-f72a-4032-86b2-080d99c2773b))
   (no_connect (at 40.64 46.99) (uuid 59cfb5ec-3145-4cb3-8b0b-793d29d15c16))
   (no_connect (at 66.04 64.77) (uuid 6a6c9702-ac00-4627-9b93-d851cea1990a))
+  (no_connect (at 49.53 105.41) (uuid 753906ad-6f3b-46bc-9914-0754a18df0d1))
   (no_connect (at 66.04 62.23) (uuid 94398e9a-66e9-4207-a6f0-a25eaa607436))
+  (no_connect (at 36.83 115.57) (uuid 997ede5e-1245-4164-806d-e7f3e74cbb41))
   (no_connect (at 186.055 69.85) (uuid b5ce6c7e-9b17-47be-a4bf-72be588fbf07))
+  (no_connect (at 49.53 115.57) (uuid bc55e227-4760-4201-88ba-3ee457f5e2b2))
   (no_connect (at 40.64 57.15) (uuid c7aaf99c-1090-4317-94da-c38a37fcfdc0))
+  (no_connect (at 36.83 105.41) (uuid de0fd564-3954-443a-ab3c-f363f647f434))
   (no_connect (at 66.04 36.83) (uuid df94600f-b7ac-4df8-8261-fd159e83d3f4))
 
   (wire (pts (xy 205.105 118.745) (xy 205.105 123.825))
