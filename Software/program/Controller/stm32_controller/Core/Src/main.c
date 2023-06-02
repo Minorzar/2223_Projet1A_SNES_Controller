@@ -118,8 +118,6 @@ int main(void)
     uint16_t CE_Pin = 11;
     uint8_t Power_Check_Pin = 4;
 
-    uint8_t Logic_State = 1;
-
     //Button data buffer
     uint16_t Button_Data = 0;
 
