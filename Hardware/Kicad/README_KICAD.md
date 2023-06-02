@@ -1,12 +1,21 @@
-# NRF24L01 (Receiver)
+# SNES Controller (Hardware - KiCad)
 
-This folder contains the Kicad projects of our controller.
-- "Controller": refers to the controller itself, it contains the schematic and PCB with the buttons on it, and will be inserted in the shell of the controller.
-- "NRF24L01_Include" refers to the Kicad project where the NRF24L01 is included in the schematic and PCB.
-- "NRF24L01_Exclude" refers to the Kicad project in which the NRF24L01 is not included in the schematic and PCB. The NRF24 module will have to be connected by cables for the receiver to work.
-- The library section contains the relevant files used in the projects.
+The purpose of this document is to explain the conception of our PCB on KiCad.
+
+---------- Folder structure ----------
+Projects: This folder contains the Kicad projects of our controller.
+- "Controller_NRF24L01_Exclude": refers to the controller itself, it contains the schematic and PCB with the buttons on it, and will be inserted in the shell of the controller.
+- "Controller_NRF24L01_Include": refers to the controller itself, it contains the schematic and PCB with the buttons on it, and will be inserted in the shell of the controller.
+- "Plug_NRF24L01_Exclude" refers to the Kicad project in which the NRF24L01 is not included in the schematic and PCB. The NRF24 module will have to be connected by cables for the receiver to work.
+- "Plug_NRF24L01_Include" refers to the Kicad project where the NRF24L01 is included in the schematic and PCB.
+
+Library: The library section contains the relevant files used in the projects.
+
+Image: 
 
 
+
+---------- Schematic ----------
 When we started the schematic, we remembered that the controller needed be ergonomic. So we planned and anticipated the positions of the buttons. 
 We reported the size controller on Kicad, the mounting hole of a side (R or L) are separate by a vector (+/-10,+/-20) (based on (x,y)). 
 
