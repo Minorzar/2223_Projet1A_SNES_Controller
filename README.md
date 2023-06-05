@@ -5,6 +5,8 @@ During the first year, our project will focus only on the controller aspect of t
 Our repository will be divided into different sections such as "References", "Data sheets", "Hardware" and "Software".
 For more details on each section, a readme can be found inside the folders.
 
-KiCAD: https://github.com/Minorzar/snes_project_ensea2025/blob/main/Hardware/Kicad/README_KICAD.md
+KiCad: https://github.com/Minorzar/snes_project_ensea2025/blob/main/Hardware/Kicad/README_KICAD.md
+
 Hardware : https://github.com/Minorzar/snes_project_ensea2025/blob/main/Hardware/README_HARDWARE.md
+
 SoftwareReadME : https://github.com/Minorzar/snes_project_ensea2025/blob/main/Software/README_SOFTWARE.md
