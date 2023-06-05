@@ -21,6 +21,8 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
+#include <string.h>
+
 uint8_t uartFlag;
 char uartTxBuffer[UARTTXBUFFERSIZE];
 char uartRxBuffer[UARTRXBUFFERSIZE];
@@ -153,7 +155,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 }
 
 HAL_StatusTypeDef HAL_UART_Print(char* buffer){
-	return HAL_UART_Transmit(&huart3, buffer, strlen(buffer), 100);
+	return HAL_UART_Transmit(&huart3, (uint8_t*)buffer, strlen(buffer), 100);
 }
 
 /* USER CODE END 1 */
