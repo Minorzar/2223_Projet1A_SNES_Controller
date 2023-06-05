@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "NRF24.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,17 +58,22 @@ extern char uartTxBuffer[UARTTXBUFFERSIZE];
 extern char uartRxBuffer[UARTRXBUFFERSIZE];
 extern UART_HandleTypeDef huart3;
 extern uint8_t uartFlag;
-extern uint8_t is_Transmiting ;
+int mode ;
 
-uint8_t TxAddress[] = {0xEE,0xDD,0xCC,0xBB,0xAA};
 char* TxData = "\r\nFonctionne stp\r\n";
 char* msglu = "\r\nMessage recu !\r\n";
 
-uint8_t RxAddress[] = {0x00,0xDD,0xCC,0xBB,0xAA};
-uint8_t RxData[32];
+//RX mode
+uint64_t RxpipeAddrs = 0x11223344AA;
+char myRxData[50];
+char myAckPayload[32] = "Ack by STMF7!";
+
+//TX mode
+uint64_t TxpipeAddrs = 0x11223344AA;
+char myTxData[32] = "Hello World!";
+char AckPayload[32];
 
 
-uint8_t data[50];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -118,15 +124,50 @@ int main(void)
 	/* USER CODE BEGIN 2 */
 	HAL_UART_Transmit(&huart3, (uint8_t*) "Booting...\r\n",12,100);
 
-	nrf24_Init();
-
-
 	// TX mode
-	nrf24_TxMode(TxAddress, 10);
-
+	//mode = 0;
 
 	//RX mode
-	//nrf24_RxMode(RxAddress, 10);
+	mode = 1;
+
+
+
+	switch(mode){
+	case 0:
+		NRF24_begin(hspi1);
+		nrf24_DebugUART_Init(huart3);
+
+		printRadioSettings();
+
+		NRF24_stopListening();
+		NRF24_openWritingPipe(TxpipeAddrs);
+		NRF24_setAutoAck(true);
+		NRF24_setChannel(52);
+		NRF24_setPayloadSize(32);
+
+		NRF24_enableDynamicPayloads();
+		NRF24_enableAckPayload();
+		break;
+	case 1:
+		NRF24_begin(hspi1);
+		nrf24_DebugUART_Init(huart3);
+
+		printRadioSettings();
+
+		NRF24_setAutoAck(true);
+		NRF24_setChannel(52);
+		NRF24_setPayloadSize(32);
+		NRF24_openReadingPipe(1, RxpipeAddrs);
+		NRF24_enableDynamicPayloads();
+		NRF24_enableAckPayload();
+
+		NRF24_startListening();
+		break;
+	}
+
+
+	printRadioSettings();
+
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
@@ -139,7 +180,7 @@ int main(void)
 			switch(uartRxBuffer[0]){
 			case 'g' :
 				HAL_UART_Transmit(&huart3,(uint8_t*) "et informations for nrf24\r\n",27,100);
-				nrf24_ShowMemory();
+				void NRF24_ShowMemory() ;
 				break;
 			default :
 				HAL_GPIO_TogglePin(LED2_PORT,  LED2_PIN) ;
@@ -149,37 +190,30 @@ int main(void)
 			}
 			uartFlag = 0 ;
 		}
-		/*
-		if (nrf24_DataAvailable(2) == 1){
-			nrf24_Receive(RxData) ;
-			HAL_UART_Transmit(&huart3, RxData, 32, 100);
-			HAL_GPIO_TogglePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin);
-			HAL_Delay(10);
-			HAL_GPIO_TogglePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin);
-		}
-		else{
-			HAL_GPIO_TogglePin(LED3_PORT,  LED3_PIN);
-			HAL_Delay(50);
-			HAL_GPIO_TogglePin(LED3_PORT,  LED3_PIN);
-			HAL_Delay(50);
-		}
-		 */
-		// Part for the transmission, will be put on one device the comment to upload the receive on another one
-		if (nrf24_Transmit((uint8_t*)TxData) == HAL_OK){
-			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN);
-			HAL_Delay(100);
-			HAL_GPIO_TogglePin(LED1_PORT,  LED1_PIN);
-			HAL_Delay(100);
-		}
-		else{
-			HAL_GPIO_TogglePin(LED3_PORT,  LED3_PIN);
-			HAL_Delay(100);
-			HAL_GPIO_TogglePin(LED3_PORT,  LED3_PIN);
-			HAL_Delay(100);
-		}
-		 //
 
-		//HAL_Delay(1000);
+		switch(mode){
+		case 0:
+			if(NRF24_write(myTxData, 32)){
+				NRF24_read(AckPayload, 32);
+				HAL_UART_Transmit(&huart3, (uint8_t *)"Transmitted Successfully\r\n", strlen("Transmitted Successfully\r\n"), 10);
+
+				char myDataack[80];
+				sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
+				HAL_UART_Transmit(&huart3, (uint8_t *)myDataack, strlen(myDataack), 10);
+			}
+			break;
+		case 1:
+			if(NRF24_available()){
+				NRF24_read(myRxData, 32);
+				NRF24_writeAckPayload(1, myAckPayload, 32);
+				myRxData[32] = '\r'; myRxData[32+1] = '\n';
+				HAL_UART_Transmit(&huart3, (uint8_t *)myRxData, 32+2, 10);
+			}
+			break ;
+		}
+
+		HAL_Delay(1000);
+
 	}
 	/* USER CODE END 3 */
 }
