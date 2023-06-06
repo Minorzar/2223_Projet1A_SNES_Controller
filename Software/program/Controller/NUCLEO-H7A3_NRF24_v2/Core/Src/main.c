@@ -36,14 +36,19 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+// This is where every macro I use in the code is implemented
+/*
+ * UARTTXBUFFERSIZE is the size use for the TX buffer when communicating with uart
+ * UARTRXBUFFERSIZE is the size use for the RX buffer when communicating with uart
+ * LED2_PORT is use to control the port of the user LED 2
+ * LED2_PIN is use to control the pin of the user LED 2
+ *
+ */
 #define UARTTXBUFFERSIZE 32
 #define UARTRXBUFFERSIZE 32
-#define LED1_PORT GPIOB
-#define LED1_PIN GPIO_PIN_0
 #define LED2_PORT GPIOE
 #define LED2_PIN GPIO_PIN_1
-#define LED3_PORT GPIOB
-#define LED3_PIN GPIO_PIN_14
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -54,19 +59,34 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+// This is where the basic declaration are made
+/*
+ * uartTxBuffer is the buffer use for TX mode with uart communication
+ * uartRxBuffer is the buffer use for RX mode with uart communication
+ * huart3 is the uart configuration we are using
+ * uartFlag is a flag the indicate whether or not a communication has been made from the computer to the board
+ * mode indicate in which mode (between TX and RX) we are with SPI communication
+ * msglu is use to indicate that a message has been receive with uart communication
+ * RxPipeAddrs is the adress of the receiving pipe for the NRF24
+ * myRxData is the buffer that will receive the data
+ * myAckPayload is the payload that will indicate if the communication has really been made
+ * TxpipeAddrs is the adress of the transmitting pipe for NRF24
+ * myTxData is the text that will be send during test phase
+ * AckPayload is the buffer that will be use for collecting the data of the ACK payload
+ *
+ */
 extern char uartTxBuffer[UARTTXBUFFERSIZE];
 extern char uartRxBuffer[UARTRXBUFFERSIZE];
 extern UART_HandleTypeDef huart3;
 extern uint8_t uartFlag;
 int mode ;
 
-char* TxData = "\r\nFonctionne stp\r\n";
 char* msglu = "\r\nMessage recu !\r\n";
 
 //RX mode
 uint64_t RxpipeAddrs = 0x11223344AA;
 char myRxData[50];
-char myAckPayload[32] = "Ack by STMF7!";
+char myAckPayload[32] = "Ack by STM32H7!";
 
 //TX mode
 uint64_t TxpipeAddrs = 0x11223344AA;
@@ -124,49 +144,56 @@ int main(void)
 	/* USER CODE BEGIN 2 */
 	HAL_UART_Transmit(&huart3, (uint8_t*) "Booting...\r\n",12,100);
 
+
+	/*
+	 *
+	 * This is where the configuration of the NRF24 is made, the only thing needed to change from TX to RX is to comment the instruction for TX or RX
+	 * depending on which mode you want to use.
+	 *
+	 */
 	// TX mode
-	//mode = 0;
+	mode = 0;
 
 	//RX mode
-	mode = 1;
+	//mode = 1;
 
 
 
 	switch(mode){
-	case 0:
-		NRF24_begin(hspi1);
-		nrf24_DebugUART_Init(huart3);
+	case 0:										// Configuration for TX mode
+		NRF24_begin(hspi1);						// Initialise the NRF24 with default value and link to hspi1
+		nrf24_DebugUART_Init(huart3);			// Use to make sure huart3 is connected
 
-		printRadioSettings();
+		printRadioSettings();					// A first print of the setting of the NRF24
 
-		NRF24_stopListening();
-		NRF24_openWritingPipe(TxpipeAddrs);
-		NRF24_setAutoAck(true);
-		NRF24_setChannel(52);
-		NRF24_setPayloadSize(32);
+		NRF24_stopListening();					// This is to disable the NRF24 while we continue the setup
+		NRF24_openWritingPipe(TxpipeAddrs);		// This setup the TX pipe
+		NRF24_setAutoAck(true);					// Configure the auto acknowledge
+		NRF24_setChannel(52);					// Confire the channel where the NRF24 will be communicating
+		NRF24_setPayloadSize(32);				// Define the payload size
 
-		NRF24_enableDynamicPayloads();
-		NRF24_enableAckPayload();
+		NRF24_enableDynamicPayloads();			// Enable the Dynamic payload (must be enable for ACK mode)
+		NRF24_enableAckPayload();				// Enable the ACK payload (must be enable for ACK mode)
 		break;
-	case 1:
-		NRF24_begin(hspi1);
-		nrf24_DebugUART_Init(huart3);
+	case 1:										// Configuration for RX mode
+		NRF24_begin(hspi1);						// Initialise the NRF24 with default value and link to hspi1
+		nrf24_DebugUART_Init(huart3);			// Use to make sure huart3 is connected
 
-		printRadioSettings();
+		printRadioSettings();					// A first print of the setting of the NRF24
 
-		NRF24_setAutoAck(true);
-		NRF24_setChannel(52);
-		NRF24_setPayloadSize(32);
-		NRF24_openReadingPipe(1, RxpipeAddrs);
-		NRF24_enableDynamicPayloads();
-		NRF24_enableAckPayload();
+		NRF24_setAutoAck(true);					// Configure the auto acknowledge
+		NRF24_setChannel(52);					// Configure the channel where the NRF24 will be communicating
+		NRF24_setPayloadSize(32);				// Define the payload size
+		NRF24_openReadingPipe(1, RxpipeAddrs);	// This setup the RX pipe
+		NRF24_enableDynamicPayloads();			// Enable the Dynamic payload (must be enable for ACK mode)
+		NRF24_enableAckPayload();				// Enable the ACK payload (must be enable for ACK mode)
 
-		NRF24_startListening();
+		NRF24_startListening();					// Enable the listening of the NRF24
 		break;
 	}
 
 
-	printRadioSettings();
+	printRadioSettings();						// Print the final configuration of the NRF24
 
 	/* USER CODE END 2 */
 
@@ -176,6 +203,14 @@ int main(void)
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
+		/*
+		 *
+		 * The first part is set to test the uart communication
+		 * at first, it was suppose to be: pc -> uart -> board 1 -> spi -> NRF24 TX -> NRF24 RX -> spi -> board 2 -> uart -> pc
+		 * Everytime a g is entered, it will print the current memory of every register of the NRF24
+		 * In other cases, it will just make the second user LED flicker.
+		 *
+		 */
 		if(uartFlag == 1){
 			switch(uartRxBuffer[0]){
 			case 'g' :
@@ -191,6 +226,19 @@ int main(void)
 			uartFlag = 0 ;
 		}
 
+
+		/*
+		 *
+		 * This is the code for the NRF24.
+		 * The case 0 is for the transmission
+		 * The NRF24_read is to confirm that the AckPayload has been filled.
+		 * The rest of the code is to transmit to the uart (this is mainly for test purpose)
+		 *
+		 * The case 1 is for the receive
+		 * It first check if there is data available then will put it in the RxData buffer.
+		 * The rest is also to transmit to the uart for test purpose
+		 *
+		 */
 		switch(mode){
 		case 0:
 			if(NRF24_write(myTxData, 32)){
@@ -213,6 +261,7 @@ int main(void)
 		}
 
 		HAL_Delay(1000);
+
 
 	}
 	/* USER CODE END 3 */

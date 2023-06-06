@@ -3633,13 +3633,12 @@ int main(void)
  8001d4a:	f005 fbde 	bl	800750a <HAL_UART_Transmit>
 
 	// TX mode
-	//mode = 0;
-
-	//RX mode
-	mode = 1;
+	mode = 0;
  8001d4e:	4b71      	ldr	r3, [pc, #452]	; (8001f14 <main+0x1f4>)
- 8001d50:	2201      	movs	r2, #1
+ 8001d50:	2200      	movs	r2, #0
  8001d52:	601a      	str	r2, [r3, #0]
+	//RX mode
+	//mode = 1;
 
 
 
@@ -3798,6 +3797,7 @@ int main(void)
  8001e68:	2200      	movs	r2, #0
  8001e6a:	701a      	strb	r2, [r3, #0]
 		}
+
 
 		switch(mode){
  8001e6c:	4b29      	ldr	r3, [pc, #164]	; (8001f14 <main+0x1f4>)
