@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "functions.h"
+#include "NRF24.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -119,36 +120,43 @@ int main(void)
     uint8_t Power_Check_Pin = 4;
 
     //Button data buffer
-    uint16_t Button_Data = 0;
+    uint8_t Button_Data[2] = {0, 0};
 
     //Battery related variables
     uint16_t Battery_Raw = 0;
     float Battery_Temp = 0;
     uint8_t i = 0;
 
+    //LED related variables
+	#define LED_DEVICE 0x25
+	#define LED_REGISTER 0x6
+	#define LED_ENABLE 0x10
+    uint8_t LED_Buf[2];
+    uint8_t LED_ADDRESS = LED_DEVICE<<1 + 0x80;
 
-    uint8_t LED_Buf[3];
-    uint8_t LED_ADDRESS = 0x15;
-    uint8_t LED_REGISTER = 0x6;
-    uint8_t LED_ENABLE = 0x10;
-    LED_Buf[0] = LED_ADDRESS<<1 + 0x81;
-    LED_Buf[2] = LED_ENABLE;
+
+    LED_Buf[1] = LED_ENABLE;
     uint8_t GPIOE_ADDRESS_1 = 0b01000001;
     uint8_t GPIOE_ADDRESS_2 = 0b01000011;
     uint8_t GPIO_Data_2 = 0;
+
+    //LED driver Initialization
+    LED_Init();
 
     //Battery saving variables
     Eco_const = 1000;
     Eco_var = 0;
 
+    //NRF24 Initialization
+    NRF24_begin(hspi1);
+	NRF24_stopListening();
+	NRF24_openWritingPipe(TxpipeAddrs);
+	NRF24_setAutoAck(true);
+	NRF24_setChannel(52);
+	NRF24_setPayloadSize(32);
 
-
-
-
-
-
-
-    //CODE TO ADD: nrf24 initialization
+	NRF24_enableDynamicPayloads();
+	NRF24_enableAckPayload();
 
   /* USER CODE END 2 */
 
@@ -172,16 +180,16 @@ int main(void)
 	  		  	  }
 	  	  	  }
 	  	  }
-	  	  Button_Data = 0;
+	  	Button_Data = 0;
 
 	  	  //Getting Button info
-	  	  HAL_I2C_Master_Receive(&hi2c1, GPIOE_ADDRESS_1, &Button_Data , 1, HAL_MAX_DELAY);
-	  	  HAL_I2C_Master_Receive(&hi2c1, GPIOE_ADDRESS_2, &Button_Data +8, 1, HAL_MAX_DELAY);
+	  	HAL_I2C_Master_Receive(&hi2c1, GPIOE_ADDRESS_1, &Button_Data[0] , 1, HAL_MAX_DELAY);
+	  	HAL_I2C_Master_Receive(&hi2c1, GPIOE_ADDRESS_2, &Button_Data[1], 1, HAL_MAX_DELAY);
 
+	  	//Wireless transmission
+	  	NRF24_write(&Button_Data, 2);
 
-	  	  //CODE TO ADD: wireless transmission
-
-	  	  Eco_var = (Eco_var + 1) % Eco_const;
+	  	Eco_var = (Eco_var + 1) % Eco_const;
 
 
     /* USER CODE END WHILE */

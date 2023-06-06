@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "NRF24.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,6 +43,7 @@
 SPI_HandleTypeDef hspi1;
 
 UART_HandleTypeDef huart2;
+DMA_HandleTypeDef hdma_usart2_rx;
 
 /* USER CODE BEGIN PV */
 
@@ -51,6 +52,7 @@ UART_HandleTypeDef huart2;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
@@ -90,6 +92,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_SPI1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
@@ -124,10 +127,22 @@ int main(void)
   uint16_t L_Pin = 13;
   uint16_t R_Pin = 5;
 
+  uint16_t SPI_Data = 16;
   uint8_t Bit_Number[16] = {B_Pin, Y_Pin, Select_Pin, Start_Pin, Cross_Up_Pin, Cross_Down_Pin, Cross_Left_Pin, Cross_Right_Pin, A_Pin, X_Pin, L_Pin, R_Pin, 0, 0, 0, 0};
+  uint8_t step = 0;
 
-  //CODE TO ADD:
+  //NRF24 Initialization
+  NRF24_begin(hspi1);
+  NRF24_setAutoAck(true);
+  NRF24_setChannel(52);
+  NRF24_setPayloadSize(32);
+  NRF24_openReadingPipe(1, RxpipeAddrs);
+  NRF24_enableDynamicPayloads();
+  NRF24_enableAckPayload();
 
+  NRF24_startListening();
+
+  HAL_Delay(1000);
 
 
   /* USER CODE END 2 */
@@ -139,7 +154,10 @@ int main(void)
 
 	  //Loop that detects the Data_Latch rising edge while updating the controller state
 	  do {
-		  //CODE TO ADD : wireless data reception
+		  //Wireless data reception
+			NRF24_read(myRxData, 2);
+			NRF24_writeAckPayload(1, myAckPayload, 2);
+
 		  Data_Latch = HAL_GPIO_ReadPin(GPIOB, Data_Latch_Pin);
 	  }
 	  while(Data_Latch == 0);
@@ -165,9 +183,25 @@ int main(void)
 		  while(Data_Clock == 0);
 	  }
 	  HAL_GPIO_WritePin(GPIOB, Serial_Data_Pin, GPIO_PIN_RESET);
+	  if(step<600){
+		  if(SPI_Data ==0){
+	  	  		  SPI_Data = 16;
+	  	  	  }
+	  	  else{
+	  	  		  SPI_Data = 0;
+	  	  	  }
+	  }
+	  if((step>=600)){
+		  if(SPI_Data ==0){
+			  SPI_Data = 1024;
+		  }
+		  else{
+			  SPI_Data = 0;
+		  	  }
 
-
-
+	  }
+	  step++;
+	  HAL_UART_Transmit(&huart2,&step,1,HAL_MAX_DELAY);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -275,7 +309,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 9600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -291,6 +325,22 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel6_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
 
 }
 
