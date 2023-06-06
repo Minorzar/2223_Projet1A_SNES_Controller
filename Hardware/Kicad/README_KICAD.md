@@ -11,15 +11,15 @@ Projects: This folder contains the Kicad projects of our controller.
 
 Library: The library section contains the relevant files used in the projects.
 
-Image: 
+Image:
 
 
 
 ---------- Schematic ----------
-When we started the schematic, we remembered that the controller needed be ergonomic. So we planned and anticipated the positions of the buttons. 
-We reported the size controller on Kicad, the mounting hole of a side (R or L) are separate by a vector (+/-10,+/-20) (based on (x,y)). 
+When we started the schematic, we remembered that the controller needed be ergonomic. So we planned and anticipated the positions of the buttons.
+We reported the size controller on Kicad, the mounting hole of a side (R or L) are separate by a vector (+/-10,+/-20) (based on (x,y)).
 
-Every button of the two cross (real cross and the 4 buttons (A,B,X,Y)) have been spaced by 25mm. The button Start and Select have been put at the same place as the original controller. 
+Every button of the two cross (real cross and the 4 buttons (A,B,X,Y)) have been spaced by 25mm. The button Start and Select have been put at the same place as the original controller.
 In order to be able to create the PCB the easiest way possible, the STM32 have been putted on the middle of the controller.
 
 For the nRF24, for the Include version, we reproduced the schematic of the nRF24 on the PCB. We chose the condensers, crystal and resistors for it.
@@ -32,7 +32,7 @@ But the N+1 asked a way to see the battery level and the number of the controlle
 
 So , the multi-led needed 2 port (I2C SPI and CLK) and controlled 16 led. We use 4 led for the number of the controller and 12 for the battery level.
 
-Moreover they are some problem on the 
+Moreover they are some problem on the number of port on the processor. Indeed the processor was impose by the teacher but this one hadn't 
 
 UPDATES
 
