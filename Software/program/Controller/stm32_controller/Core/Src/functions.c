@@ -1,3 +1,17 @@
+#ifndef __fonction_H__
+#define __fonction_H__
+
+#include "stm32l4xx_hal.h"
+
+#define LED_DEVICE           0x15
+#define LED_REGISTER         0x6
+#define LED_ENABLE           0x10
+
+extern uint8_t LED_Buf[2];
+extern uint8_t LED_ADDRESS;
+extern I2C_HandleTypeDef hi2c1;
+
+
 void LED_Init(){
 	LED_Buf[1] = LED_ENABLE;
 	int i;
@@ -19,3 +33,5 @@ void LED_Write(uint8_t lednum, uint8_t state){
 	}
 	HAL_I2C_Master_Transmit(&hi2c1, LED_ADDRESS, LED_Buf, 2, HAL_MAX_DELAY);
 }
+
+#endif
