@@ -1,21 +1,22 @@
-# SNES Controller (Hardware - KiCad)
+# SNES Controller (KiCad)
 
-The purpose of this document is to explain the conception of our PCB on KiCad.
+The purpose of this document is to explain the operations behind the design of our PCBs made with KiCad.
 
----------- Folder structure ----------
-Projects: This folder contains the Kicad projects of our controller.
-- "Controller_NRF24L01_Exclude": refers to the controller itself, it contains the schematic and PCB with the buttons on it, and will be inserted in the shell of the controller.
-- "Controller_NRF24L01_Include": refers to the controller itself, it contains the schematic and PCB with the buttons on it, and will be inserted in the shell of the controller.
-- "Plug_NRF24L01_Exclude" refers to the Kicad project in which the NRF24L01 is not included in the schematic and PCB. The NRF24 module will have to be connected by cables for the receiver to work.
-- "Plug_NRF24L01_Include" refers to the Kicad project where the NRF24L01 is included in the schematic and PCB.
+# Folder structure
 
-Library: The library section contains the relevant files used in the projects.
+Projects:
+- Our KiCad projects consist of a controller and a plug, both of which have two distinct versions: the exclude and include versions. The exclude version will have a connector which will be used to connect an NRF24L01 to it. The include version will have the NRF24L01 directly on the PCB, along with the crystal and antenna corresponding to the latter's specifications.
 
-Image: 
+Library:
+- The library section contains the library files used in KiCad for our projects. The files there mainly concern the use of the NRF24L01 in particular.
 
+Image:
+- This folder contains the progress of our PCBs in the form of images. It contains only images relating to the Plug_NRF24L01 schematic, PCB and 3D viewer.
 
+Unused:
+- The KiCad projects in this folder contain the "Include" versions of our controller and plug, as this was deemed infeasible due to bizarre antenna restrictions on the KiCad software. The only references we've found to this problem date back several years, and most of them have not been resolved on community forums and social networks.
 
----------- Schematic ----------
+# Schematic
 When we started the schematic, we remembered that the controller needed be ergonomic. So we planned and anticipated the positions of the buttons. 
 We reported the size controller on Kicad, the mounting hole of a side (R or L) are separate by a vector (+/-10,+/-20) (based on (x,y)). 
 
@@ -32,9 +33,13 @@ But the N+1 asked a way to see the battery level and the number of the controlle
 
 So , the multi-led needed 2 port (I2C SPI and CLK) and controlled 16 led. We use 4 led for the number of the controller and 12 for the battery level.
 
-Moreover they are some problem on the 
+Moreover they are some problem on the number of port on the processor. Indeed the processor was impose by the teacher but this one hadn't 
 
 UPDATES
 
 - The V.0 was original a rectangular PCB but the unused part of copper was to high
 - The spacing between button have been changed (10mm -> 25mm)
+
+
+
+The only concerns when routing our PCB were the following: the size and the use of coppers.
