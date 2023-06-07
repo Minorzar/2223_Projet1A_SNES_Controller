@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "NRF24.h"
@@ -98,8 +97,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   //Constants and variables declaration
-  uint8_t SPI_CE_Pin = 9;
-  uint8_t SPI_CS_Pin = 8;
   uint8_t Data_Latch_Pin = 4;
   uint8_t Data_Clock_Pin = 3;
   uint8_t Serial_Data_Pin = 5;
@@ -107,9 +104,9 @@ int main(void)
   GPIO_PinState Data_Clock = GPIO_PIN_RESET;
   GPIO_PinState Serial_Data = GPIO_PIN_RESET;
 
-  uint8_t Serial_Data_2_Pin = 6;
-  uint8_t IO_Bit=7;
-  uint8_t Pairing_Button = 4;
+  //uint8_t Serial_Data_2_Pin = 6;
+  //uint8_t IO_Bit=7;
+  //uint8_t Pairing_Button = 4;
 
   uint8_t i = 0;
 
@@ -127,11 +124,15 @@ int main(void)
   uint16_t L_Pin = 13;
   uint16_t R_Pin = 5;
 
-  uint16_t SPI_Data = 16;
+  uint8_t NRF_Data[2] = {0,0};
+  uint16_t Button_Data = 0;
   uint8_t Bit_Number[16] = {B_Pin, Y_Pin, Select_Pin, Start_Pin, Cross_Up_Pin, Cross_Down_Pin, Cross_Left_Pin, Cross_Right_Pin, A_Pin, X_Pin, L_Pin, R_Pin, 0, 0, 0, 0};
   uint8_t step = 0;
 
   //NRF24 Initialization
+  uint64_t RxpipeAddrs = 0x11223344AA;
+  char myAckPayload[32] = "Ack by LM!";
+
   NRF24_begin(hspi1);
   NRF24_setAutoAck(true);
   NRF24_setChannel(52);
@@ -155,8 +156,10 @@ int main(void)
 	  //Loop that detects the Data_Latch rising edge while updating the controller state
 	  do {
 		  //Wireless data reception
-			NRF24_read(myRxData, 2);
-			NRF24_writeAckPayload(1, myAckPayload, 2);
+		  NRF24_read(NRF_Data, 2);
+		  NRF24_writeAckPayload(1, myAckPayload, 2);
+		  Button_Data = ((NRF_Data[1]<<8)||NRF_Data[0]);
+
 
 		  Data_Latch = HAL_GPIO_ReadPin(GPIOB, Data_Latch_Pin);
 	  }
@@ -166,7 +169,7 @@ int main(void)
 	  //When the rising edge is detected, transmission of the button states begins:
 	  for(i=0;i<16; i++){
 
-		  if ((SPI_Data && Bit_Number[i]) == 0){
+		  if ((Button_Data && Bit_Number[i]) == 0){
 			  HAL_GPIO_WritePin(GPIOB, Serial_Data_Pin, GPIO_PIN_SET);
 		  }
 		  else{
@@ -183,25 +186,27 @@ int main(void)
 		  while(Data_Clock == 0);
 	  }
 	  HAL_GPIO_WritePin(GPIOB, Serial_Data_Pin, GPIO_PIN_RESET);
+	  /*
 	  if(step<600){
-		  if(SPI_Data ==0){
-	  	  		  SPI_Data = 16;
+		  if(Button_Data ==0){
+	  	  		  Button_Data = 16;
 	  	  	  }
 	  	  else{
-	  	  		  SPI_Data = 0;
+	  	  		  Button_Data = 0;
 	  	  	  }
 	  }
 	  if((step>=600)){
-		  if(SPI_Data ==0){
-			  SPI_Data = 1024;
+		  if(Button_Data ==0){
+			  Button_Data = 1024;
 		  }
 		  else{
-			  SPI_Data = 0;
+			  Button_Data = 0;
 		  	  }
 
 	  }
 	  step++;
 	  HAL_UART_Transmit(&huart2,&step,1,HAL_MAX_DELAY);
+	  */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

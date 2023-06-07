@@ -50,7 +50,8 @@ SPI_HandleTypeDef hspi1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+uint8_t LED_Buf[2];
+uint8_t LED_ADDRESS = (LED_DEVICE<<1) + 0x80;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -127,12 +128,9 @@ int main(void)
     float Battery_Temp = 0;
     uint8_t i = 0;
 
-    //LED related variables
-	#define LED_DEVICE 0x25
-	#define LED_REGISTER 0x6
-	#define LED_ENABLE 0x10
-    uint8_t LED_Buf[2];
-    uint8_t LED_ADDRESS = LED_DEVICE<<1 + 0x80;
+
+
+
 
 
     LED_Buf[1] = LED_ENABLE;
@@ -140,14 +138,18 @@ int main(void)
     uint8_t GPIOE_ADDRESS_2 = 0b01000011;
     uint8_t GPIO_Data_2 = 0;
 
+
+
     //LED driver Initialization
     LED_Init();
 
     //Battery saving variables
-    Eco_const = 1000;
-    Eco_var = 0;
+    uint8_t Eco_const = 1000;
+    uint8_t Eco_var = 0;
 
     //NRF24 Initialization
+    uint64_t TxpipeAddrs = 0x11223344AA;
+
     NRF24_begin(hspi1);
 	NRF24_stopListening();
 	NRF24_openWritingPipe(TxpipeAddrs);
@@ -180,7 +182,6 @@ int main(void)
 	  		  	  }
 	  	  	  }
 	  	  }
-	  	Button_Data = 0;
 
 	  	  //Getting Button info
 	  	HAL_I2C_Master_Receive(&hi2c1, GPIOE_ADDRESS_1, &Button_Data[0] , 1, HAL_MAX_DELAY);

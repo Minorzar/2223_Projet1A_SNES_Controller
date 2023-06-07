@@ -1,3 +1,6 @@
+#ifndef __NRF24_H__
+#define __NRF24_H__
+
 #include "NRF24.h"
 
 //*** Variables declaration ***//
@@ -899,3 +902,5 @@ void printFIFOstatus(void)
 	HAL_UART_Transmit(&nrf24_huart, (uint8_t *)uartTxBuf, strlen(uartTxBuf), 10);
 
 }
+
+#endif

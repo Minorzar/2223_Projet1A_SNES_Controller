@@ -41,7 +41,12 @@ extern "C" {
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
+//LED related variables
+#define LED_DEVICE           0x15
+#define LED_REGISTER         0x6
+#define LED_ENABLE           0x10
 
+//I2C_HandleTypeDef hi2c1;
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/

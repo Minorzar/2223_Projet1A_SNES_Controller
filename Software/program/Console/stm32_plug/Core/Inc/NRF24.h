@@ -1,17 +1,17 @@
 //List of header files
-#include "stm32h7xx_hal.h"   //** Change this according to your STM32 series **//
-#include "usart.h"
+#include "stm32l4xx_hal.h"   //** Change this according to your STM32 series **//
+//#include "usart.h"
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
 #include <main.h>
 //1. Pinout Ports and Pin
-#define nrf24_CSN_PORT			CSN_Pin_GPIO_Port
-#define nrf24_CSN_PIN			CSN_Pin_Pin
+#define nrf24_CSN_PORT			GPIOA
+#define nrf24_CSN_PIN			8
 
-#define nrf24_CE_PORT			CE_Pin_GPIO_Port
-#define nrf24_CE_PIN			CE_Pin_Pin
+#define nrf24_CE_PORT			GPIOB
+#define nrf24_CE_PIN			9
 
 
 #define _BV(x) (1<<(x))

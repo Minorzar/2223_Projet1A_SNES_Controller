@@ -6,3 +6,4 @@
  */
 
 void LED_Write(uint8_t, uint8_t);
+void LED_Init(void);
