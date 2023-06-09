@@ -40,7 +40,7 @@ Operation:
 - Every 16.67 ms, the console sends a 12 μs wide pulse to pin 3, instructing the controller to latch the state of the buttons.
 - After 6 μs, the console sends 16 clock cycles to the "Data_clock" pin.
     - On the rising edge, the controller, or our plug in particular for this project, serially shifts the states of the buttons locked on the "Serial_data" pin.
-    - On the falling edge, the CPU inside the console samples the data.
+    - On the falling edge, the CPU inside the SNES samples the data.
 
 Algorithm:
 - In order to comply with the above-mentioned protocol, the plug's microprocessor must be able to detect the various signals sent by the console and respond accordingly.
@@ -51,7 +51,7 @@ Algorithm:
 ## Battery
 
 - One of the most important functions of a wireless controller is to display its battery charge, as we wouldn't want it to unexpectedly run out of power. The easiest way to do this is to measure the battery voltage. A fully charged battery will have a high voltage, and then slowly decrease as it is used. Fortunately, our microprocessor has an analog pin that allows us to do just that.
-- Once we've obtained this value, we'll need to convert it into a number between 1 and 12, as we'll have 12 LEDs representing the current state of the battery.
+- Once this value has been obtained, it must be converted to an integer between 1 and 12. The reason for these precise numbers is that we have exactly 12 LEDs to represent the current state of the battery.
 
 ## I2C Devices
 

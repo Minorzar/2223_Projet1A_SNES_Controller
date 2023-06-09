@@ -15,7 +15,8 @@ PCB:
 - The main challenge of our project will be to design a PCB. To do this, we'll be using KiCad software. Knowing that we'll be creating a controller and a plug, we've estimated that we'll need exactly two PCBs, one for each.
 
 Microprocessor:
-- A microprocessor will be required on both the plug and the controller. Their main role will be to receive data from the controller, which will be transmitted via the NRF24L01 communication protocol to the plug, and then adapt it to the console using the SNES communication protocol. We chose to use an STM32-LK412KBTx for the plug and controller, as it was the most readily available while having sufficient GPIOs and being the smallest.
+- A microprocessor will be required on both the plug and the controller. Their main role will be to receive data from the controller, which will be transmitted via the NRF24L01 communication protocol to the plug, and then adapt it to the console using the SNES communication protocol.
+- We chose to use an STM32-LK412KBTx for the plug and controller, as it was the most readily available while having sufficient GPIOs and being the smallest.
 
 NRF24L01:
 - We decided to use the NRF24 for two reasons. The first is its low power consumption, as it costs less than many other communication devices. The secnd is its low latency compared with other available options.
@@ -42,7 +43,6 @@ Power supply:
 
 DC/DC converter:
 - To convert the voltage from 4.3V to 3.3V, we used a DC/DC converter. We first considered using an AMS1117 linear voltage regulator, but as it was not available, we decided to replace it with a MIC5219-3.3YMM.
-
 
 ## Plug
 

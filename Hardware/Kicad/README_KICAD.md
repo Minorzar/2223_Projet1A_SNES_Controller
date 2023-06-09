@@ -5,7 +5,10 @@ The purpose of this document is to explain the operations behind the design of o
 ## Folder Structure
 
 Projects:
-- Our KiCad projects consist of a controller and a plug, both of which have two distinct versions: the exclude version and the include version. The exclude version will have a connector which will be used to connect an NRF24L01 to it. The include version will have the NRF24L01 directly on the PCB, along with the crystal and antenna corresponding to the latter's specifications. As indicated in the README_HARDWARE, our project consists of 2 PCBs, one for the controller and the other for the plug. We will therefore have 4 KiCad projects with different versions over the course of the projects.
+- Our KiCad projects consist of a controller and a plug, both of which have two distinct versions: the exclude version and the include version.
+    - The exclude version will have a connector which will be used to connect an NRF24L01 to it.
+    - The include version will have the NRF24L01 directly on the PCB, along with the crystal and antenna corresponding to the latter's specifications.
+- As indicated in the README_HARDWARE, our project consists of 2 PCBs, one for the controller and the other for the plug. We will therefore have 4 KiCad projects with different versions over the course of the projects.
 
 Library:
 - The library section contains the libraries used in KiCad for our projects. The files found there mainly concern the use of the NRF24L01 in particular.
@@ -51,8 +54,7 @@ Plug:
 
 Controller:
 - The design of our controller PCB was based on a totally different mindset from that of the plug. We first had to measure the size of a controller and make sure the PCB met these criteria, as we were going to be soldering our buttons to it. As a rough estimate of the size of our controller, we decided to place the PCB mounting holes according to the following criteria: +/- 10mm horizontally and +/- 20mm vertically for mounting holes on the same side and +125mm between our inner mounting holes on the vertical.
-- The directional cross button and the A, B, X, Y buttons are each separated by 25mm horizontally and vertically. The L and R buttons are both located on top of the controller in the form of connectors. The reason they're not buttons is that we're going to place them orthogonally to the controller, so they can't be placed on the PCB. The Start and Select buttons have been placed in the center of the controller, in a position similar to that of the original controller.
-- The directional cross buttons and the A, B, X, Y buttons are each separated by 25 mm horizontally and vertically. The Start and Select buttons have both been placed in the center of the controller, in a position similar to that of the original controller. The L and R buttons are both located on the top of the controller in the form of connectors. The reason the L and R aren't buttons is that we're going to place them orthogonally to the controller, so they couldn't be placed on the PCB.
+- The directional cross buttons and the A, B, X, Y buttons are each separated by 25 mm horizontally and vertically. The Start and Select buttons have both been placed in the center of the controller, in a position similar to that of the original controller. The L and R buttons are both located on the top of the controller in the form of connectors.The reason why the L and R buttons are not buttons is that they are bumpers that will be placed orthogonally to the controller, and therefore cannot be placed on the PCB.
 - All other components have been placed in the appropriate locations, such as the GPIO extenders close to the buttons to which they are connected.
 
 ## Updates
