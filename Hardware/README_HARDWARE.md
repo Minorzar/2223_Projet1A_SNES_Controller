@@ -1,4 +1,5 @@
 # SNES Controller (Hardware)
+
 The purpose of this document is to explain the hardware operation of the controller and the reasons behind our choices.
 
 Objective:
