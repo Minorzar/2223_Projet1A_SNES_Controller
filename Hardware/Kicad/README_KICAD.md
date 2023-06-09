@@ -20,7 +20,7 @@ The purpose of this document is to explain the operations behind the design of o
 
 Designing the schematics for our PCB was fairly straightforward, as we had already planned our main components in advance. Since the purposes of our plug and controller are quite similar, namely data transmission, their schematics won't be too different. However, there are still a few notable differences, such as the fact that the controller will have a battery and more buttons; or that our plug will have several level shifters to convert signals into a voltage suitable for our microprocessor and console. More importantly, a GPIO Extender was added to our controller as other constraints were imposed during the project, such as the addition of LEDs to show the current state of our battery. This last constraint cost us a few too many pins on our microprocessor, and we ended up needing just one extra pin. That being said, after following the datasheets, all that's left to do is place the passive components needed for the IC, LEDs and buttons to work properly. The main components are as follows:
 
-Controller:
+### Controller:
 - Microprocessor
 - SWD connector
 - DC/DC converter
@@ -31,7 +31,7 @@ Controller:
 - Battery connector
 - GPIO Extender
 
-Plug:
+### Plug:
 - Microprocessor
 - SWD connector
 - DC/DC converter
