@@ -18,12 +18,8 @@ Microprocessor:
 - A microprocessor will be required on both the plug and the controller. Their main role will be to receive data from the controller, which will be transmitted via the NRF24L01 communication protocol to the plug, and then adapt it to the console using the SNES communication protocol. We chose to use an STM32-LK412KBTx for the plug and controller, as it was the most readily available while having sufficient GPIOs and being the smallest.
 
 NRF24L01:
-- We decided to use the NRF24 for three reasons. The first, although not very important, is its long range. The second is its low power consumption, as it costs less than many other communication devices. The third is its low latency compared with other available options.
+- We decided to use the NRF24 for two reasons. The first is its low power consumption, as it costs less than many other communication devices. The secnd is its low latency compared with other available options.
 - To use the NRF24L01 module, we decided to create two types of PCB: "Include" in which the NRF24L01 is directly included on the PCB, and "Exclude" in which the NRF24L01 will be excluded and will have to be connected to our PCB. The reason we decided on these two PCB types was to provide insurance in case the included version didn't work properly. Unfortunately, it really did happened and we had to abandon the included version, although not for the reasons we expected. It was mainly due to problems with KiCad and the antenna required for the NRF24L01. As a result, we had to fall back on the excluded version.
-
-- We decided to use the NRF24 because it has a greater range than the ESB, for example. Another aspect is that it consumes little energy and costs less than many other devices that do the same thing. Finally, it is mainly due to the fact that it has lower latency than other devices. 
-- To use the NRF24L01 module, we decided to create two types of PCB: "Include" in which the NRF24L01 is directly included on the PCB, and "Exclude" in which the NRF24L01 will be excluded and will have to be connected to our PCB. The reason we opted for these two PCB types was to provide insurance in case the included version didn't work properly.
-- Unfortunately, this did happen and we had to abandon the included version, although not for the reasons we expected. This was mainly due to problems with KiCad and the antenna required for the NRF24L01. So we had to fall back on the excluded version.
 
 ## Controller
 
