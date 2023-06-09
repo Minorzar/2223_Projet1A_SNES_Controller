@@ -20,7 +20,7 @@ NRF24L01:
 - To use the NRF24L01 module, we decided to create two types of PCB: "Include" in which the NRF24L01 is directly included on the PCB, and "Exclude" in which the NRF24L01 will be excluded and will have to be connected to our PCB. The reason we decided on these two PCB types was to provide insurance in case the included version didn't work properly.
 - Unfortunately, it really did happened and we had to abandon the included version, although not for the reasons we expected. It was mainly due to problems with KiCad and the antenna required for the NRF24L01. As a result, we had to fall back on the excluded version.
 
-# Controller
+## Controller
 
 The initial controller design was to include 15 buttons, a few LEDs, a power supply with DC/DC converter and the various parts required for the NRF24L01.
 
@@ -43,7 +43,7 @@ DC/DC converter:
 - To convert the voltage from 4.3V to 3.3V, we used a DC/DC converter. We first considered using an AMS1117 linear voltage regulator, but as it was not available, we decided to replace it with a MIC5219-3.3YMM.
 
 
-# Plug
+## Plug
 
 The purpose of our plug is to act as a data bridge between the controller and the console. As the console is powered by a 5V voltage, we'll need to lower it to 3.3V to suit our microprocessor. To do this, we'll use level shifters for each of the SNES signals passing through our SNES port, and once again a MIC5219-3.3YMM DC/DC converter for our microprocessor. The PCB will also differ depending on whether the NRF24L01 is included or not.
 - If the NRF24L01 is excluded, only one connector needs to be added to the PCB.
@@ -54,3 +54,17 @@ LEDs:
 
 Crystal / Antenna:
 - As the "included" version has been dropped, we won't go into the details of what was used here. The only thing to note is that a certain frequency was required to select our crystal, and that we tried to use the same type of antenna found on the NRF24L01.
+
+## Readme
+
+Main: /README.md
+- https://github.com/Minorzar/snes_project_ensea2025/blob/main/README.md
+
+Hardware: /Hardware/README_HARDWARE.md
+- https://github.com/Minorzar/snes_project_ensea2025/blob/main/Hardware/README_HARDWARE.md
+
+KiCad: /Hardware/Kicad/README_KICAD.md
+- https://github.com/Minorzar/snes_project_ensea2025/blob/main/Hardware/Kicad/README_KICAD.md
+
+Software: /Software/README_SOFTWARE.md
+- https://github.com/Minorzar/snes_project_ensea2025/blob/main/Software/README_SOFTWARE.md

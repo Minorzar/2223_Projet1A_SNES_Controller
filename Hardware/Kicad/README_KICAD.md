@@ -11,7 +11,7 @@ Library:
 - The library section contains the libraries used in KiCad for our projects. The files found there mainly concern the use of the NRF24L01 in particular.
 
 Image:
-- This folder has no particular function other than practical. It provides quick access to the status of a KiCad project in its latest useful version in the form of images that can be shared and viewed more easily. Here we can see the different versions of the plug in the form of images of its schematic, routing and 3D view.
+- This folder has no particular function other than practical. It provides quick access to the status of a KiCad project in its latest useful version in the form of images that can be shared and viewed more easily. Here, different versions of the schematic, routing and 3D views can be seen.
 
 Unused:
 - The KiCad projects in this folder contain the "Include" versions of our controller and plug, as this was deemed infeasible due to bizarre restrictions with our antenna on the KiCad software. The only references we've found to this problem date back several years, and most of them have not been resolved on community forums and social networks.
@@ -68,3 +68,17 @@ Plug:
  
  Controller:
 - Apart from the problems we've already mentioned with the plug, the controller hasn't undergone any other major changes. The only notable changes we've made are that we've changed the hexagonal shape of our PCB to a smoother form more reminiscent of the original SNES controller. 
+
+## Readme
+
+Main: /README.md
+- https://github.com/Minorzar/snes_project_ensea2025/blob/main/README.md
+
+Hardware: /Hardware/README_HARDWARE.md
+- https://github.com/Minorzar/snes_project_ensea2025/blob/main/Hardware/README_HARDWARE.md
+
+KiCad: /Hardware/Kicad/README_KICAD.md
+- https://github.com/Minorzar/snes_project_ensea2025/blob/main/Hardware/Kicad/README_KICAD.md
+
+Software: /Software/README_SOFTWARE.md
+- https://github.com/Minorzar/snes_project_ensea2025/blob/main/Software/README_SOFTWARE.md
