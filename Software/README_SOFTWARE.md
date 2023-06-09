@@ -1,11 +1,11 @@
-     This ReadMe explains the algorithms and various bits of programming that we have written for the 2 CPUs in our project: the one in the controller and the one in the plug.
+This ReadMe explains the algorithms and various bits of programming that we have written for the 2 CPUs in our project: the one in the controller and the one in the plug.
 
 
 
 
-#The SNES Port Communication Protocol
+# The SNES Port Communication Protocol
 
-     The SNES console communicates with the controller and retrieves data in a particular way, we had to adapt to that and make sure that the CPU plugged to the console 
+The SNES console communicates with the controller and retrieves data in a particular way, we had to adapt to that and make sure that the CPU plugged to the console 
 follows the right steps with the right timing.
 
 
@@ -54,16 +54,16 @@ When that's finished, the CPU resumes the updates of the button data and the cyc
 
 
 
-#Battery Information
+# Battery Information
 
-	We wanted the controller to display the charge of its battery, so that the controller doesn't run flat unexpectedly. The easiest way to 
+We wanted the controller to display the charge of its battery, so that the controller doesn't run flat unexpectedly. The easiest way to 
 know the state of the battery is to measure its voltage. Indeed, a fully charged battery has high voltage that decreases slowly as it is used.
 The CPU we have chosen offers a built-in solution to do that: some specific pins can be used as an AD converter that can measure analog voltages.
 After obtaining the raw number from the ADC, it is used to compute an integer between 0 and 12, which indicates how many LEDS should be powered on the controller.
 
 
-#I2C Devices
-	On the controller, we needed to have many digital inputs and outputs: we have 12 buttons to detect and 16 LEDs to power. There are just 
+# I2C Devices
+On the controller, we needed to have many digital inputs and outputs: we have 12 buttons to detect and 16 LEDs to power. There are just 
 not enough GPIOs available on our CPU to connect them all. That's why we had to use specific devices to manage all of these inputs and outputs: 
 2 GPIO extenders and 1 LED driver.
 	These devices communicate with the CPU through a protocol called I2C that allows multiple modules to be hooked up to the same lines.
@@ -77,9 +77,9 @@ so to simplify things we created a function that edits the registers according t
 
 
 
-#Wireless Communication
+# Wireless Communication
 
-	In the specifications of our project, we wanted the controller to function without any wire connecting it to the console. That's why we had to 
+In the specifications of our project, we wanted the controller to function without any wire connecting it to the console. That's why we had to 
 allow the 2 parts of our project to communicate using electromagnetic signals. The NRF24 wireless module seemed particularly fitting for what we intended to do.
 
 ---- nrf24 characteristics ----
@@ -94,7 +94,8 @@ and modified via commands that can read and write the registers in the module.
 	The problem is that we can only program the CPU, we can't directly write commands in the module or access its information, thus it requires another communication 
 protocol for it to respond to the processor: the SPI protocol. In addition to the SPI the NRF24 module has one more pin that is used to switch between Standby mode 
 and RX/TX mode. Thankfully the functions necessary to SPI communication are already provided in STM32CubeIDE, but the whole process remains really convoluted. 
-So we had to write a whole library of functions related to communication with the nrf24 module.
+So we had to write a whole library of functions related to communication with the nrf24 module but despite our best efforts, we were unable to make it worked, so we have decided to look at other library that were written by other people.
+With the help of thoes library, we managed to make the two STM32 used to test our code to communicate with each other.
 In addition to the SPI the NRF24 module has one more pin that is used to switch between Standby mode and RX/TX mode.
 
 ---- Data transmission ----
