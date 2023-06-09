@@ -1,13 +1,14 @@
 # SNES Controller (Software)
 
-This Readme explains the algorithms and various bits of programming that we have written for the 2 CPUs in our project: the one in the controller and the one in the plug.
+The purpose of this document is to explain the algorithms and programming elements we've written for the two microprocessors in our project: one for the controller, the other for the plug.
 
-The SNES console communicates with the controller and retrieves data in a particular way, we had to adapt to that and make sure that the CPU plugged to the console follows the right steps with the right timing.
+## SNES Communication Protocol
 
+The SNES console communicates with the controller and retrieves data in a specific way. That's why we have to adapt to it and ensure that our microprocessors reproduce these steps correctly.
 
------ Characteristics of the SNES port-----
+SNES port features:
 - Frequency: 60 Hz / 16.67 ms
-- Clock period: 12 us
+- Clock period: 12 μs
 - Pin 1: +5 V
 - Pin 2: Data_clock
 - Pin 3: Data_latch
@@ -16,8 +17,7 @@ The SNES console communicates with the controller and retrieves data in a partic
 - Pin 6: N/A
 - Pin 7: Ground
 
------ Communication sequence -----
-    
+Communication sequence:   
 - 1     B       
 - 2     Y       
 - 3     Select  
@@ -36,11 +36,11 @@ The SNES console communicates with the controller and retrieves data in a partic
 - 16    High    
 - (17   Low)     
 
------ Operation -----
-- Every 16.67 ms, the console sends a 12 us wide pulse to pin 3, instructing the controller to latch the button states.
-- 6 us after that, the console sends 16 clock cycles on the "Data_clock" pin:
-    - On the rising edge, the controller (or for our project the plug) serially shifts the latched button states out of the "Serial_data" pin
-    - On the falling edge, the CPU inside the console samples the data
+Operation:
+- Every 16.67 ms, the console sends a 12 μs wide pulse to pin 3, instructing the controller to latch the state of the buttons.
+- After 6 μs, the console sends 16 clock cycles to the "Data_clock" pin.
+    - On the rising edge, the controller, or our plug in particular for this project, serially shifts the states of the buttons locked on the "Serial_data" pin.
+    - On the falling edge, the CPU inside the console samples the data.
 
 ---- Algorithm ----
 
@@ -52,6 +52,11 @@ When the latch order is given, it stops to update the button states and then sen
 
 When that's finished, the CPU resumes the updates of the button data and the cycle continues.
 
+
+In order to comply with the above-mentioned protocol, the plug's microprocessor must be able to detect the various signals sent by the console and respond accordingly.
+- When the SNES sends nothing, it regularly updates the button data. 
+- When the lock command is given, it stops to update the button states, and then sends them one by one after each rising edge of the clock. 
+- When this is complete, the CPU resumes updating the button data and the cycle continues.
 
 
 # Battery Information
@@ -86,7 +91,9 @@ The operation of nrf24 module is fairly complex in itself: in order to send or r
 
 The problem is that we can only program the CPU, we can't directly write commands in the module or access its information, thus it requires another communication protocol for it to respond to the processor: the SPI protocol. In addition to the SPI the NRF24 module has one more pin that is used to switch between Standby mode and RX/TX mode. Thankfully the functions necessary to SPI communication are already provided in STM32CubeIDE, but the whole process remains really convoluted.
 
-So we had to write a whole library of functions related to communication with the nrf24 module.
+So we had to write a whole library of functions related to communication with the nrf24 module but despite our best efforts, we were unable to make it worked, so we have decided to look at other library that were written by other people.
+ With the help of thoes library, we managed to make the two STM32 used to test our code to communicate with each other.
+
 
 In addition to the SPI the NRF24 module has one more pin that is used to switch between Standby mode and RX/TX mode.
 

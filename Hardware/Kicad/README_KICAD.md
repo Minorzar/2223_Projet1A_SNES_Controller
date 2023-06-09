@@ -2,7 +2,7 @@
 
 The purpose of this document is to explain the operations behind the design of our PCBs made with KiCad.
 
-## Folder structure
+## Folder Structure
 
 Projects:
 - Our KiCad projects consist of a controller and a plug, both of which have two distinct versions: the exclude version and the include version. The exclude version will have a connector which will be used to connect an NRF24L01 to it. The include version will have the NRF24L01 directly on the PCB, along with the crystal and antenna corresponding to the latter's specifications. As indicated in the README_HARDWARE, our project consists of 2 PCBs, one for the controller and the other for the plug. We will therefore have 4 KiCad projects with different versions over the course of the projects.
@@ -42,7 +42,7 @@ Plug:
 - Mounting holes
 - Level shifters
 
-## PCB
+## PCB (Routing)
 
 When routing our PCBs, we had two main concerns: the size of our controller and the use of resources for our plug. As our controller had to meet certain size criteria, we couldn't afford to make it small and use as few resources as possible to make it. Our plug, on the other hand, was exactly the opposite.
 
