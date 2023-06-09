@@ -73,16 +73,15 @@ Communication between the microprocessor and the communication device:
 - The operation of the NRF24 module is quite complex in itself. A series of specific actions must be performed so that it can trigger various commands such as receiving or sending data. Thanks to several of its commands, we can also read and write to the module's registers.
 - The main problem will be that all of our command will have to be done through our microprocessor. This means that we will have to use another communication protocol in order to use the NRF24: the SPI protocol. Fortunately, the functions necessary to SPI communication are already provided in STM32CubeIDE, but it doesn’t change the fact that the whole process can be quite tedious.
 - The main problem will be that all our commands will have to be made via our microprocessor. This means we'll have to use another communication protocol to operate the NRF24: the SPI protocol. Fortunately, the functions required for SPI communication are already provided in STM32CubeIDE, but this doesn't change the fact that the whole process can be quite tedious.
+- To make the NRF24 work, we still had to write a whole library of functions. However, despite our best efforts, we couldn't get it to work, so we decided to look at other libraries that had been written by other people. In the end, we still had problems, but we did manage to transmit data between two NRF24s, although not as reliably as we'd hoped. On the other hand, we still don't know whether our first program worked or not, as it seems that our test equipment was one of the causes of its failure.
 
-So we had to write a whole library of functions related to communication with the nrf24 module but despite our best efforts, we were unable to make it worked, so we have decided to look at other library that were written by other people.
- With the help of thoes library, we managed to make the two STM32 used to test our code to communicate with each other.
-
-
-In addition to the SPI the NRF24 module has one more pin that is used to switch between Standby mode and RX/TX mode.
-
----- Data transmission ----
-
-The way we use the nrf24 module is actually fairly simple: first the CPU inside the controller retrieves the data from the 2 GPIO extenders (1 byte of data for each), then sends it to the nrf24 module that transmits the data wirelessly to the module on the other board. This module sends the data to the CPU, that derives the button states from the 16 bits of information. Finally the button states are transmitted to the console according to the communication protocol explained above.
+Data transmission:
+- Once the library has been set up, its use can be considered fairly straightforward.
+- First of all, the microprocessor needs to retrieve the controller data from inside the 2 GPIO Extenders (1 byte of data each). 
+- It then sends them to the NRF24 module for wireless transmission to the plug module.
+- After the data has been received on the plug module, it is sent to the CPU.
+- This data is then converted into 16 bits of information corresponding to the states of our buttons.
+- Finally, they are transmitted to the console according to the communication protocol.
 
 ## Readme
 
