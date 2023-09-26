@@ -2,7 +2,88 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "Led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Led[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Btn[9]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

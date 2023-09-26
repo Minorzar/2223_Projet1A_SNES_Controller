@@ -1,5 +1,5 @@
 Flow report for Micro_audio
-Tue Sep 19 16:46:46 2023
+Tue Sep 26 16:01:54 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Tue Sep 19 16:46:29 2023          ;
+; Flow Status                     ; Successful - Tue Sep 26 16:01:49 2023          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; Micro_audio                                    ;
-; Top-level Entity Name           ; DE1_SOC_golden_top                             ;
+; Top-level Entity Name           ; control_switch                                 ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
 ; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                           ;
 ; Total registers                 ; 0                                              ;
-; Total pins                      ; 241 / 457 ( 53 % )                             ;
+; Total pins                      ; 20 / 457 ( 4 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
@@ -68,28 +68,28 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/19/2023 16:45:31 ;
+; Start date & time ; 09/26/2023 16:00:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Micro_audio         ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+-------------------------------------+----------------------------------------+---------------+--------------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name        ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+--------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 9447194249565.169513473100724          ; --            ; --                 ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                 ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                 ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE1_SOC_golden_top ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE1_SOC_golden_top ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; DE1_SOC_golden_top ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                 ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                 ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                 ; --         ;
-; TOP_LEVEL_ENTITY                    ; DE1_SOC_golden_top                     ; Micro_audio   ; --                 ; --         ;
-+-------------------------------------+----------------------------------------+---------------+--------------------+------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+----------------------------------------+---------------+----------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+----------------+------------+
+; COMPILER_SIGNATURE_ID               ; 9447194249565.169573685918844          ; --            ; --             ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; control_switch ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; control_switch ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; control_switch ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --             ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --             ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --             ; --         ;
+; TOP_LEVEL_ENTITY                    ; control_switch                         ; Micro_audio   ; --             ; --         ;
++-------------------------------------+----------------------------------------+---------------+----------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -97,11 +97,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4799 MB             ; 00:00:14                           ;
-; Fitter               ; 00:00:39     ; 1.0                     ; 6486 MB             ; 00:00:52                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4882 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:16     ; 1.0                     ; 5152 MB             ; 00:00:05                           ;
-; Total                ; 00:01:11     ; --                      ; --                  ; 00:01:16                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4871 MB             ; 00:00:10                           ;
+; Fitter               ; 00:00:28     ; 1.0                     ; 6477 MB             ; 00:00:41                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4875 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 5131 MB             ; 00:00:03                           ;
+; Total                ; 00:00:49     ; --                      ; --                  ; 00:00:59                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
