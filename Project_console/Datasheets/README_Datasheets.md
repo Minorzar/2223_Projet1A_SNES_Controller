@@ -1,7 +1,7 @@
 ---------- Official Documentation ----------
 ----- SNES Developer Manual:
-book1.pdf - Super Nintendo Development Manual Book 1 - Hardware and assembly documentation
-book2.pdf - Super Nintendo Development Manual Book 2 - SA-1, SuperFX, DSP/DSP1, Accessories
+book1_text.pdf - Super Nintendo Development Manual Book 1 - Hardware and assembly documentation
+book2_text.pdf - Super Nintendo Development Manual Book 2 - SA-1, SuperFX, DSP/DSP1, Accessories
 https://archive.org/details/SNESDevManual/
 
 ---------- Unofficial Documentation ----------
